@@ -7,7 +7,8 @@ function EducationItem(props) {
         <h3>{props.business}</h3>
         <h4>{props.workTitle}</h4>
         <p className="date">
-          <time dateTime="2021-06">{props.startTime}</time> til
+          <time dateTime="2021-06">{props.startTime}</time>
+          &nbsp;til&nbsp;
           <time dateTime="2021-08">{props.endTime}</time>
         </p>
       </header>

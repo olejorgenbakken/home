@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/main.css";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
+import CV from "./views/cv/cv";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header
+        name="Ole Jørgen"
+        description="Interaksjons&shy;designer og utvikler"
+      />
+      <CV />
+      <Footer
+        text="Kildekoden til denne nettsiden er tilgjengelig på"
+        link="https://github.com/olejorgenbakken/home"
+        linkText="GitHub"
+      />
     </div>
   );
 }

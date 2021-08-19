@@ -1,0 +1,95 @@
+@import "normalize.css";
+:root {
+  --background: #fff5e8;
+  --text: #121213;
+  --separator: #d6d6d6;
+  --linksIdle: #052f6d;
+  --linksVisited: #2b00a1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.3em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p,
+li {
+  font-size: 1.1em;
+  line-height: 1.8em;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 1px;
+}
+
+a:link {
+  color: var(--linksIdle);
+  border-bottom: 2px solid var(--linksIdle);
+}
+
+a:visited {
+  color: var(--linksVisited);
+  border-bottom: 2px solid var(--linksVisited);
+}
+
+ul {
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #202020;
+    --text: #fff;
+    --separator: #434346;
+    --linksIdle: #60a0ff;
+    --linksVisited: #b398ff;
+  }
+}

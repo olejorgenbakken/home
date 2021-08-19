@@ -3,11 +3,11 @@ import "./footer.css";
 function Footer(props) {
   return (
     <footer id="global-footer">
-      <article className="content width-900">
+      <section className="width-1000">
         <p>
           {props.text} <a href={props.link}>{props.linkText}</a>
         </p>
-      </article>
+      </section>
     </footer>
   );
 }

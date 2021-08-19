@@ -1,7 +1,11 @@
-#global-footer {
+.width-1000 {
   width: 100%;
+  max-width: 1000px;
+  padding: 0 1em;
   margin: 0 auto;
+}
+
+.padding {
   padding-top: 4em;
   padding-bottom: 4em;
-  background: var(--background-darker);
 }

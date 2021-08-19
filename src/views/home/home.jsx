@@ -1,15 +1,15 @@
-import Hero from "../../components/heroes/hero-basic/hero-basic";
-import ExternalList from "../../components/sections/other/external/externalList";
+import Hero from "../../components/hero/hero";
+import ExternalList from "../../components/external/externalList";
 
 function Home(props) {
   return (
     <section>
       <Hero
         title="Hei 👋"
-        backgroundImg="https://images.unsplash.com/photo-1608255726239-8d44c46cdd58?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3024&q=80"
         message="Jeg heter Ole Jørgen, og jeg lager ting på internett. Denne nettsiden er nettopp påbegynt."
+        background="gradient"
       />
-      <section className="width-900">
+      <section className="width-1000 padding">
         <ExternalList />
       </section>
     </section>

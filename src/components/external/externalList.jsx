@@ -1,11 +1,11 @@
 import "./externalList.css";
-import "../../../../styles/cards.css";
-import GitHubLogo from "../../../../assets/logos/github.png";
-import FigmaLogo from "../../../../assets/logos/figma.webp";
-import BehanceLogo from "../../../../assets/logos/behance.svg";
-import LinkedInLogo from "../../../../assets/logos/linkedin.png";
+import GitHubLogo from "../../assets/logos/github.svg";
+import FigmaLogo from "../../assets/logos/figma.svg";
+import BehanceLogo from "../../assets/logos/behance.svg";
+import LinkedInLogo from "../../assets/logos/linkedin.svg";
 
 import ExternalItem from "./externalItem/externalItem";
+import Grid from "../grid/grid";
 
 const webpages = [
   {
@@ -42,7 +42,7 @@ const webpages = [
   },
 ];
 
-function ExternalList(props) {
+function ExternalList() {
   const externalList = webpages.map((page) => (
     <ExternalItem
       key={page.id}
@@ -53,14 +53,7 @@ function ExternalList(props) {
       background={page.color}
     ></ExternalItem>
   ));
-  return (
-    <section className="external-webpages">
-      <header>
-        <h2>Se arbeidet mitt</h2>
-      </header>
-      <section className="cards-grid-4">{externalList}</section>
-    </section>
-  );
+  return <Grid grids="4" elements={externalList} />;
 }
 
 export default ExternalList;

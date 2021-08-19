@@ -1,11 +1,15 @@
-@import "normalize.css";
+@import "./normalize.css";
+@import "./constraints.css";
+@import "./flex.css";
+@import "./grid.css";
+
 :root {
   --background: #fffcf9;
-  --background-darker: #e9edf8;
+  --background-darker: #fff3e6;
   --text: #121213;
   --separator: #d6d6d6;
-  --linksIdle: #052f6d;
-  --linksVisited: #2b00a1;
+  --linksIdle: #0066ff;
+  --linksVisited: #3c00e2;
 }
 
 * {
@@ -26,13 +30,6 @@ body {
 main {
   width: 100%;
   margin: 0 auto;
-}
-
-.width-900 {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 0 1em;
 }
 
 h1,
@@ -79,15 +76,30 @@ li {
 
 a {
   text-decoration: none;
-  padding-bottom: 1px;
 }
 
-a:link {
+h1 a:link,
+h2 a:link,
+h3 a:link,
+h4 a:link,
+h5 a:link,
+h6 a:link,
+p a:link,
+li a:link {
+  padding-bottom: 1px;
   color: var(--linksIdle);
   border-bottom: 2px solid var(--linksIdle);
 }
 
-a:visited {
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited,
+p a:visited,
+li a:visited {
+  padding-bottom: 1px;
   color: var(--linksVisited);
   border-bottom: 2px solid var(--linksVisited);
 }
@@ -108,6 +120,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   color: blue;
+}
+
+img {
+  max-width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {

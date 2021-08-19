@@ -1,0 +1,25 @@
+.external-item {
+  width: max-content;
+  padding: 1em 2em;
+  background: white;
+  border: 2px solid var(--separator);
+  color: inherit;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  transition: ease-in-out 0.2s;
+}
+
+.external-item:hover {
+  transform: translateY(-2px);
+  border: 2px solid var(--linksIdle);
+  color: var(--linksIdle);
+}
+
+.external-item img {
+  height: 24px;
+}

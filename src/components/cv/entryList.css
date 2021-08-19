@@ -1,0 +1,12 @@
+.cv-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 4em 0;
+}
+
+.cv-section-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}

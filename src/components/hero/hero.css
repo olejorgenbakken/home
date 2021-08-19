@@ -1,0 +1,26 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 4em 1em;
+}
+
+.hero article {
+  padding: 3em 2em;
+  background: var(--background);
+  border: 1px solid var(--separator);
+  border-radius: 4px;
+}
+
+.hero article h2 {
+  font-size: 2.5em;
+}
+
+@media screen and (min-width: 1000px) {
+  .hero {
+    padding: 10em 1em;
+  }
+}

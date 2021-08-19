@@ -9,7 +9,7 @@ function Header(props) {
 
   return (
     <header id="global-header" style={headerStyle}>
-      <section className="width-900">
+      <section className="width-1000">
         <h1>
           <Link to="/" title="Tilbake til startsiden">
             {props.name}

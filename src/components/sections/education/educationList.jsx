@@ -19,6 +19,24 @@ const educationData = [
     description:
       "Innføring i mange ulike informatikkemner, som databaser, programmering og datamaskinens oppbygging. Etter et felles førsteår ble vi delt inn i spesialiseringene våre hvor jeg hadde tre emner om interaksjonsdesign, hvor vi lærte om alt fra prototyping av brukergrensesnitt, og testing av disse, til innholdsproduksjon. Samtidig tok jeg også emner om utvikling i javascriptrammeverk som Vue og React, og Wordpress.",
   },
+  {
+    id: 3,
+    business: "Universitet i Oslo",
+    workTitle: "Årsstudium i kjønnsstudier og sosiologi",
+    startTime: "2017-08",
+    endTime: "2018-06",
+    description:
+      "Introduserende emner om ulike teorier innen sosiologi og kjønn.",
+  },
+  {
+    id: 4,
+    business: "Høyskolen i Volda",
+    workTitle: "Årsstudium i mediekommunikasjon",
+    startTime: "2016-08",
+    endTime: "2017-06",
+    description:
+      "Introduserende emner innen medieproduksjon, medietolking, samt kvantitativ og kvalitativ forskningsmetode.",
+  },
 ];
 
 function EducationList() {

@@ -1,10 +1,10 @@
-#global-header {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+#global-header section {
   padding: 2em 1em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
 }
 
 #global-header h1 a {
@@ -13,27 +13,12 @@
   border-bottom: none;
 }
 
-#global-header p {
-  font-size: 1.1em;
-}
-
 #global-menu {
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 1em 2em;
   padding: 0;
-}
-
-@media screen and (min-width: 700px) {
-  #global-header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    gap: 1em;
-  }
-
-  #global-menu {
-    justify-content: flex-end;
-  }
 }

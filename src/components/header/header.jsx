@@ -3,25 +3,30 @@ import { Link } from "react-router-dom";
 import "./header.css";
 
 function Header(props) {
-  return (
-    <header id="global-header">
-      <section className="introduction">
-        <h1>
-          <Link to="/">{props.name}</Link>
-        </h1>
-        <p>{props.description}</p>
-      </section>
+  const headerStyle = {
+    background: props.background,
+  };
 
-      <nav>
-        <ul id="global-menu">
-          <li>
-            <Link to="/portefølje">Portefølje</Link>
-          </li>
-          <li>
-            <Link to="/cv">CV</Link>
-          </li>
-        </ul>
-      </nav>
+  return (
+    <header id="global-header" style={headerStyle}>
+      <section className="width-900">
+        <h1>
+          <Link to="/" title="Tilbake til startsiden">
+            {props.name}
+          </Link>
+        </h1>
+
+        <nav>
+          <ul id="global-menu">
+            <li>
+              <Link to="/portefølje">Portefølje</Link>
+            </li>
+            <li>
+              <Link to="/cv">CV</Link>
+            </li>
+          </ul>
+        </nav>
+      </section>
     </header>
   );
 }

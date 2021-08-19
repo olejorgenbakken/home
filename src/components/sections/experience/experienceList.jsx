@@ -53,7 +53,7 @@ function ExperienceList() {
   return (
     <section className="entries">
       <header>
-        <h2>Erfaring</h2>
+        <h2>Arbeidserfaring</h2>
       </header>
       <section>{experienceList}</section>
     </section>

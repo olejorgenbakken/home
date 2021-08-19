@@ -14,7 +14,7 @@ const webpages = [
     title: "GitHub",
     link: "https://github.com/olejorgenbakken",
     description: "",
-    color: "",
+    color: "white",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const webpages = [
     title: "Figma",
     link: "https://figma.com/@olejorgen",
     description: "",
-    color: "",
+    color: "white",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const webpages = [
     title: "Behance",
     link: "https://behance.net/olejorgenbakken",
     description: "",
-    color: "",
+    color: "white",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const webpages = [
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/ole-jorgen-bakken/",
     description: "",
-    color: "",
+    color: "white",
   },
 ];
 
@@ -50,13 +50,13 @@ function ExternalList(props) {
       link={page.link}
       logo={page.logo}
       description={page.description}
-      color={page.color}
+      background={page.color}
     ></ExternalItem>
   ));
   return (
-    <section className="width-900 external-webpages">
+    <section className="external-webpages">
       <header>
-        <h2>Finn meg andre steder</h2>
+        <h2>Se arbeidet mitt</h2>
       </header>
       <section className="cards-grid-4">{externalList}</section>
     </section>

@@ -48,6 +48,7 @@ function ExternalList(props) {
       key={page.id}
       title={page.title}
       link={page.link}
+      logo={page.logo}
       description={page.description}
       color={page.color}
     ></ExternalItem>

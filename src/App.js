@@ -2,7 +2,6 @@ import "./styles/main.css";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import CV from "./views/cv/cv";
-import { Link } from "react-router-dom";
 
 function App() {
   return (

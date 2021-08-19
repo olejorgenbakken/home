@@ -1,22 +1,19 @@
+import { Route } from "react-router-dom";
+
 import "./styles/main.css";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
 import CV from "./views/cv/cv";
+import Home from "./views/home/home";
 
 function App() {
   return (
-    <div className="App">
-      <Header
-        name="Ole Jørgen"
-        description="Interaksjons&shy;designer og utvikler"
-      />
-      <CV />
-      <Footer
-        text="Kildekoden til denne nettsiden er tilgjengelig på"
-        link="https://github.com/olejorgenbakken/home"
-        linkText="GitHub"
-      />
-    </div>
+    <main>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/cv">
+        <CV />
+      </Route>
+    </main>
   );
 }
 

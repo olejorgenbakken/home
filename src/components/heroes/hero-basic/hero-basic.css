@@ -1,0 +1,19 @@
+.hero-basic {
+  height: 50vh;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 2em;
+}
+
+.hero-basic article {
+  width: 100%;
+  max-width: 900px;
+  padding: 4em 2em;
+  background: white;
+  border-radius: 4px;
+}

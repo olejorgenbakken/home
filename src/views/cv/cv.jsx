@@ -4,10 +4,11 @@ import EducationList from "../../components/sections/education/educationList";
 
 function CV() {
   return (
-    <main>
+    <section className="width-900">
       <ExperienceList />
+      <hr />
       <EducationList />
-    </main>
+    </section>
   );
 }
 

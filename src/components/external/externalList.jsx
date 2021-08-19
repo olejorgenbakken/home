@@ -53,7 +53,7 @@ function ExternalList() {
       background={page.color}
     ></ExternalItem>
   ));
-  return <Grid grids="4" elements={externalList} />;
+  return <Grid grids="5" elements={externalList} />;
 }
 
 export default ExternalList;

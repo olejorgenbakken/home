@@ -1,6 +1,7 @@
 @import "normalize.css";
 :root {
   --background: #fff5e8;
+  --background-lighter: #fffaf5;
   --text: #121213;
   --separator: #d6d6d6;
   --linksIdle: #052f6d;
@@ -100,6 +101,7 @@ hr {
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #202020;
+    --background-lighter: #303030;
     --text: #fff;
     --separator: #434346;
     --linksIdle: #60a0ff;

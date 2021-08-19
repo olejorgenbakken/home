@@ -7,7 +7,7 @@ function Home(props) {
       <Hero
         title="Hei 👋"
         backgroundImg="https://images.unsplash.com/photo-1608255726239-8d44c46cdd58?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3024&q=80"
-        message="Jeg heter Ole Jørgen, og jeg designer og utvikler ting på internett. Denne nettsiden er forresten langt fra ferdig."
+        message="Jeg heter Ole Jørgen, og jeg lager ting på internett. Denne nettsiden er nettopp påbegynt."
       />
       <section className="width-900">
         <ExternalList />

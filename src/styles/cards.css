@@ -1,12 +1,28 @@
 .card {
-  padding: 2em;
-  border-radius: 12px;
   background: var(--background-lighter);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5em;
+  border-radius: 12px;
 }
 
-.cards-row {
-  display: flex;
-  flex-direction: row;
-  gap: 2em;
-  overflow: auto;
+.cards-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1em;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .cards-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .cards-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

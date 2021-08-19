@@ -1,3 +1,8 @@
 .external-webpages {
-  padding: 4em 0;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.external-webpages header {
+  margin-bottom: 1em;
 }

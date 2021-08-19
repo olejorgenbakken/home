@@ -1,3 +1,5 @@
+import "./externalItem.css";
+
 function ExternalItem(props) {
   return (
     <article className="card external-item">

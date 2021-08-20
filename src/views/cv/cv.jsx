@@ -30,12 +30,12 @@ const experienceData = [
   },
   {
     id: 4,
-    place: "LWIM AS",
+    place: "Flow Digital AS",
     workTitle: "Interaksjonsdesigner og utvikler",
     startTime: "2019-09",
     endTime: "2021-02",
     description:
-      "I LWIM jobbet jeg med å utvikle nettsider i Php, javascript, HTML og CSS. Her hadde jeg, sammen med to andre ansvar for cirka 14 nettsteder med ulik grafisk profil, som vi til enhver tid utviklet videre.",
+      "Her jobbet jeg med å utvikle nettsider i Php, javascript, HTML og CSS. Her hadde jeg, sammen med to andre ansvar for cirka 14 nettsteder med ulik grafisk profil, som vi til enhver tid utviklet videre.",
   },
 ];
 const educationData = [

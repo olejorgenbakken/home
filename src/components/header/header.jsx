@@ -15,10 +15,14 @@ function Header(props) {
         <nav>
           <ul id="global-menu">
             <li>
-              <Link to="/portefølje">Portefølje</Link>
+              <Link to="/portefølje" title="Se porteføljen min">
+                Portefølje
+              </Link>
             </li>
             <li>
-              <Link to="/cv">CV</Link>
+              <Link to="/cv" title="Gå til CVen min">
+                CV
+              </Link>
             </li>
           </ul>
         </nav>

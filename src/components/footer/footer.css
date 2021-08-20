@@ -5,3 +5,9 @@
   padding-bottom: 4em;
   background: var(--background-darker);
 }
+
+#global-footer .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

@@ -1,0 +1,15 @@
+.external-link {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.08em;
+}
+
+.external-link svg {
+  height: 0.75em;
+  width: 0.75em;
+}
+
+.external-link svg path {
+  fill: var(--text);
+}

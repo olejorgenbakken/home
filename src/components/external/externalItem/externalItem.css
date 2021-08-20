@@ -2,21 +2,25 @@
   width: max-content;
   padding: 1em 2em;
   background: white;
-  border: 2px solid var(--separator);
+  border: 1px solid var(--link);
+  box-shadow: 0 0 4px var(--link);
   border-radius: 4px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1em;
   transition: ease-in-out 0.2s;
 }
 
 .external-item:hover {
   transform: translateY(-2px);
-  border: 2px solid var(--linksIdle);
-  color: var(--linksIdle);
+  border: 1px solid var(--link-hover);
+  box-shadow: 0 2px 8px var(--link);
+}
+
+.external-item::after {
+  display: none;
 }
 
 .external-item img {

@@ -18,8 +18,10 @@
 
 #global-header h1 a {
   color: inherit;
-  padding-bottom: 0;
-  border-bottom: none;
+}
+
+#global-header h1 a::after {
+  background: none;
 }
 
 #global-menu {
@@ -38,8 +40,14 @@
   background: transparent;
 }
 
-#global-header[type="project"] a,
 #global-header[type="project"] a {
   color: white;
-  border-bottom-color: white;
+}
+
+#global-header[type="project"] #global-menu a::after {
+  background: white;
+}
+
+#global-header[type="project"] #global-menu a:hover::after {
+  background: var(--separator);
 }

@@ -1,10 +1,10 @@
-import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import "./portfolio.css";
 
 import Header from "../../components/header/header";
-import Grid from "../../components/grid/grid";
+import ProjectList from "../../components/projectList/projectList";
 import Footer from "../../components/footer/footer";
-import Vipps from "./vipps/vipps";
+import Vipps from "./projects/vipps/vipps";
 
 function Portfolio() {
   let match = useRouteMatch();
@@ -18,19 +18,15 @@ function Portfolio() {
       </Route>
       <Route exact path={`${match.path}`}>
         <Header />
-        <main className="width-1000 padding">
-          <h1>Prosjekter</h1>
-          <Grid
-            grids="3"
-            elements={<Link to={`${match.url}/vipps`}>Vipps</Link>}
-          ></Grid>
-        </main>
+        <ProjectList />
         <Footer />
       </Route>
       <Route path={`${match.path}`}>
         <Header />
-        <p className="width-1000">Dette prosjektet finnes ikke 😭</p>
-        <Link to={`${match.url}/vipps`}>Vipps</Link>
+        <p className="width-1000">
+          Dette prosjektet finnes ikke 😭, prøv et av disse:
+        </p>
+        <ProjectList />
         <Footer />
       </Route>
     </Switch>

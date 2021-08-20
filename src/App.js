@@ -11,7 +11,9 @@ function App() {
       <Route exact path="/" component={Home}></Route>
       <Route path="/portefølje" component={Portfolio} />
       <Route path="/cv" component={CV}></Route>
-      <Route render={() => <h1>404: page not found</h1>} />
+      <Route>
+        <h1>404</h1>
+      </Route>
     </Switch>
   );
 }

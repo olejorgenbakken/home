@@ -1,7 +1,7 @@
 import { ReactComponent as Icon } from "../../../assets/icons/link_external.svg";
 import "./externalLink.css";
 
-function Link(props) {
+function ExternalLink(props) {
   return (
     <span className="external-link">
       <a href={props.href} title={props.title} className="external-link">
@@ -12,4 +12,4 @@ function Link(props) {
   );
 }
 
-export default Link;
+export default ExternalLink;

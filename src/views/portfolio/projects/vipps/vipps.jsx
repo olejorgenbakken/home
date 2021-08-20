@@ -1,8 +1,8 @@
 import "./vipps.css";
-import Gallery from "../../../components/gallery/gallery";
+import Gallery from "../../../../components/gallery/gallery";
 
-import VippsImage1Src from "../../../assets/portfolio/vipps/image1.svg";
-import VippsImage2Src from "../../../assets/portfolio/vipps/image2.svg";
+import VippsImage1Src from "../../../../assets/portfolio/vipps/image1.svg";
+import VippsImage2Src from "../../../../assets/portfolio/vipps/image2.svg";
 
 function Vipps() {
   const introPics = [

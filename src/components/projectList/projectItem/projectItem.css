@@ -1,0 +1,14 @@
+.project-item {
+  border-width: 1px;
+  border-style: solid;
+  padding: 2em;
+  border-radius: 4px;
+}
+
+.project-item::after {
+  display: none;
+}
+
+.project-item img {
+  height: 100px;
+}

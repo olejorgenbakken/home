@@ -1,6 +1,14 @@
+#global-header {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: var(--background);
+}
+
 #global-header section {
-  padding-top: 2em;
-  padding-bottom: 2em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,4 +30,16 @@
   justify-content: flex-end;
   gap: 1em 2em;
   padding: 0;
+}
+
+#global-header[type="project"] {
+  top: 0;
+  position: fixed;
+  background: transparent;
+}
+
+#global-header[type="project"] a,
+#global-header[type="project"] a {
+  color: white;
+  border-bottom-color: white;
 }

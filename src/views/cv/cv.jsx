@@ -1,3 +1,5 @@
+import Header from "../../components/header/header";
+import Footer from "../../components/footer/footer";
 import EntryList from "../../components/cv/entryList";
 
 const experienceData = [
@@ -79,11 +81,15 @@ const educationData = [
 
 function CV() {
   return (
-    <section className="width-1000">
-      <h1>CV</h1>
-      <EntryList data={experienceData} title="Arbeidserfaring" />
-      <hr />
-      <EntryList data={educationData} title="Utdanning" />
+    <section id="cv">
+      <Header />
+      <main className="width-1000">
+        <h1>CV</h1>
+        <EntryList data={experienceData} title="Arbeidserfaring" />
+        <hr />
+        <EntryList data={educationData} title="Utdanning" />
+      </main>
+      <Footer />
     </section>
   );
 }

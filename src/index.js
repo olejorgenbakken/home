@@ -4,19 +4,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-
 ReactDOM.render(
   <React.StrictMode>
     <Router basemname={`/${process.env.PUBLIC_URL}`}>
-      <Header name="Ole Jørgen" />
       <App />
-      <Footer
-        text="Kildekoden til denne nettsiden er tilgjengelig på"
-        link="https://github.com/olejorgenbakken/home"
-        linkText="GitHub"
-      />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

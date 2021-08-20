@@ -5,7 +5,10 @@ function Footer(props) {
     <footer id="global-footer">
       <section className="width-1000">
         <p>
-          {props.text} <a href={props.link}>{props.linkText}</a>
+          Kildekoden til denne nettsiden er&nbsp;
+          <a href="https://github.com/olejorgenbakken/home">
+            tilgjengelig på GitHub
+          </a>
         </p>
       </section>
     </footer>

@@ -3,16 +3,12 @@ import { Link } from "react-router-dom";
 import "./header.css";
 
 function Header(props) {
-  const headerStyle = {
-    background: props.background,
-  };
-
   return (
-    <header id="global-header" style={headerStyle}>
+    <header id="global-header" type={props.type}>
       <section className="width-1000">
         <h1>
           <Link to="/" title="Tilbake til startsiden">
-            {props.name}
+            Ole Jørgen
           </Link>
         </h1>
 

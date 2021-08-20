@@ -2,7 +2,7 @@ import "./grid.css";
 
 function Grid(props) {
   return (
-    <section className={"grid"} grids={props.grids}>
+    <section className={`grid`} grids={props.elements.length}>
       {props.elements}
     </section>
   );

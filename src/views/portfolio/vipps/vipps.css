@@ -2,7 +2,5 @@
   color: white;
   padding-top: 10em;
   padding-bottom: 10em;
-  background-position: center;
-  background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1549222945-0ca3a530493c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
+  background: #ff5b24;
 }

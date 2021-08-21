@@ -43,14 +43,6 @@ const experienceData = [
 const educationData = [
   {
     id: 1,
-    place: "Universitetet i Oslo",
-    workTitle: "Mastergrad i informatikk: Design, bruk og interaksjon",
-    startTime: "2021-08",
-    endTime: "2023-06",
-    description: "",
-  },
-  {
-    id: 2,
     place: "Høyskolen Kristiania",
     workTitle:
       "Bachelorgrad innen informatikk med spesialisering i interaksjonsdesign",
@@ -60,7 +52,7 @@ const educationData = [
       "Innføring i mange ulike informatikkemner, som databaser, programmering og datamaskinens oppbygging. Etter et felles førsteår ble vi delt inn i spesialiseringene våre hvor jeg hadde tre emner om interaksjonsdesign, hvor vi lærte om alt fra prototyping av brukergrensesnitt, og testing av disse, til innholdsproduksjon. Samtidig tok jeg også emner om utvikling i javascriptrammeverk som Vue og React, og Wordpress.",
   },
   {
-    id: 3,
+    id: 2,
     place: "Universitet i Oslo",
     workTitle: "Årsstudium i kjønnsstudier og sosiologi",
     startTime: "2017-08",
@@ -69,7 +61,7 @@ const educationData = [
       "Introduserende emner om ulike teorier innen sosiologi og kjønn.",
   },
   {
-    id: 4,
+    id: 3,
     place: "Høyskolen i Volda",
     workTitle: "Årsstudium i mediekommunikasjon",
     startTime: "2016-08",

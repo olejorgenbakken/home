@@ -76,7 +76,7 @@ class EntryItem extends Component<Props> {
   render() {
     console.log(this.props.logo)
 
-    if (this.props.logo == '' || this.props.logo == undefined) {
+    if (this.props.logo === '' || this.props.logo === undefined) {
       return (
         <article className="cv-entry" >
           <section className="content">

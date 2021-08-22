@@ -9,52 +9,52 @@
 }
 
 @media screen and (min-width: 360px) {
-  .grid[grids="6"] {
+  .grid[data-grids="6"] {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 400px) {
-  .grid[grids="5"],
-  .grid[grids="6"] {
+  .grid[data-grids="5"],
+  .grid[data-grids="6"] {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 600px) {
-  .grid[grids="2"],
-  .grid[grids="3"],
-  .grid[grids="4"],
-  .grid[grids="5"] {
+  .grid[data-grids="2"],
+  .grid[data-grids="3"],
+  .grid[data-grids="4"],
+  .grid[data-grids="5"] {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid[grids="6"] {
+  .grid[data-grids="6"] {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 800px) {
-  .grid[grids="3"] {
+  .grid[data-grids="3"] {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .grid[grids="5"],
-  .grid[grids="6"] {
+  .grid[data-grids="5"],
+  .grid[data-grids="6"] {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .grid[grids="4"] {
+  .grid[data-grids="4"] {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .grid[grids="5"] {
+  .grid[data-grids="5"] {
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .grid[grids="6"] {
+  .grid[data-grids="6"] {
     grid-template-columns: repeat(6, 1fr);
   }
 }

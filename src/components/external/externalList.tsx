@@ -6,13 +6,14 @@ import LinkedInLogo from "../../assets/logos/linkedin.svg";
 
 import ExternalItem from "./externalItem/externalItem";
 import Grid from "../grid/grid";
+import { Component } from "react";
 
 const webpages = [
   {
     id: 1,
     logo: GitHubLogo,
     title: "GitHub",
-    link: "https://github.com/olejorgenbakken",
+    href: "https://github.com/olejorgenbakken",
     description: "",
     color: "white",
   },
@@ -20,7 +21,7 @@ const webpages = [
     id: 2,
     logo: FigmaLogo,
     title: "Figma",
-    link: "https://figma.com/@olejorgen",
+    href: "https://figma.com/@olejorgen",
     description: "",
     color: "white",
   },
@@ -28,7 +29,7 @@ const webpages = [
     id: 3,
     logo: BehanceLogo,
     title: "Behance",
-    link: "https://behance.net/olejorgenbakken",
+    href: "https://behance.net/olejorgenbakken",
     description: "",
     color: "white",
   },
@@ -36,24 +37,31 @@ const webpages = [
     id: 4,
     logo: LinkedInLogo,
     title: "LinkedIn",
-    link: "https://www.linkedin.com/in/ole-jorgen-bakken/",
+    href: "https://www.linkedin.com/in/ole-jorgen-bakken/",
     description: "",
     color: "white",
   },
 ];
 
-function ExternalList() {
-  const externalList = webpages.map((page) => (
-    <ExternalItem
-      key={page.id}
-      title={page.title}
-      link={page.link}
-      logo={page.logo}
-      description={page.description}
-      background={page.color}
-    ></ExternalItem>
-  ));
-  return <Grid grids="5" elements={externalList} />;
+class ExternalList extends Component {
+
+  getList() {
+    const externalList = webpages.map((page) => (
+      <ExternalItem
+        key={page.id}
+        title={page.title}
+        href={page.href}
+        logo={page.logo}
+      ></ExternalItem>
+    ));
+
+    return (externalList);
+  }
+
+
+  render() {
+    return <Grid data-grids="5" elements={this.getList()} />;
+  }
 }
 
 export default ExternalList;

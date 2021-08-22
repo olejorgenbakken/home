@@ -34,20 +34,20 @@
   padding: 0;
 }
 
-#global-header[type="project"] {
+#global-header[data-type="project"] {
   top: 0;
   position: fixed;
   background: transparent;
 }
 
-#global-header[type="project"] a {
+#global-header[data-type="project"] a {
   color: white;
 }
 
-#global-header[type="project"] #global-menu a::after {
+#global-header[data-type="project"] #global-menu a::after {
   background: white;
 }
 
-#global-header[type="project"] #global-menu a:hover::after {
+#global-header[data-type="project"] #global-menu a:hover::after {
   background: var(--separator);
 }

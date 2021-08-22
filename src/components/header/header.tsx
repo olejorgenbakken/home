@@ -12,11 +12,11 @@ class Header extends Component<Props> {
     return (
       <header id="global-header" data-type={this.props.type}>
         <section className="width-1000">
-          <h1>
+          <span className="my-name">
             <Link to="/" title="Tilbake til startsiden">
               Ole Jørgen
             </Link>
-          </h1>
+          </span>
 
           <nav>
             <ul id="global-menu">

@@ -3,6 +3,7 @@ import "./entryItem.css";
 
 
 interface Props {
+  logo?: string,
   place: string,
   title: string,
   time: {
@@ -14,7 +15,7 @@ interface Props {
 
 class EntryItem extends Component<Props> {
 
-  getMonth(monthNum: number) {
+  getNorMonth(monthNum: number) {
     let monthName: string
 
     switch (monthNum) {
@@ -54,10 +55,8 @@ class EntryItem extends Component<Props> {
       case 12:
         monthName = 'desember'
         return monthName;
-
       default:
         break;
-
     }
   }
 
@@ -66,29 +65,55 @@ class EntryItem extends Component<Props> {
     let end = new Date(this.props.time.end - 1);
 
     let startYYYYMM = `${start.getFullYear()}-${start.getMonth()}`;
-    let startText = `${this.getMonth(start.getMonth())} ${start.getFullYear()}`;
+    let startText = `${this.getNorMonth(start.getMonth())} ${start.getFullYear()}`;
 
     let endYYYYMM = `${end.getFullYear()}-${end.getMonth()}`;
-    let endText = `${this.getMonth(end.getMonth())} ${end.getFullYear()}`;
+    let endText = `${this.getNorMonth(end.getMonth())} ${end.getFullYear()}`;
 
     return ({ startYYYYMM, startText, endYYYYMM, endText })
   }
 
   render() {
-    return (
-      <article className="cv-entry" >
-        <header>
-          <h3>{this.props.place}</h3>
-          <h4>{this.props.title}</h4>
-          <p className="date">
-            <time dateTime={this.toDate().startYYYYMM}>{this.toDate().startText}</time>
-            &nbsp;til&nbsp;
-            <time dateTime={this.toDate().endYYYYMM}>{this.toDate().endText}</time>
-          </p>
-        </header>
-        <p>{this.props.description}</p>
-      </article>
-    );
+    console.log(this.props.logo)
+
+    if (this.props.logo == '' || this.props.logo == undefined) {
+      return (
+        <article className="cv-entry" >
+          <section className="content">
+            <header>
+              <h3 className="place">{this.props.place}</h3>
+              <h4 className="title">{this.props.title}</h4>
+              <p className="date">
+                <time dateTime={this.toDate().startYYYYMM}>{this.toDate().startText}</time>
+                &nbsp;–&nbsp;
+                <time dateTime={this.toDate().endYYYYMM}>{this.toDate().endText}</time>
+              </p>
+            </header>
+            <p>{this.props.description}</p>
+          </section>
+        </article>
+      );
+    } else {
+      return (
+        <article className="cv-entry" >
+          <img src={this.props.logo} alt={`${this.props.place} logo`} />
+
+          <section className="content">
+            <header>
+              <h3 className="place">{this.props.place}</h3>
+              <h4 className="title">{this.props.title}</h4>
+              <p className="date">
+                <time dateTime={this.toDate().startYYYYMM}>{this.toDate().startText}</time>
+                &nbsp;–&nbsp;
+                <time dateTime={this.toDate().endYYYYMM}>{this.toDate().endText}</time>
+              </p>
+            </header>
+            <p>{this.props.description}</p>
+          </section>
+        </article >
+      );
+    }
+
   }
 }
 

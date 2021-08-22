@@ -1,0 +1,38 @@
+.cv-entry {
+  padding: 2em;
+  border: 1px solid var(--separator);
+  border-radius: 4px;
+}
+
+.cv-entry img {
+  height: 4em;
+  width: 4em;
+  object-fit: contain;
+  margin-bottom: 1em;
+}
+
+.cv-entry header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  padding-bottom: 8px;
+}
+
+.cv-entry .title {
+  font-weight: 500;
+}
+
+.cv-entry .date {
+  color: var(--text-lighter);
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 600px) {
+  .cv-entry {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+}

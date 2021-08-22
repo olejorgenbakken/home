@@ -7,6 +7,7 @@
   --background: #fffcf9;
   --background-darker: #fff3e6;
   --text: #121213;
+  --text-lighter: #838383;
   --separator: #d6d6d6;
   --link: #7eb4ff;
   --link-hover: #0061e9;
@@ -43,7 +44,8 @@ a {
   margin: 0;
 }
 
-h1 {
+h1,
+.my-name {
   font-size: 2em;
   line-height: 1.3em;
 }
@@ -123,6 +125,7 @@ img {
     --background: #15191f;
     --background-darker: #03090e;
     --text: #fff;
+    --text-lighter: #cfcfcf;
     --separator: #434346;
     --link: #156ce6;
     --link-hover: #4190ff;

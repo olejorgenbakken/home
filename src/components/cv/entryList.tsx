@@ -6,6 +6,7 @@ interface Props {
   title: string
   data: Array<{
     id?: number,
+    logo?: string,
     place: string,
     title: string,
     time: {
@@ -20,7 +21,7 @@ class EntryList extends Component<Props> {
 
   getList() {
     const entryList = this.props.data.map((entry) => (
-      <EntryItem place={entry.place} title={entry.title} time={entry.time} description={entry.description} />
+      <EntryItem logo={entry.logo} place={entry.place} title={entry.title} time={entry.time} description={entry.description} />
     ));
 
     return (entryList)

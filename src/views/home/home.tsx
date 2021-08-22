@@ -12,9 +12,9 @@ class Home extends Component {
 
   render() {
     return (
-      <section id="home" >
+      <section>
         <Header />
-        <main>
+        <main id="home">
           <Hero content={this.content}
           />
           <section className="width-1000 padding">

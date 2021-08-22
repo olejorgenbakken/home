@@ -16,11 +16,12 @@
   gap: 1em;
 }
 
-#global-header h1 a {
+#global-header .my-name a {
   color: inherit;
+  font-weight: 900;
 }
 
-#global-header h1 a::after {
+#global-header .my-name a::after {
   background: none;
 }
 

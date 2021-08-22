@@ -1,6 +1,5 @@
 .project-item {
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid var(--separator);
   padding: 2em;
   border-radius: 4px;
 }

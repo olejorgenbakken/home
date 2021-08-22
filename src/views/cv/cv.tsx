@@ -3,9 +3,12 @@ import Footer from "../../components/footer/footer";
 import EntryList from "../../components/cv/entryList";
 import { Component } from "react";
 
+import './cv.css';
+
 const experienceData = [
   {
     id: 1,
+    logo: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flh3.googleusercontent.com%2FdFTiB31J5oL-c25R3pMunMTvh6v5WV1p61tKybTetcUbst9Jw9-FwXDLZQEIH6MHaols&f=1&nofb=1',
     place: "Vipps",
     title: "Interaksjonsdesigner",
     time: {
@@ -89,9 +92,9 @@ const educationData = [
 class CV extends Component {
   render() {
     return (
-      <section id="cv">
+      <section>
         <Header />
-        <main className="width-1000">
+        <main className="width-1000" id="cv">
           <h1>CV</h1>
           <EntryList data={experienceData} title="Arbeidserfaring" />
           <hr />

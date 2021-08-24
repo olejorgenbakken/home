@@ -4,20 +4,34 @@ import "./externalItem.css";
 interface Props {
   title: string,
   href: string,
-  logo: string
+  logo?: string
 }
 
 class ExternalItem extends Component<Props> {
   render() {
-    return (
-      <a
-        href={this.props.href}
-        title={"Gå til " + this.props.title}
-        className="external-item"
-      >
-        {this.props.logo}
-      </a>
-    );
+    if (this.props.logo !== undefined) {
+      return (
+        <a
+          href={this.props.href}
+          title={"Gå til " + this.props.title}
+          className="external-item"
+        >
+          {this.props.logo}
+          <p>{this.props.title}</p>
+        </a>
+      );
+    } else {
+      return (
+        <a
+          href={this.props.href}
+          title={"Gå til " + this.props.title}
+          className="external-item"
+        >
+          <p>{this.props.title}</p>
+        </a>
+      );
+    }
+
   }
 
 }

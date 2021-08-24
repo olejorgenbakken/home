@@ -1,8 +1,8 @@
 import "./externalList.css";
-import GitHubLogo from "../../assets/logos/github.svg";
-import FigmaLogo from "../../assets/logos/figma.svg";
-import BehanceLogo from "../../assets/logos/behance.svg";
-import LinkedInLogo from "../../assets/logos/linkedin.svg";
+// import { ReactComponent as GitHubLogo } from "../../assets/logos/github.svg";
+// import { ReactComponent as FigmaLogo } from "../../assets/logos/figma.svg";
+import BehanceLogo from '../../assets/logos/behance';
+// import { ReactComponent as LinkedInLogo } from "../../assets/logos/linkedin.svg";
 
 import ExternalItem from "./externalItem/externalItem";
 import Grid from "../grid/grid";
@@ -11,7 +11,6 @@ import { Component } from "react";
 const webpages = [
   {
     id: 1,
-    logo: GitHubLogo,
     title: "GitHub",
     href: "https://github.com/olejorgenbakken",
     description: "",
@@ -19,7 +18,6 @@ const webpages = [
   },
   {
     id: 2,
-    logo: FigmaLogo,
     title: "Figma",
     href: "https://figma.com/@olejorgen",
     description: "",
@@ -35,7 +33,6 @@ const webpages = [
   },
   {
     id: 4,
-    logo: LinkedInLogo,
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/ole-jorgen-bakken/",
     description: "",
@@ -51,7 +48,6 @@ class ExternalList extends Component {
         key={page.id}
         title={page.title}
         href={page.href}
-        logo={page.logo}
       />
     ));
 

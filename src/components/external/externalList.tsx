@@ -1,12 +1,13 @@
+import { Component } from "react";
+import Grid from "../grid/grid";
+
 import "./externalList.css";
 // import { ReactComponent as GitHubLogo } from "../../assets/logos/github.svg";
 // import { ReactComponent as FigmaLogo } from "../../assets/logos/figma.svg";
-import BehanceLogo from '../../assets/logos/behance';
+import BehanceIcon from '../../assets/logos/behance';
 // import { ReactComponent as LinkedInLogo } from "../../assets/logos/linkedin.svg";
 
 import ExternalItem from "./externalItem/externalItem";
-import Grid from "../grid/grid";
-import { Component } from "react";
 
 const webpages = [
   {
@@ -25,11 +26,11 @@ const webpages = [
   },
   {
     id: 3,
-    logo: BehanceLogo,
     title: "Behance",
     href: "https://behance.net/olejorgenbakken",
     description: "",
     color: "white",
+    logo: BehanceIcon
   },
   {
     id: 4,
@@ -56,7 +57,12 @@ class ExternalList extends Component {
 
 
   render() {
-    return <Grid data-grids="5" elements={this.getList()} />;
+    return (
+      <section>
+        <Grid data-grids="5" elements={this.getList()} />
+        <BehanceIcon fill='blue' fill2="#fff" />
+      </section>
+    );
   }
 }
 

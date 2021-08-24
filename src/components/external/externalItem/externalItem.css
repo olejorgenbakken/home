@@ -1,7 +1,7 @@
 .external-item {
   width: max-content;
   padding: 1em 2em;
-  background: white;
+  background: var(--background-darker);
   border: 1px solid var(--link);
   box-shadow: 0 0 4px var(--link);
   border-radius: 4px;

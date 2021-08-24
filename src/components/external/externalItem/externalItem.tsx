@@ -4,7 +4,7 @@ import "./externalItem.css";
 interface Props {
   title: string,
   href: string,
-  logo?: React.ReactSVGElement
+  logo?: string
 }
 
 class ExternalItem extends Component<Props> {
@@ -16,7 +16,6 @@ class ExternalItem extends Component<Props> {
           title={"Gå til " + this.props.title}
           className="external-item"
         >
-          {this.props.logo}
           <p>{this.props.title}</p>
         </a>
       );
@@ -27,7 +26,6 @@ class ExternalItem extends Component<Props> {
           title={"Gå til " + this.props.title}
           className="external-item"
         >
-          {this.props.logo}
           <p>{this.props.title}</p>
         </a>
       );

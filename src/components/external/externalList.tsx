@@ -4,7 +4,7 @@ import Grid from "../grid/grid";
 import "./externalList.css";
 // import { ReactComponent as GitHubLogo } from "../../assets/logos/github.svg";
 // import { ReactComponent as FigmaLogo } from "../../assets/logos/figma.svg";
-import BehanceIcon from '../../assets/logos/behance';
+// import BehanceIcon from '../../assets/logos/behance';
 // import { ReactComponent as LinkedInLogo } from "../../assets/logos/linkedin.svg";
 
 import ExternalItem from "./externalItem/externalItem";
@@ -30,7 +30,6 @@ const webpages = [
     href: "https://behance.net/olejorgenbakken",
     description: "",
     color: "white",
-    logo: BehanceIcon
   },
   {
     id: 4,
@@ -60,7 +59,6 @@ class ExternalList extends Component {
     return (
       <section>
         <Grid data-grids="5" elements={this.getList()} />
-        <BehanceIcon fill='blue' fill2="#fff" />
       </section>
     );
   }

@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 
-import "./styles/style.css";
+import "./styles/global.css";
 import Home from "./views/home/home";
 import Portfolio from "./views/portfolio/portfolio";
 import CV from "./views/cv/cv";

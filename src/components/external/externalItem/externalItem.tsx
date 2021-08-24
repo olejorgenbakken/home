@@ -15,7 +15,7 @@ class ExternalItem extends Component<Props> {
         title={"Gå til " + this.props.title}
         className="external-item"
       >
-        <img src={this.props.logo} alt={this.props.title + " logo"} />
+        {this.props.logo}
       </a>
     );
   }

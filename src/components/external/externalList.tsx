@@ -52,7 +52,7 @@ class ExternalList extends Component {
         title={page.title}
         href={page.href}
         logo={page.logo}
-      ></ExternalItem>
+      />
     ));
 
     return (externalList);

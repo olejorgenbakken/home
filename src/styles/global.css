@@ -1,7 +1,5 @@
 @import "./normalize.css";
-@import "./constraints.css";
-@import "./flex.css";
-@import "./grid.css";
+@import "./util.css";
 
 :root {
   --background: #fffcf9;
@@ -9,8 +7,6 @@
   --text: #121213;
   --text-lighter: #838383;
   --separator: #d6d6d6;
-  --link: #7eb4ff;
-  --link-hover: #0061e9;
 }
 
 * {
@@ -77,6 +73,8 @@ li {
 }
 
 a {
+  --link: #7eb4ff;
+  --link-hover: #0061e9;
   text-decoration: none;
   display: inline-block;
   position: relative;
@@ -127,6 +125,9 @@ img {
     --text: #fff;
     --text-lighter: #cfcfcf;
     --separator: #434346;
+  }
+
+  a {
     --link: #156ce6;
     --link-hover: #4190ff;
   }

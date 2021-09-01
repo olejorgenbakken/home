@@ -1,18 +1,29 @@
 import { Route, Switch } from "react-router-dom";
 
 import "./styles/global.css";
-import Home from "./views/home/home";
-import Portfolio from "./views/portfolio/portfolio";
-import CV from "./views/cv/cv";
+import Header from "./components/header/header";
+import Home from "./Views/Home/home";
+import CV from "./Views/CV/cv";
+import NotFound from "./Views/NotFound/NotFound";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
     <Switch>
-      <Route exact path="/" component={Home}></Route>
-      <Route path="/portefølje" component={Portfolio} />
-      <Route path="/cv" component={CV}></Route>
+      <Route exact path="/">
+        <Header />
+        <Home />
+        <Footer />
+      </Route>
+      <Route exact path="/cv">
+        <Header />
+        <CV />
+        <Footer />
+      </Route>
       <Route>
-        <h1>404</h1>
+        <Header type="fixed" />
+        <NotFound />
+        <Footer />
       </Route>
     </Switch>
   );

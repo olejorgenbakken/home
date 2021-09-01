@@ -8,6 +8,23 @@
   padding: 4em 1em;
 }
 
+.hero-xl {
+  padding: 8em 1em;
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    var(--background) 0%,
+    var(--background-darker) 50%,
+    var(--background)
+  );
+}
+
+.hero-gradient {
+  background-size: cover;
+  background-position: center center;
+}
+
 .hero article {
   padding: 3em 2em;
   background: var(--background);

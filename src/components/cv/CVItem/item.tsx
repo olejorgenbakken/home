@@ -1,9 +1,8 @@
 import { Component } from "react";
-import "./entryItem.css";
+import "./item.css";
 
 
 interface Props {
-  logo?: string,
   place: string,
   title: string,
   time: {
@@ -13,7 +12,7 @@ interface Props {
   description: string
 }
 
-class EntryItem extends Component<Props> {
+class CVItem extends Component<Props> {
 
   getNorMonth(monthNum: number) {
     let monthName: string
@@ -74,47 +73,23 @@ class EntryItem extends Component<Props> {
   }
 
   render() {
-    console.log(this.props.logo)
-
-    if (this.props.logo === '' || this.props.logo === undefined) {
-      return (
-        <article className="cv-entry" >
-          <section className="content">
-            <header>
-              <h3 className="place">{this.props.place}</h3>
-              <h4 className="title">{this.props.title}</h4>
-              <p className="date">
-                <time dateTime={this.toDate().startYYYYMM}>{this.toDate().startText}</time>
-                &nbsp;–&nbsp;
-                <time dateTime={this.toDate().endYYYYMM}>{this.toDate().endText}</time>
-              </p>
-            </header>
-            <p>{this.props.description}</p>
-          </section>
-        </article>
-      );
-    } else {
-      return (
-        <article className="cv-entry" >
-          <img src={this.props.logo} alt={`${this.props.place} logo`} />
-
-          <section className="content">
-            <header>
-              <h3 className="place">{this.props.place}</h3>
-              <h4 className="title">{this.props.title}</h4>
-              <p className="date">
-                <time dateTime={this.toDate().startYYYYMM}>{this.toDate().startText}</time>
-                &nbsp;–&nbsp;
-                <time dateTime={this.toDate().endYYYYMM}>{this.toDate().endText}</time>
-              </p>
-            </header>
-            <p>{this.props.description}</p>
-          </section>
-        </article >
-      );
-    }
-
+    return (
+      <article className="cv-entry" >
+        <section className="content">
+          <header>
+            <h3 className="place">{this.props.place}</h3>
+            <h4 className="title">{this.props.title}</h4>
+            <p className="date">
+              <time dateTime={this.toDate().startYYYYMM}>{this.toDate().startText}</time>
+              &nbsp;–&nbsp;
+              <time dateTime={this.toDate().endYYYYMM}>{this.toDate().endText}</time>
+            </p>
+          </header>
+          <p>{this.props.description}</p>
+        </section>
+      </article >
+    );
   }
 }
 
-export default EntryItem;
+export default CVItem;

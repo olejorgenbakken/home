@@ -3,7 +3,7 @@
 
 :root {
   --background: #fffcf9;
-  --background-darker: #fff3e6;
+  --background-darker: #fff7f3;
   --text: #121213;
   --text-lighter: #838383;
   --separator: #d6d6d6;
@@ -81,7 +81,7 @@ a {
   color: inherit;
 }
 
-a::after {
+p a::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -90,14 +90,16 @@ a::after {
   height: 2px;
   border-radius: 2px;
   background: var(--link);
+  transition: 0.2s ease-in-out;
 }
 
-a:hover::after {
+p a:hover::after {
   background: var(--link-hover);
 }
 
 ul {
   margin: 0;
+  padding: 0;
 }
 
 hr {
@@ -121,7 +123,7 @@ img {
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #15191f;
-    --background-darker: #03090e;
+    --background-darker: #090f13;
     --text: #fff;
     --text-lighter: #cfcfcf;
     --separator: #434346;

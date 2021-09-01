@@ -1,0 +1,11 @@
+#home {
+  display: grid;
+  grid-template-rows: 1fr max-content;
+  min-height: calc(100vh - 100px);
+}
+
+#home .external-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

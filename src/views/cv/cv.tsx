@@ -1,6 +1,4 @@
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
-import EntryList from "../../components/cv/entryList";
+import EntryList from "../../components/cv/list";
 import { Component } from "react";
 
 import './cv.css';
@@ -92,16 +90,11 @@ const educationData = [
 class CV extends Component {
   render() {
     return (
-      <section>
-        <Header />
-        <main className="width-1000" id="cv">
-          <h1>CV</h1>
-          <EntryList data={experienceData} title="Arbeidserfaring" />
-          <hr />
-          <EntryList data={educationData} title="Utdanning" />
-        </main>
-        <Footer />
-      </section>
+      <main className="width-1000" id="cv">
+        <EntryList data={experienceData} title="Arbeidserfaring" />
+        <hr />
+        <EntryList data={educationData} title="Utdanning" />
+      </main>
     );
   }
 

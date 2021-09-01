@@ -1,6 +1,6 @@
 import { Component } from "react";
-import { ReactComponent as Icon } from "../../../assets/icons/link_external.svg";
-import "./externalLink.css";
+import { ReactComponent as ExternalIcon } from "../../assets/icons/link_external.svg";
+import "./link.css";
 
 interface Props {
   href: string,
@@ -12,10 +12,10 @@ class ExternalLink extends Component<Props> {
   render() {
     return (
       <span className="external-link">
-        <a href={this.props.href} title={this.props.title} className="external-link">
+        <a href={this.props.href} title={this.props.title} className="link">
           {this.props.text}
         </a>
-        <Icon />
+        <ExternalIcon />
       </span>
     );
   }

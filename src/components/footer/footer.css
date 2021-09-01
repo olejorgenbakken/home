@@ -4,6 +4,7 @@
   padding-top: 4em;
   padding-bottom: 4em;
   background: var(--background-darker);
+  border-top: 1px solid var(--separator);
 }
 
 #global-footer .content {

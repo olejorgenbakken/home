@@ -1,16 +1,3 @@
-.cv-entry {
-  padding: 2em;
-  border: 1px solid var(--separator);
-  border-radius: 4px;
-}
-
-.cv-entry img {
-  height: 4em;
-  width: 4em;
-  object-fit: contain;
-  margin-bottom: 1em;
-}
-
 .cv-entry header {
   display: flex;
   flex-direction: column;

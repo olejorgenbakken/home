@@ -1,54 +1,21 @@
 #global-header {
+  width: 100%;
   height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  background: var(--background);
 }
 
-#global-header section {
+#global-menu {
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
 }
 
-#global-header .my-name a {
-  color: inherit;
-  font-weight: 900;
-}
-
-#global-header .my-name a::after {
-  background: none;
-}
-
-#global-menu {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 1em 2em;
-  padding: 0;
-}
-
-#global-header[data-type="project"] {
-  top: 0;
-  position: fixed;
-  background: transparent;
-}
-
-#global-header[data-type="project"] a {
-  color: white;
-}
-
-#global-header[data-type="project"] #global-menu a::after {
-  background: white;
-}
-
-#global-header[data-type="project"] #global-menu a:hover::after {
-  background: var(--separator);
+#global-menu .home a {
+  font-size: 1.3em;
+  font-weight: 700;
 }

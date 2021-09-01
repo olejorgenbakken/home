@@ -1,0 +1,10 @@
+@import "../card.css";
+
+.card-link {
+  border-color: var(--link);
+  transition: 0.2s ease-in-out;
+}
+
+.card-link:hover {
+  border-color: var(--link-hover);
+}

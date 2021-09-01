@@ -4,37 +4,52 @@ import { Link } from "react-router-dom";
 import "./header.css";
 
 interface Props {
-  type?: string
+  type?: 'default' | 'fixed';
 }
 
 class Header extends Component<Props> {
   render() {
-    return (
-      <header id="global-header" data-type={this.props.type}>
-        <section className="width-1000">
-          <span className="my-name">
-            <Link to="/" title="Tilbake til startsiden">
-              Ole Jørgen
-            </Link>
-          </span>
+    switch (this.props.type) {
+      case 'fixed':
+        return (
+          <header id="global-header" className="fixed">
+            <nav className="width-1000">
+              <ul id="global-menu">
+                <li className="home">
+                  <Link to="/" title="Til hovedsiden">
+                    Ole Jørgen
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/cv" title="Gå til CVen min">
+                    CV
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </header>
+        );
 
-          <nav>
-            <ul id="global-menu">
-              <li>
-                <Link to="/portefølje" title="Se porteføljen min">
-                  Portefølje
-                </Link>
-              </li>
-              <li>
-                <Link to="/cv" title="Gå til CVen min">
-                  CV
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </section>
-      </header>
-    );
+      default:
+        return (
+          <header id="global-header" className="default">
+            <nav className="width-1000">
+              <ul id="global-menu">
+                <li className="home">
+                  <Link to="/" title="Til hovedsiden">
+                    Ole Jørgen
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/cv" title="Gå til CVen min">
+                    CV
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </header>
+        );
+    }
   }
 
 }

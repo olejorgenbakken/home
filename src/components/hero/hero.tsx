@@ -3,8 +3,13 @@ import "./hero.css";
 
 interface Props {
   background?: 'default' | 'gradient',
-  heading: {
-    level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5',
+  heading?: {
+    level: string
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5',
     text: string
   },
   description?: string

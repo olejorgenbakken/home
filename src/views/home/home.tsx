@@ -29,8 +29,6 @@ class Home extends Component {
       <main id="home">
         <Hero
           background="gradient"
-          size="xl"
-          image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F2000%2F0*D4c3Wot2boeghGqI.gif&f=1&nofb=1"
           content={this.content}
         />
         <section className="width-1000 padding external-links">

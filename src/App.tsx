@@ -21,7 +21,7 @@ function App() {
         <Footer />
       </Route>
       <Route>
-        <Header type="fixed" />
+        <Header background="transparent" position="absolute" />
         <NotFound />
         <Footer />
       </Route>

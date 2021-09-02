@@ -5,6 +5,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#global-header[data-bg="transparent"] {
+  background: transparent;
+}
+
+#global-header[data-pos="fixed"] {
+  position: fixed;
+}
+
+#global-header[data-pos="absolute"] {
+  position: absolute;
 }
 
 #global-menu {

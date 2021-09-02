@@ -2,59 +2,60 @@ import { Component } from "react";
 import "./hero.css";
 
 interface Props {
-  background: 'none' | 'gradient' | 'image',
-  size?: 'default' | 'xl',
-  image?: string,
-  content: {
-    heading: string,
+  background?: 'default' | 'gradient',
+  heading: {
+    level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5',
     text: string
-  }
+  },
+  description?: string
 }
 
 class Hero extends Component<Props> {
-  render() {
-
-    switch (this.props.background) {
-      case 'gradient':
-        return (
-          <section className={`hero hero-${this.props.size} hero-${this.props.background}`}>
-            <article className="width-1000">
-              <h2>{this.props.content.heading}</h2>
-              <p>{this.props.content.text}</p>
-            </article>
-          </section>
-        );
-
-      case 'image':
-        const styles = {
-          constainer: {
-            backgroundImage: `url(${this.props.image})`
-          }
-        }
-
-        return (
-          <section className={`hero hero-${this.props.size} hero-${this.props.background}`} style={styles.constainer}>
-            <article className="width-1000">
-              <h2>{this.props.content.heading}</h2>
-              <p>{this.props.content.text}</p>
-            </article>
-          </section>
-        );
-
-
+  setHeading() {
+    switch (this.props.heading?.level) {
+      case 'h1':
+        return (<h1>{this.props.heading.text}</h1>);
+      case 'h2':
+        return (<h2>{this.props.heading.text}</h2>);
+      case 'h3':
+        return (<h3>{this.props.heading.text}</h3>);
+      case 'h4':
+        return (<h4>{this.props.heading.text}</h4>);
+      case 'h5':
+        return (<h5>{this.props.heading.text}</h5>);
       default:
-        return (
-          <section className={`hero hero-${this.props.size} `}>
-            <article className="width-1000">
-              <h2>{this.props.content.heading}</h2>
-              <p>{this.props.content.text}</p>
-            </article>
-          </section>
-        );
+        break;
     }
   }
 
+  setStyle() {
+    let style = {
+    }
 
+    switch (this.props.background) {
+      case 'gradient':
+        style = {
+          background: `linear-gradient(var(--background) 0%, var(--background-darker) 50%, var(--background) 100%)`
+        }
+        return style
+
+      default:
+        console.log(this.props.background)
+        break;
+    }
+  }
+
+  render() {
+    console.log(this.setStyle())
+    return (
+      <section className={`hero`} style={this.setStyle()}>
+        <article>
+          {this.setHeading()}
+          <p>{this.props.description}</p>
+        </article>
+      </section>
+    );
+  }
 }
 
 export default Hero;

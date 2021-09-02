@@ -5,9 +5,10 @@
   margin: 0 auto;
 }
 
-.padding {
-  padding-top: 4em;
-  padding-bottom: 4em;
+@media (min-width: 400px) {
+  .width-1000 {
+    padding: 0 2em;
+  }
 }
 
 .header-padding {

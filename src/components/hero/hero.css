@@ -5,7 +5,6 @@
   align-items: center;
   background-size: cover;
   background-position: center;
-  padding: 4em 1em;
 }
 
 .hero-xl {
@@ -16,7 +15,7 @@
   background: linear-gradient(
     var(--background) 0%,
     var(--background-darker) 50%,
-    var(--background)
+    var(--background) 100%
   );
 }
 
@@ -26,18 +25,11 @@
 }
 
 .hero article {
-  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 3em;
   background: var(--background);
   border: 1px solid var(--separator);
-  border-radius: 4px;
-}
-
-.hero article h2 {
-  font-size: 2.5em;
-}
-
-@media screen and (min-width: 1000px) {
-  .hero {
-    padding: 10em 1em;
-  }
+  border-radius: 12px;
 }

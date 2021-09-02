@@ -16,13 +16,11 @@ class Header extends Component<Props> {
         data-bg={this.props.background}
         data-pos={this.props.position}
         className={`header-fixed`}>
-        <nav className="width-1000">
-          <ul id="global-menu">
-            <li className="home">
-              <Link to="/" title="Til hovedsiden">
-                Ole Jørgen
-              </Link>
-            </li>
+        <nav className="width-1000" id="global-menu">
+          <Link to="/" title="Til hovedsiden" className="home">
+            Hovedside
+          </Link>
+          <ul>
             <li>
               <Link to="/cv" title="Gå til CVen min">
                 CV

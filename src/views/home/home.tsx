@@ -7,9 +7,12 @@ import webpages from "../../assets/data/webpages";
 import './home.css'
 
 class Home extends Component {
-  content = {
-    heading: "Hei 👋",
-    text: "Jeg heter Ole Jørgen, og jeg lager ting på internett. Denne nettsiden er nettopp påbegynt."
+  hero = {
+    heading: {
+      level: "h1",
+      text: "Hei, Ole Jørgen her 👋"
+    },
+    description: "Jeg designer og utvikler ting på internett. Denne nettsiden er nettopp påbegynt, så sjekk ut sidene nedenfor til jeg har fått samlet alt her."
   }
 
   getWebpages() {
@@ -26,14 +29,13 @@ class Home extends Component {
 
   render() {
     return (
-      <main id="home">
+      <main id="home" className="width-1000">
         <Hero
           background="gradient"
-          content={this.content}
+          heading={this.hero.heading}
+          description={this.hero.description}
         />
-        <section className="width-1000 padding external-links">
-          <Grid elements={this.getWebpages()} />
-        </section>
+        <Grid elements={this.getWebpages()} />
       </main>
     );
   }

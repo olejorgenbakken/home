@@ -20,7 +20,7 @@ class EntryList extends Component<Props> {
 
   getList() {
     const entryList = this.props.data.map((entry) => (
-      <CVItem place={entry.place} title={entry.title} time={entry.time} description={entry.description} />
+      <CVItem key={entry.id} place={entry.place} title={entry.title} time={entry.time} description={entry.description} />
     ));
 
     return (entryList)

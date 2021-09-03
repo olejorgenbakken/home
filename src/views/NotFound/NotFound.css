@@ -129,7 +129,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.4em;
-  padding-bottom: var(--padding);
+  padding-bottom: var(--spacing);
   z-index: 1;
 }
 

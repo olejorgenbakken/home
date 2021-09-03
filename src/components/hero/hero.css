@@ -25,7 +25,7 @@
 }
 
 .hero article {
-  padding: var(--padding);
+  padding: var(--spacing);
   display: flex;
   flex-direction: column;
   gap: 0.4em;

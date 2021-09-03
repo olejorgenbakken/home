@@ -2,12 +2,16 @@
   display: grid;
   grid-template-rows: 1fr max-content;
   min-height: calc(100vh - var(--header-height));
-  padding-bottom: var(--padding);
+  padding-bottom: var(--spacing);
+}
+
+#home > *:first-of-type {
+  padding-bottom: var(--spacing);
 }
 
 @media (min-width: 1000px) {
   #home {
-    gap: var(--padding);
-    padding-bottom: calc(var(--padding) * 2);
+    gap: var(--spacing);
+    padding-bottom: calc(var(--spacing) * 2);
   }
 }

@@ -1,12 +1,11 @@
 @import "./normalize.css";
-@import "./util.css";
 
 :root {
   --background: #fffcf9;
   --background-darker: #fff7f3;
-  --text: #121213;
-  --text-lighter: #838383;
-  --separator: #d6d6d6;
+  --header-height: 8em;
+  --padding: 2em;
+  --max-width: 1000px;
 }
 
 * {
@@ -16,7 +15,6 @@
 body {
   margin: 0;
   background: var(--background);
-  color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -36,22 +34,28 @@ h4,
 h5,
 h6,
 p,
-a {
+a,
+ul,
+li,
+label {
+  padding: 0;
   margin: 0;
+  --text: #121213;
+  --text-lighter: #838383;
 }
 
-h1,
-.my-name {
+h1 {
   font-size: 2em;
   line-height: 1.3em;
+  font-weight: 700;
 }
 
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   line-height: 1.5em;
+  font-weight: 700;
 }
 
 h2 {
@@ -64,6 +68,10 @@ h3 {
 
 h4 {
   font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
 }
 
 p,
@@ -97,9 +105,10 @@ p a:hover::after {
   background: var(--link-hover);
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+hr,
+footer,
+.card {
+  --separator: #d6d6d6;
 }
 
 hr {

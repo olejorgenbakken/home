@@ -1,12 +1,13 @@
 #home {
   display: grid;
   grid-template-rows: 1fr max-content;
-  min-height: calc(100vh - 100px);
-  padding-bottom: 4em;
+  min-height: calc(100vh - var(--header-height));
+  padding-bottom: var(--padding);
 }
 
-#home .external-links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+@media (min-width: 1000px) {
+  #home {
+    gap: var(--padding);
+    padding-bottom: calc(var(--padding) * 2);
+  }
 }

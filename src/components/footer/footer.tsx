@@ -7,7 +7,7 @@ class Footer extends Component {
   render() {
     return (
       <footer id="global-footer" >
-        <section className="container content">
+        <section className="content">
           <p>
             Takk for at du sjekket ut nettsiden min. &nbsp;
             <Link

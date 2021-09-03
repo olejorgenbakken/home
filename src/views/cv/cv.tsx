@@ -7,7 +7,7 @@ import './cv.css';
 class Cv extends Component {
   render() {
     return (
-      <main className="width-1000" id="cv">
+      <main className="container" id="cv">
         <EntryList data={CV.experience} title="Arbeidserfaring" />
         <hr />
         <EntryList data={CV.education} title="Utdanning" />

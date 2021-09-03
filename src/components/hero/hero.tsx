@@ -54,7 +54,7 @@ class Hero extends Component<Props> {
     console.log(this.setStyle())
     return (
       <section className={`hero`} style={this.setStyle()}>
-        <article>
+        <article className="container">
           {this.setHeading()}
           <p>{this.props.description}</p>
         </article>

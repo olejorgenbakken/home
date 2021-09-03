@@ -16,7 +16,7 @@ class Header extends Component<Props> {
         data-bg={this.props.background}
         data-pos={this.props.position}
         className={`header-fixed`}>
-        <nav className="width-1000" id="global-menu">
+        <nav className="container" id="global-menu">
           <Link to="/" title="Til hovedsiden" className="home">
             Hovedside
           </Link>

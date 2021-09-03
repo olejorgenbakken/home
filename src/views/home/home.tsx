@@ -29,7 +29,7 @@ class Home extends Component {
 
   render() {
     return (
-      <main id="home" className="width-1000">
+      <main id="home">
         <Hero
           background="gradient"
           heading={this.hero.heading}

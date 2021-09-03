@@ -7,7 +7,7 @@ class Footer extends Component {
   render() {
     return (
       <footer id="global-footer" >
-        <section className="width-1000 content">
+        <section className="container content">
           <p>
             Takk for at du sjekket ut nettsiden min. &nbsp;
             <Link

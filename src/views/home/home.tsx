@@ -10,7 +10,7 @@ class Home extends Component {
   hero = {
     heading: {
       level: "h1",
-      text: "Hei, Ole Jørgen her 👋"
+      title: "Hei, Ole Jørgen her 👋"
     },
     description: "Jeg designer og utvikler ting på internett. Denne nettsiden er nettopp påbegynt, så sjekk ut sidene nedenfor til jeg har fått samlet alt her."
   }
@@ -35,7 +35,7 @@ class Home extends Component {
           heading={this.hero.heading}
           description={this.hero.description}
         />
-        <Grid elements={this.getWebpages()} />
+        <Grid elements={this.getWebpages()} columns={4} width="contained" />
       </main>
     );
   }

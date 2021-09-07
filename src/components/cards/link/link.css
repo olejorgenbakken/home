@@ -2,9 +2,15 @@
 
 .card-link {
   border-color: var(--link);
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .card-link:hover {
   border-color: var(--link-hover);
+}
+
+.card-link .card-content {
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
 }

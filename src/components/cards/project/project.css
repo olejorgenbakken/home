@@ -1,0 +1,53 @@
+@import "../card.css";
+
+.card-project {
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 130px;
+}
+
+.card-project .card-image {
+  display: none;
+}
+
+.card-project .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--spacing);
+}
+
+.card-project .card-content h2 {
+  font-size: 1.4em;
+}
+
+@media (min-width: 700px) {
+  .card-project .card-content h2 {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 900px) {
+  .card-project {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .card-project .card-content {
+    padding: calc(var(--spacing) * 2);
+  }
+
+  .card-project .card-content h2 {
+    font-size: 3em;
+  }
+
+  .card-project .card-image {
+    display: flex;
+    height: 100%;
+    width: 50%;
+  }
+}

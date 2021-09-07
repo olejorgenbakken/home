@@ -1,7 +1,7 @@
 #cv {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: var(--spacing);
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;

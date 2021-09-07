@@ -1,13 +1,20 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import './link.css'
 
 interface Props {
   image?: string,
-  text?: string
+  text: string
   href: string
 }
 
 class LinkCard extends Component<Props> {
+
+  getContent() {
+    return (<section className="card-content">
+      <p>{this.props.text}</p>
+    </section>)
+  }
+
   render() {
     if (this.props.image !== undefined) {
       return (
@@ -15,17 +22,13 @@ class LinkCard extends Component<Props> {
           <section className="card-image">
             <img src={this.props.image} alt={this.props.image} />
           </section>
-          <section className="card-content">
-            <p>{this.props.text}</p>
-          </section>
+          {this.getContent()}
         </a >
       )
     } else {
       return (
         <a className="card card-link" href={this.props.href} title={`Gå til ${this.props.text}`}>
-          <section className="card-content">
-            <p>{this.props.text}</p>
-          </section>
+          {this.getContent()}
         </a >
       )
     }

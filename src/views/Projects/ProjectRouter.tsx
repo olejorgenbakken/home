@@ -14,7 +14,7 @@ class ProjectRouter extends Component {
     render() {
         return (
             <Switch>
-                <Route path={"/prosjekter/vipps"}>
+                <Route path="/prosjekter/vipps">
                     <Header position="absolute" background="transparent" />
                     <Vipps />
                     <Footer />

@@ -125,15 +125,6 @@ img {
   max-width: 100%;
 }
 
-button {
-  font-size: 1em;
-  padding: 1em 2em;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 @media (min-width: 400px) {
   :root {
     --spacing: 2em;

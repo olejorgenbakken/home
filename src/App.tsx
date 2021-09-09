@@ -6,7 +6,6 @@ import { Route, Switch } from "react-router-dom";
 
 import Header from "./components/header/header";
 import Home from "./Views/Home/Home";
-import ProjectRouter from './Views/Projects/ProjectRouter';
 import CV from "./Views/CV/Cv";
 import NotFound from "./Views/NotFound/NotFound";
 import Footer from "./components/footer/footer";
@@ -17,23 +16,28 @@ const ProjectsRouter = loadable(() => import("./Views/Projects/ProjectRouter"));
 
 
 class App extends Component<RouteComponentProps, any> {
+
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <Switch>
-        <Route path={`${process.env.PUBLIC_URL}/prosjekter`}>
+        <Route path="/prosjekter">
           <ProjectsRouter />
         </Route>
-        <Route exact path={`${process.env.PUBLIC_URL}/cv`}>
+        <Route exact path="/cv">
           <Header />
           <CV />
           <Footer />
         </Route>
-        <Route exact path={process.env.PUBLIC_URL}>
+        <Route exact path="/">
           <Header />
           <Home />
           <Footer />
         </Route>
-        <Route path="/">
+        <Route path="*">
           <Header background="transparent" position="absolute" />
           <NotFound message="Denne siden ekisterer ikke (ennå)" link="/" linkTitle="Gå til hovedsiden" />
           <Footer />

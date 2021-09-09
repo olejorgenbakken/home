@@ -1,9 +1,9 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
 
 import './vipps.css';
 
 import Hero from "../../../components/hero/hero";
+import Button from "../../../components/button/Button";
 
 class Vipps extends Component {
     render() {
@@ -11,7 +11,7 @@ class Vipps extends Component {
         return (
             <main id="vipps">
                 <Hero headingLevel="h1" headingTitle="Vipps" />
-                <Link to={"/prosjekter"}>Til alle prosjekter</Link>
+                <Button text={"Til alle prosjekter"} link="/prosjekter" />
             </main>
         )
     }

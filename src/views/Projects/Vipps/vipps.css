@@ -1,0 +1,9 @@
+#vipps {
+  padding-top: var(--header-height);
+}
+
+#vipps header {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: var(--spacing);
+}

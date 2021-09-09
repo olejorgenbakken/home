@@ -1,38 +1,43 @@
+import { Component } from "react";
+import { RouteComponentProps, withRouter } from 'react-router';
 import { Route, Switch } from "react-router-dom";
 
-import "./styles/global.css";
 import Header from "./components/header/header";
 import Home from "./Views/Home/Home";
 import CV from "./Views/CV/Cv";
-import Projects from "./Views/Projects/Projects";
+import ProjectRouter from "./Views/Projects/ProjectRouter";
 import NotFound from "./Views/NotFound/NotFound";
 import Footer from "./components/footer/footer";
 
-function App() {
-  return (
-    <Switch>
-      <Route exact path="/prosjekter">
-        <Header />
-        <Projects />
-        <Footer />
-      </Route>
-      <Route exact path="/cv">
-        <Header />
-        <CV />
-        <Footer />
-      </Route>
-      <Route exact path="/">
-        <Header />
-        <Home />
-        <Footer />
-      </Route>
-      <Route>
-        <Header background="transparent" position="absolute" />
-        <NotFound />
-        <Footer />
-      </Route>
-    </Switch>
-  );
+import "./styles/global.css";
+import ProjectsList from "./Views/Projects/ProjectsList/ProjectsList";
+
+class App extends Component<RouteComponentProps, any> {
+  render() {
+    return (
+      <Switch>
+        <Route path={`${process.env.PUBLIC_URL}/prosjekter`}>
+          <ProjectRouter />
+        </Route>
+        <Route exact path={`${process.env.PUBLIC_URL}/cv`}>
+          <Header />
+          <CV />
+          <Footer />
+        </Route>
+        <Route exact path={process.env.PUBLIC_URL}>
+          <Header />
+          <Home />
+          <Footer />
+        </Route>
+        <Route path="*">
+          <Header background="transparent" position="absolute" />
+          <NotFound message="Denne siden ekisterer ikke (ennå)" link="/" linkTitle="Gå til hovedsiden" />
+          <Footer />
+        </Route>
+      </Switch >
+    );
+  }
+
 }
 
-export default App;
+export default withRouter(App);

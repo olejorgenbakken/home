@@ -3,20 +3,18 @@ import { Link } from "react-router-dom";
 import './project.css'
 
 interface Props {
-    href: string,
-    title: string,
-    year: number,
-    role: string,
-    cover?: string,
-    color: string
+    link?: string,
+    heading: string,
+    description?: string,
+    image?: string,
+    color?: string
 }
 
-class ProjectCard extends Component<Props> {
+class Project extends Component<Props> {
     setStyle() {
         let style = {
             background: this.props.color,
         }
-
         return style;
     }
 
@@ -52,12 +50,12 @@ class ProjectCard extends Component<Props> {
 
     getImg() {
         let style = {
-            backgroundImage: `url(${this.props.cover}`,
+            backgroundImage: `url(${this.props.image}`,
             backgroundSize: "cover",
             backgroundPosition: "center"
         }
 
-        if (this.props.cover) {
+        if (this.props.image) {
             return (
                 <section className="card-image" style={style}></section>
             )
@@ -68,21 +66,40 @@ class ProjectCard extends Component<Props> {
     }
 
     getContent() {
-        return (
-            <section className="card-content">
-                <h2 style={this.lightOrDark(this.props.color)}>{this.props.title}</h2>
-                <p style={this.lightOrDark(this.props.color)}>{this.props.role}</p>
-            </section>)
+        if (this.props.description) {
+            return (
+                <section className="card-content" style={this.lightOrDark(this.props.color)}>
+                    <h2>{this.props.heading}</h2>
+                    <p>{this.props.description}</p>
+                </section>
+            )
+        } else {
+            return (
+                <section className="card-content" style={this.lightOrDark(this.props.color)}>
+                    <h2>{this.props.heading}</h2>
+                </section>
+            )
+        }
+
     }
 
     render() {
-        return (
-            <Link to={`prosjekter/${this.props.href.toLocaleLowerCase()}`} title={`Gå til ${this.props.title}`} className="card card-project" style={this.setStyle()}>
-                {this.getContent()}
-                {this.getImg()}
-            </Link >
-        )
+        if (this.props.link) {
+            return (
+                <Link to={`${process.env.PUBLIC_URL}/prosjekter/${this.props.link.toLocaleLowerCase()}`} title={`Gå til ${this.props.heading}`} className="card card-project" style={this.setStyle()}>
+                    {this.getContent()}
+                    {this.getImg()}
+                </Link >
+            )
+        } else {
+            return (
+                <article className="card card-project" style={this.setStyle()}>
+                    {this.getContent()}
+                    {this.getImg()}
+                </article >
+            )
+        }
     }
 }
 
-export default ProjectCard;
+export default Project;

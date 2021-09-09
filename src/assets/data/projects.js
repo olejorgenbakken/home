@@ -1,7 +1,7 @@
 import VippsLogo from "../projects/vipps/logo.svg";
 import VippsCover from "../projects/vipps/cover.jpeg";
 
-import ShortcutLogo from "../projects/shortcut/logo.svg";
+// import ShortcutLogo from "../projects/shortcut/logo.svg";
 // import ShortcutCover from '../projects/shortcut/cover.jpeg';
 
 import PyskiskHelseLogo from "../projects/psykisk-helse/logo.svg";
@@ -19,7 +19,7 @@ const projects = [
     description: "",
     logo: VippsLogo,
     color: "#39134c",
-    cover: VippsCover,
+    image: VippsCover,
   },
   {
     workplace: "Psykisk Helse Magasinet",
@@ -32,7 +32,7 @@ const projects = [
     description: "",
     logo: PyskiskHelseLogo,
     color: "#fff",
-    cover: PyskiskHelseCover,
+    image: PyskiskHelseCover,
   },
   {
     workplace: "Repairable",
@@ -45,7 +45,7 @@ const projects = [
     description: "",
     logo: "",
     color: "#d13b3b",
-    cover: "",
+    image: "",
   },
   {
     workplace: "Restaurant",
@@ -58,7 +58,7 @@ const projects = [
     description: "",
     logo: "",
     color: "#11f093",
-    cover: "",
+    image: "",
   },
   {
     workplace: "Handleapp",
@@ -71,7 +71,7 @@ const projects = [
     description: "",
     logo: "",
     color: "#45a3f0",
-    cover: "",
+    image: "",
   },
 ];
 

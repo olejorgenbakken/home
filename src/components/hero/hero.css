@@ -7,10 +7,6 @@
   background-position: center;
 }
 
-.hero-xl {
-  padding: 8em 1em;
-}
-
 .hero article {
   padding: var(--spacing);
   display: flex;

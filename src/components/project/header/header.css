@@ -1,7 +1,8 @@
 .project-header {
   width: 100%;
   padding-top: var(--header-height);
-  min-height: 90vh;
+  height: 100vh;
+  max-height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,15 +21,15 @@
 }
 
 .project-header-content {
+  margin-top: calc(var(--header-height) - calc(var(--header-height) * 2));
   width: 100%;
   max-width: var(--max-width);
-  padding: var(--spacing);
-  padding-bottom: calc(var(--spacing) * 4);
+  padding: 0 var(--spacing);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.4em;
+  gap: 1em;
   z-index: 1;
   color: #fff;
 }
@@ -37,8 +38,13 @@
   font-size: 3em;
 }
 
-.project-header-content p {
+.project-header-content .role {
+  font-weight: 500;
   font-size: 1.2em;
+}
+
+.project-header-content section {
+  margin-top: 2.4em;
 }
 
 @media (min-width: 900px) {

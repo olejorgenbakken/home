@@ -5,6 +5,7 @@ interface Props {
   styling: {
     columns?: 8 | 6 | 4 | 2 | 1,
     width: 'contained' | 'full',
+    align: 'flex-start' | 'center' | 'flex-end'
   }
   elements: Array<object>
 }
@@ -12,22 +13,28 @@ interface Props {
 class Grid extends Component<Props> {
 
   setStyle() {
-    let style = {
-      maxWidth: '',
-      padding: ''
-    }
+    switch (this.props.styling.width) {
+      case "contained":
+        let containedStyle = {
+          maxWidth: 'var(--max-width)',
+          padding: '0 var(--spacing)',
+          justifyContent: this.props.styling.align
+        }
+        return containedStyle;
 
-    if (this.props.styling != undefined) {
-      if (this.props.styling.width === 'contained') {
-        style.maxWidth = 'var(--max-width)'
-        style.padding = '0 var(--spacing)'
-      }
-    } else {
-      style.maxWidth = 'unset'
-      style.padding = '0'
-    }
+      case 'full':
+        let fullStyle = {
+          justifyContent: this.props.styling.align
+        }
+        return fullStyle;
 
-    return style;
+      default:
+        let defaultStyle = {
+          maxWidth: 'unset',
+          padding: '0',
+        }
+        return defaultStyle;
+    }
   }
 
   render() {

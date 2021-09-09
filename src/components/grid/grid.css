@@ -24,7 +24,7 @@
 
 .flex > * {
   width: unset;
-  min-width: 120px;
+  height: auto;
 }
 
 @media screen and (min-width: 360px) {

@@ -26,7 +26,9 @@ class Vipps extends Component {
                     <ProjectHeader
                         text={{ heading: project.workplace, subheading: project.role }}
                         background={project.image}
-                        color={project.color} />
+                        color={project.color}
+                        tags={project.tags}
+                    />
                     <Text
                         heading={{ level: "h1", text: "Brief" }}
                         paragraph="in" color="#fff" />

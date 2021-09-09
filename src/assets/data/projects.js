@@ -20,6 +20,7 @@ const projects = [
     logo: VippsLogo,
     color: "#ff5b24",
     image: VippsCover,
+    tags: ["UX", "Brukertesting", "Prototype"],
   },
   {
     workplace: "Psykisk Helse Magasinet",

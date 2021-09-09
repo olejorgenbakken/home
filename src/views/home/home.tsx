@@ -32,7 +32,7 @@ class Home extends Component {
             description: "Jeg designer og utvikler ting på internett. Denne nettsiden er nettopp påbegynt, så sjekk ut sidene nedenfor til jeg har fått samlet alt her."
           }}
         />
-        <Grid elements={this.getWebpages()} styling={{ columns: 4, width: "contained" }} />
+        <Grid elements={this.getWebpages()} styling={{ columns: 4, width: "contained", align: "center" }} />
       </main>
     );
   }

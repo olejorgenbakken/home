@@ -22,7 +22,7 @@ class ProjectsList extends Component {
     render() {
         return (
             <main id="projects">
-                <Grid elements={this.getProjects()} styling={{ columns: 1, width: "contained" }} />
+                <Grid elements={this.getProjects()} styling={{ columns: 1, width: "contained", align: "center" }} />
             </main>
         );
     }

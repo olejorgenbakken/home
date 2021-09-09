@@ -1,11 +1,11 @@
 import { Component } from "react";
 
-import './vipps.css';
-
 import Button from "../../../components/button/Button";
-import ProjectHeader from "../../../components/project/header/header";
+import ProjectHeader from "../../../components/project/header/projectHeader";
 import projects from "../../../assets/data/projects";
-import Text from "../../../components/project/paragraph/Paragraph";
+import Paragraph from "../../../components/project/paragraph/Paragraph";
+
+import './vipps.css';
 
 let project = projects.find(project => project.slug === "vipps");
 
@@ -19,22 +19,34 @@ class Vipps extends Component {
     }
 
     render() {
-
-        if (project != undefined) {
+        if (project !== undefined) {
             return (
                 <main id="vipps" className="main-project" style={this.setBackground()}>
                     <ProjectHeader
-                        text={{ heading: project.workplace, subheading: project.role }}
+                        text={{ heading: project.workplace }}
                         background={project.image}
                         color={project.color}
                         tags={project.tags}
                     />
-                    <Text
-                        heading={{ level: "h1", text: "Brief" }}
-                        paragraph="in" color="#fff" />
+                    <Paragraph
+                        content={
+                            {
+                                heading: { level: "h2", text: "Problemstilling" },
+                                paragraph: "Hvordan kan vi samle inn mer penger til veldedighet"
+                            }
+                        }
+                        styling={
+                            {
+                                align: "left",
+                                color: "#fff"
+                            }
+                        }
+                    />
                     <Button text={"Til alle prosjekter"} link="/prosjekter" />
                 </main>
             )
+        } else {
+            return null;
         }
     }
 }

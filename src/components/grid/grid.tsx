@@ -38,7 +38,7 @@ class Grid extends Component<Props> {
   }
 
   render() {
-    if (this.props.styling.columns != undefined) {
+    if (this.props.styling.columns !== undefined) {
       return (
         <section className='grid' data-grids={this.props.styling.columns} style={this.setStyle()} >
           {this.props.elements}

@@ -29,26 +29,35 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 4em;
   z-index: 1;
   color: #fff;
 }
 
-.project-header-content h1 {
+.project-header-content .opening {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.project-header-content .opening .title {
   font-size: 3em;
 }
 
-.project-header-content .role {
-  font-weight: 500;
-  font-size: 1.2em;
+.project-header-content .opening .role {
+  font-weight: 400;
+  font-size: 1.3em;
 }
 
-.project-header-content section {
-  margin-top: 2.4em;
+.project-header-content .tag {
+  font-weight: 700;
+  font-size: 1em;
 }
 
 @media (min-width: 900px) {
-  .project-header-content h1 {
+  .project-header-content .opening .title {
     font-size: 4em;
   }
 }

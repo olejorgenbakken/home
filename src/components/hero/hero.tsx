@@ -14,7 +14,7 @@ interface Props {
 
 class Hero extends Component<Props> {
   setHeading() {
-    if (this.props.content.heading != undefined) {
+    if (this.props.content.heading !== undefined) {
       switch (this.props.content.heading.level) {
         case 'h1':
           return (<h1>{this.props.content.heading.title}</h1>);

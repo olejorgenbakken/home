@@ -10,6 +10,7 @@ class ProjectsList extends Component {
     getProjects() {
         const externalList = projects.map((project) => (
             <ProjectCard
+                key={project.slug}
                 link={project.slug}
                 content={{ text: { heading: { level: "h1", title: project.workplace }, description: project.description }, image: project.image }}
                 color={project.color}

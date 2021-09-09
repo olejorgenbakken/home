@@ -3,25 +3,34 @@ import { Component } from "react";
 import './paragraph.css';
 
 interface Props {
-    heading?: { level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5', text: string },
-    paragraph: string,
-    color: string
+    content: {
+        heading?: { level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5', text: string },
+        paragraph: string,
+    }
+    styling?: {
+        align: 'left' | 'center',
+        color: string,
+    }
 }
 
 class Paragraph extends Component<Props> {
 
-    setColor() {
+    setStyle() {
+        let chosenAlignment = this.props.styling?.align;
+        let chosenColor = this.props.styling?.color;
+
         let style = {
-            color: this.props.color
+            textAlign: chosenAlignment,
+            color: chosenColor,
         }
 
         return style;
     }
 
     getHeading() {
-        if (this.props.heading !== undefined) {
-            let level = this.props.heading.level;
-            let text = this.props.heading.text;
+        if (this.props.content.heading !== undefined) {
+            let level = this.props.content.heading.level;
+            let text = this.props.content.heading.text;
 
             switch (level) {
                 case 'h1':
@@ -43,9 +52,9 @@ class Paragraph extends Component<Props> {
 
     render() {
         return (
-            <section className="paragraph" style={this.setColor()}>
+            <section className="paragraph" style={this.setStyle()}>
                 {this.getHeading()}
-                <p>{this.props.paragraph}</p>
+                <p>{this.props.content.paragraph}</p>
             </section>
         )
     }

@@ -111,9 +111,9 @@ class Project extends Component<Props> {
     }
 
     render() {
-        if (this.props.link != undefined) {
+        if (this.props.link !== undefined) {
             return (
-                <Link to={`${process.env.PUBLIC_URL}/prosjekter/${this.props.link.toLocaleLowerCase()}`} title={`Gå til ${this.props.content.text.heading}`} className="card card-project" style={this.setStyle()}>
+                <Link to={`${process.env.PUBLIC_URL}/prosjekter/${this.props.link.toLocaleLowerCase()}`} title={`Gå til ${this.props.content.text.heading?.title}`} className="card card-project" style={this.setStyle()}>
                     <section className="card-content" style={this.lightOrDark(this.props.color)}>
                         {this.getContent()}
                     </section>

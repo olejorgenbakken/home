@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./header.css";
 
@@ -12,7 +12,7 @@ interface Props {
 class Header extends Component<Props> {
 
   lightOrDark(color: any) {
-    if (color != undefined) {
+    if (color !== undefined) {
       let style = {
         color: '',
       }

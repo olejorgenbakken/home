@@ -134,7 +134,7 @@ button {
   cursor: pointer;
 }
 
-@media (min-width: 350px) {
+@media (min-width: 400px) {
   :root {
     --spacing: 2em;
   }

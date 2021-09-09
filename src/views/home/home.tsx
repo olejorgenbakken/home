@@ -5,7 +5,6 @@ import LinkCard from "../../components/cards/link/link";
 
 import webpages from "../../assets/data/webpages";
 import './home.css'
-import ProjectCard from "../../components/cards/project/project";
 
 class Home extends Component {
   getWebpages() {

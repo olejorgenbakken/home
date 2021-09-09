@@ -31,7 +31,7 @@ const projects = [
     },
     description: "",
     logo: PyskiskHelseLogo,
-    color: "#fff",
+    color: "#f7f7f7",
     image: PyskiskHelseCover,
   },
   {

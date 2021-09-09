@@ -2,11 +2,12 @@
 
 .card-project {
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   min-height: 130px;
+  gap: 1em;
 }
 
 .card-project .card-image {
@@ -14,40 +15,54 @@
 }
 
 .card-project .card-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: var(--spacing);
+  padding: 2em 1em;
+  gap: 0;
 }
 
 .card-project .card-content h2 {
   font-size: 1.4em;
 }
 
-@media (min-width: 700px) {
-  .card-project .card-content h2 {
-    font-size: 2em;
-  }
-}
-
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .card-project {
-    height: 40vh;
-    min-height: 300px;
+    border-radius: 2px;
   }
 
   .card-project .card-content {
-    padding: calc(var(--spacing) * 2);
+    padding: 4em 2em;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
   }
 
   .card-project .card-content h2 {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .card-project .card-image {
     display: flex;
     height: 100%;
-    width: 50%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .card-project {
+    min-height: 40vh;
+  }
+
+  .card-project .card-content {
+    padding: 6em 4em;
+  }
+
+  .card-project .card-content h2 {
+    line-height: 1.2em;
+    font-size: 3em;
   }
 }

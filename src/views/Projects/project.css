@@ -1,0 +1,19 @@
+.main-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: var(--header-height);
+}
+
+.main-project .content {
+  width: 100%;
+}
+
+.main-project .content h2,
+.main-project .content p {
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-width);
+  color: #fff;
+}

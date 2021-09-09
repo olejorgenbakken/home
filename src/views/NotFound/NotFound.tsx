@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import Button from "../../components/button/Button";
 
 import './not-found.css';
 
@@ -16,7 +17,7 @@ class NotFound extends Component<Props> {
                 <article>
                     <h1>404</h1>
                     <h2>{this.props.message}</h2>
-                    <Link to={this.props.link}><button>{this.props.linkTitle}</button></Link>
+                    <Button link={this.props.link} text={this.props.linkTitle} />
                 </article>
             </main>
         );

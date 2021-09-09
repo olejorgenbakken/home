@@ -24,11 +24,15 @@ class Home extends Component {
       <main id="home">
         <Hero
           background="gradient"
-          headingTitle="Hei, Ole Jørgen her 👋"
-          headingLevel="h1"
-          description="Jeg designer og utvikler ting på internett. Denne nettsiden er nettopp påbegynt, så sjekk ut sidene nedenfor til jeg har fått samlet alt her."
+          content={{
+            heading: {
+              level: 'h1',
+              title: "Hei, Ole Jørgen her 👋"
+            },
+            description: "Jeg designer og utvikler ting på internett. Denne nettsiden er nettopp påbegynt, så sjekk ut sidene nedenfor til jeg har fått samlet alt her."
+          }}
         />
-        <Grid elements={this.getWebpages()} columns={4} width="contained" />
+        <Grid elements={this.getWebpages()} styling={{ columns: 4, width: "contained" }} />
       </main>
     );
   }

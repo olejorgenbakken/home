@@ -18,7 +18,7 @@ const projects = [
     },
     description: "",
     logo: VippsLogo,
-    color: "#39134c",
+    color: "#ff5b24",
     image: VippsCover,
   },
   {

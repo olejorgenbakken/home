@@ -8,6 +8,8 @@ import Header from "../../components/header/header";
 import NotFound from "../NotFound/NotFound";
 import ProjectsList from "./ProjectsList/ProjectsList";
 
+import './project.css';
+
 const Vipps = loadable(() => import(`./Vipps/Vipps`));
 
 class ProjectRouter extends Component {
@@ -15,7 +17,7 @@ class ProjectRouter extends Component {
         return (
             <Switch>
                 <Route path="/prosjekter/vipps">
-                    <Header position="absolute" background="transparent" />
+                    <Header position="absolute" background="transparent" color="#000" />
                     <Vipps />
                     <Footer />
                 </Route>

@@ -3,32 +3,40 @@ import "./hero.css";
 
 interface Props {
   background?: 'gradient',
-  headingLevel: 'h1' | 'h2' | 'h3' | 'h4' | 'h5',
-  headingTitle: string
-  description?: string
+  content: {
+    heading?: {
+      level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5',
+      title: string
+    }
+    description?: string
+  }
 }
 
 class Hero extends Component<Props> {
   setHeading() {
-    switch (this.props.headingLevel) {
-      case 'h1':
-        return (<h1>{this.props.headingTitle}</h1>);
-      case 'h2':
-        return (<h2>{this.props.headingTitle}</h2>);
-      case 'h3':
-        return (<h3>{this.props.headingTitle}</h3>);
-      case 'h4':
-        return (<h4>{this.props.headingTitle}</h4>);
-      case 'h5':
-        return (<h5>{this.props.headingTitle}</h5>);
-      default:
-        break;
+    if (this.props.content.heading != undefined) {
+      switch (this.props.content.heading.level) {
+        case 'h1':
+          return (<h1>{this.props.content.heading.title}</h1>);
+        case 'h2':
+          return (<h2>{this.props.content.heading.title}</h2>);
+        case 'h3':
+          return (<h3>{this.props.content.heading.title}</h3>);
+        case 'h4':
+          return (<h4>{this.props.content.heading.title}</h4>);
+        case 'h5':
+          return (<h5>{this.props.content.heading.title}</h5>);
+        default:
+          break;
+      }
+    } else {
+      return null;
     }
   }
 
   setDescription() {
-    if (this.props.description) {
-      return (<p>{this.props.description}</p>)
+    if (this.props.content.description) {
+      return (<p>{this.props.content.description}</p>)
     } else {
       return null
     }

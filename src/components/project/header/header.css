@@ -1,0 +1,48 @@
+.project-header {
+  width: 100%;
+  padding-top: var(--header-height);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-header .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 1;
+}
+
+.project-header-content {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: var(--spacing);
+  padding-bottom: calc(var(--spacing) * 4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+  z-index: 1;
+  color: #fff;
+}
+
+.project-header-content h1 {
+  font-size: 3em;
+}
+
+.project-header-content p {
+  font-size: 1.2em;
+}
+
+@media (min-width: 900px) {
+  .project-header-content h1 {
+    font-size: 4em;
+  }
+}

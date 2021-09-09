@@ -11,9 +11,7 @@ class ProjectsList extends Component {
         const externalList = projects.map((project) => (
             <ProjectCard
                 link={project.slug}
-                image={project.image}
-                heading={project.workplace}
-                description={project.role}
+                content={{ text: { heading: { level: "h1", title: project.workplace }, description: project.description }, image: project.image }}
                 color={project.color}
             />
         ));
@@ -24,7 +22,7 @@ class ProjectsList extends Component {
     render() {
         return (
             <main id="projects">
-                <Grid elements={this.getProjects()} columns={1} width="contained" />
+                <Grid elements={this.getProjects()} styling={{ columns: 1, width: "contained" }} />
             </main>
         );
     }

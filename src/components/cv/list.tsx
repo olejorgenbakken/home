@@ -1,6 +1,6 @@
 import "./list.css";
 import CVItem from "./CVItem/item";
-import { Component } from "react";
+import Heading from "../text/heading/heading";
 
 interface Props {
   title: string
@@ -16,27 +16,33 @@ interface Props {
   }>
 }
 
-class EntryList extends Component<Props> {
+const setList = (list:
+  {
+    id?: number,
+    place: string,
+    title: string,
+    time: {
+      start: number,
+      end: number
+    },
+    description: string
+  }[]) => {
+  const dataList = list.map((entry) => (
+    <CVItem key={entry.id} place={entry.place} title={entry.title} time={entry.time} description={entry.description} />
+  ));
 
-  getList() {
-    const entryList = this.props.data.map((entry) => (
-      <CVItem key={entry.id} place={entry.place} title={entry.title} time={entry.time} description={entry.description} />
-    ));
+  return (dataList)
+}
 
-    return (entryList)
-  }
-
-  render() {
-    return (
-      <section id={"cv-" + this.props.title} className="cv-section" >
-        <header>
-          <h2>{this.props.title}</h2>
-        </header>
-        <section className="cv-section-items">{this.getList()}</section>
-      </section >
-    );
-  }
-
+function EntryList({ title, data }: Props) {
+  return (
+    <section id={"cv-" + title} className="cv-section" >
+      <header>
+        <Heading level="h2" text={title} />
+      </header>
+      <section className="cv-section-items">{setList(data)}</section>
+    </section >
+  );
 }
 
 export default EntryList;

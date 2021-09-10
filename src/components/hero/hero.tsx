@@ -1,73 +1,61 @@
-import { Component } from "react";
+import Heading from "../text/heading/heading";
 import "./hero.css";
 
 interface Props {
-  background?: 'gradient',
+  background: 'gradient' | string,
   content: {
-    heading?: {
-      level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5',
-      title: string
-    }
+    heading?: { level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5', text: string }
     description?: string
   }
 }
 
-class Hero extends Component<Props> {
-  setHeading() {
-    if (this.props.content.heading !== undefined) {
-      switch (this.props.content.heading.level) {
-        case 'h1':
-          return (<h1>{this.props.content.heading.title}</h1>);
-        case 'h2':
-          return (<h2>{this.props.content.heading.title}</h2>);
-        case 'h3':
-          return (<h3>{this.props.content.heading.title}</h3>);
-        case 'h4':
-          return (<h4>{this.props.content.heading.title}</h4>);
-        case 'h5':
-          return (<h5>{this.props.content.heading.title}</h5>);
-        default:
-          break;
+const setDescription = (text?: string) => {
+  if (text) {
+    return (<p>{text}</p>)
+  } else {
+    return null
+  }
+}
+
+const setStyle = (background: string) => {
+  let style = {
+  }
+
+  switch (background) {
+    case 'gradient':
+      style = {
+        background: `linear-gradient(0deg, var(--background) 0%, var(--background-darker) 50%, var(--background) 100%)`
       }
-    } else {
-      return null;
-    }
+      return style;
+
+    default:
+      style = {
+        background: background
+      }
+      return style;
   }
+}
 
-  setDescription() {
-    if (this.props.content.description) {
-      return (<p>{this.props.content.description}</p>)
-    } else {
-      return null
-    }
-  }
-
-  setStyle() {
-    let style = {
-    }
-
-    switch (this.props.background) {
-      case 'gradient':
-        style = {
-          background: `linear-gradient(0deg, var(--background) 0%, var(--background-darker) 50%, var(--background) 100%)`
-        }
-        return style;
-
-      default:
-        break;
-    }
-  }
-
-  render() {
+function Hero({ background, content }: Props) {
+  if (content.heading) {
     return (
-      <section className={`hero`} style={this.setStyle()}>
-        <article>
-          {this.setHeading()}
-          {this.setDescription()}
+      <section className={`hero`} style={setStyle(background)}>
+        <article className="hero-content">
+          <Heading level={content.heading.level} text={content.heading.text} />
+          {setDescription(content.description)}
+        </article>
+      </section>
+    );
+  } else {
+    return (
+      <section className={`hero`} style={setStyle(background)}>
+        <article className="hero-content">
+          {setDescription(content.description)}
         </article>
       </section>
     );
   }
+
 }
 
 export default Hero;

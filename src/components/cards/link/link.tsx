@@ -1,4 +1,3 @@
-import { Component } from "react";
 import './link.css'
 
 interface Props {
@@ -7,37 +6,33 @@ interface Props {
   link: string
 }
 
-class Link extends Component<Props> {
-
-  getImage() {
-    if (this.props.image) {
-      return (
-        <section className="card-image">
-          <img src={this.props.image} alt={this.props.image} />
-        </section>
-      )
-    } else {
-      return null
-    }
-  }
-
-  getContent() {
+const setImage = (altText: string, image?: string) => {
+  if (image) {
     return (
-      <section className="card-content">
-        <p>{this.props.text}</p>
+      <section className="card-image">
+        <img src={image} alt={altText} />
       </section>
     )
+  } else {
+    return null
   }
+}
 
-  render() {
-    return (
-      <a className="card card-link" href={this.props.link} title={`Gå til ${this.props.text}`}>
-        {this.getImage()}
-        {this.getContent()}
-      </a >
-    )
+const setContent = (text: string) => {
+  return (
+    <section className="card-content">
+      <p>{text}</p>
+    </section>
+  )
+}
 
-  }
+function Link({ image, text, link }: Props) {
+  return (
+    <a className="card card-link" href={link} title={`Gå til ${text}`}>
+      {setImage(text, image)}
+      {setContent(text)}
+    </a >
+  )
 }
 
 export default Link;

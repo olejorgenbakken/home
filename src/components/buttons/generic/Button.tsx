@@ -8,7 +8,7 @@ interface Props {
     link?: string
 }
 
-class GenericButton extends Component<Props> {
+class Button extends Component<Props> {
     render() {
         if (this.props.link) {
             return (
@@ -23,4 +23,4 @@ class GenericButton extends Component<Props> {
     }
 }
 
-export default GenericButton;
+export default Button;

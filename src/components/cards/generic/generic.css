@@ -1,0 +1,31 @@
+.card {
+  border: 1px solid var(--separator);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card .card-image {
+  position: relative;
+  height: 130px;
+  width: 100%;
+  margin: 0;
+}
+
+.card .card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2em 1em;
+}

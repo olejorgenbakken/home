@@ -5,10 +5,6 @@
   padding-bottom: var(--spacing);
 }
 
-#home > *:first-of-type {
-  padding-bottom: var(--spacing);
-}
-
 @media (min-width: 1000px) {
   #home {
     gap: var(--spacing);

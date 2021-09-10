@@ -27,7 +27,7 @@ function Vipps() {
                     text="Hvordan kan vi samle inn mer penger til veldedighet"
                     styling={
                         {
-                            alignContent: "left",
+                            textAlign: "left",
                             color: "#fff"
                         }
                     }

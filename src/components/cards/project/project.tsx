@@ -56,7 +56,7 @@ const setContent = ({ text }: Content, color: string) => {
     )
 }
 
-function Project({ link, content, color }: Props) {
+function ProjectCard({ link, content, color }: Props) {
     if (link !== undefined) {
         return (
             <Link to={`${process.env.PUBLIC_URL}/prosjekter/${link.toLocaleLowerCase()}`} title={`Gå til ${content.text.heading.text}`} className="card card-project" style={setStyle(color)}>
@@ -74,4 +74,4 @@ function Project({ link, content, color }: Props) {
     }
 }
 
-export default Project;
+export default ProjectCard;

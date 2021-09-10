@@ -1,14 +1,16 @@
 import Hero from "../../components/hero/hero";
 import Grid from "../../components/layout/grid/grid";
-import LinkCard from "../../components/cards/link/link";
+import LinkButton from "../../components/buttons/link/link";
 
 import webpages from "../../assets/data/webpages";
 import './home.css'
+import Card from "../../components/cards/generic/generic";
 
 const setWebpages = () => {
   const externalList = webpages.map((page) => (
-    <LinkCard
+    <LinkButton
       key={page.id}
+      type="external"
       text={page.title}
       link={page.href}
     />

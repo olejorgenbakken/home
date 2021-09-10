@@ -9,8 +9,8 @@ interface Props {
         text: string
     },
     styling?: {
-        alignContent: 'left' | 'center',
-        color: string
+        textAlign?: 'left' | 'center',
+        color?: string
     }
 }
 
@@ -24,7 +24,7 @@ function Paragraph({ text, heading, styling }: Props) {
         )
     } else {
         return (
-            <section className="paragraph">
+            <section className="paragraph" style={styling}>
                 <p>{text}</p>
             </section>
         )

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as ExternalIcon } from "../../assets/icons/link_external.svg";
+import { ReactComponent as ExternalIcon } from "../../../assets/icons/link_external.svg";
 import './inlineLink.css'
 
 interface Props {

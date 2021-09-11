@@ -10,7 +10,8 @@
   z-index: 1;
 }
 
-#global-header[data-bg="transparent"] {
+#global-header[data-bg="true"] {
+  color: #fff;
   background: transparent;
 }
 

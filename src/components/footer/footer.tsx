@@ -1,6 +1,6 @@
 import "./footer.css";
 
-import InlineLink from "../inlineLink/inlineLink";
+import InlineLink from "../text/inlineLink/inlineLink";
 
 function Footer() {
   return (

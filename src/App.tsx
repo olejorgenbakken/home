@@ -38,7 +38,7 @@ class App extends Component<RouteComponentProps, any> {
           <Footer />
         </Route>
         <Route path="*">
-          <Header background="transparent" position="absolute" />
+          <Header transparent={true} position="absolute" />
           <NotFound message="Denne siden ekisterer ikke (ennå)" link="/" linkTitle="Gå til hovedsiden" />
           <Footer />
         </Route>

@@ -4,19 +4,18 @@ import { contrast } from "../../assets/functions";
 import "./header.css";
 
 interface Props {
-  position?: 'relative' | 'fixed' | 'absolute';
-  background?: 'default' | 'transparent',
-  color?: string
+  position?: 'relative' | 'fixed' | 'absolute',
+  transparent?: boolean,
 }
 
-function Header({ position, background, color }: Props) {
+function Header({ position, transparent }: Props) {
   return (
     <header
       id="global-header"
-      data-bg={background}
+      data-bg={transparent}
       data-pos={position}
       className={`header-fixed`}>
-      <nav id="global-menu" style={contrast(color)}>
+      <nav id="global-menu">
         <NavLink to="/" title="Til hovedsiden" className="home" activeClassName="active">
           Hovedside
         </NavLink>

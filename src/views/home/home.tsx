@@ -15,9 +15,11 @@ const setWebpages = () => {
 function Home() {
   return (
     <main id="home">
-      <Hero background="gradient">
-        <h1>Hei, Ole Jørgen her 👋</h1>
-        <p>Jeg designer og utvikler ting på internett. Denne nettsiden er nettopp påbegynt, så sjekk ut sidene nedenfor til jeg har fått samlet alt her.</p>
+      <Hero>
+        <article className="contain">
+          <h1>Hei, Ole Jørgen her 👋</h1>
+          <p>Jeg designer og utvikler ting på internett. Denne nettsiden er nettopp påbegynt, så sjekk ut sidene nedenfor til jeg har fått samlet alt her.</p>
+        </article>
       </Hero>
       <Grid columns={4} width="contained">
         {setWebpages()}

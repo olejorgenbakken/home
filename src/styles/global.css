@@ -125,6 +125,12 @@ img {
   max-width: 100%;
 }
 
+.contain {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 var(--spacing);
+}
+
 @media (min-width: 400px) {
   :root {
     --spacing: 2em;

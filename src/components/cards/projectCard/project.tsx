@@ -10,9 +10,10 @@ interface Props {
     children: ReactNode
 }
 
-const setStyle = (color: string) => {
+const setStyle = (color: any) => {
     let style = {
         background: color,
+        color: contrast(color)
     }
     return style;
 }
@@ -37,7 +38,7 @@ function ProjectCard({ link, image, children, color }: Props) {
     if (link !== undefined) {
         return (
             <Link to={`${process.env.PUBLIC_URL}/prosjekter/${link.toLocaleLowerCase()}`} className="card card-project" style={setStyle(color)}>
-                <section className="card-content" style={contrast(color)}>
+                <section className="card-content">
                     {children}
                 </section>
                 {setImg(image)}
@@ -46,7 +47,7 @@ function ProjectCard({ link, image, children, color }: Props) {
     } else {
         return (
             <article className="card card-project" style={setStyle(color)}>
-                <section className="card-content" style={contrast(color)}>
+                <section className="card-content">
                     {children}
                 </section>
                 {setImg(image)}

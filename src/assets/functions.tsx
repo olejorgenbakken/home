@@ -1,10 +1,6 @@
 export const contrast = (color: any) => {
     if (color !== undefined) {
-        let style = {
-            color: '',
-        }
-
-        var r, g, b, hsp;
+        let r, g, b, hsp;
         color = +("0x" + color.slice(1).replace(
             color.length < 5 && /./g, '$&$&'));
 
@@ -19,12 +15,11 @@ export const contrast = (color: any) => {
         );
 
         if (hsp > 170.5) {
-            style.color = '#111111';
-            return style;
-        }
-        else {
-            style.color = '#ffffff';
-            return style;
+            color = '#111111';
+            return color;
+        } else {
+            color = '#ffffff';
+            return color;
         }
     }
 }

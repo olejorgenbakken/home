@@ -34,6 +34,7 @@ const projects = [
     logo: PyskiskHelseLogo,
     color: "#f7f7f7",
     image: PyskiskHelseCover,
+    tags: ["UX", "Brukertesting", "Prototype"],
   },
   {
     workplace: "Repairable",
@@ -47,6 +48,7 @@ const projects = [
     logo: "",
     color: "#d13b3b",
     image: "",
+    tags: ["UX", "Brukertesting", "Prototype"],
   },
   {
     workplace: "Restaurant",
@@ -60,6 +62,7 @@ const projects = [
     logo: "",
     color: "#11f093",
     image: "",
+    tags: ["UX", "Brukertesting", "Prototype"],
   },
   {
     workplace: "Handleapp",
@@ -73,6 +76,7 @@ const projects = [
     logo: "",
     color: "#45a3f0",
     image: "",
+    tags: ["UX", "Brukertesting", "Prototype"],
   },
 ];
 

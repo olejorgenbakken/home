@@ -1,25 +1,22 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 
 import './button.css';
 
 interface Props {
-    text: string,
-    link?: string
+    link?: string,
+    children: string
 }
 
-class Button extends Component<Props> {
-    render() {
-        if (this.props.link) {
-            return (
-                <Link to={this.props.link}>
-                    <button className="button link-button">{this.props.text}</button>
-                </Link>
-            )
+function Button({ link, children }: Props) {
+    if (link) {
+        return (
+            <Link to={link}>
+                <button className="button link-button">{children}</button>
+            </Link>
+        )
 
-        } else {
-            return (<button className="button">{this.props.text}</button>)
-        }
+    } else {
+        return (<button className="button">{children}</button>)
     }
 }
 

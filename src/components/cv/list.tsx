@@ -1,10 +1,9 @@
 import "./list.css";
 import CVItem from "./CVItem/item";
-import Heading from "../text/heading/heading";
 
 interface Props {
   title: string
-  data: Array<{
+  data: {
     id?: number,
     place: string,
     title: string,
@@ -13,7 +12,7 @@ interface Props {
       end: number,
     },
     description: string
-  }>
+  }[]
 }
 
 const setList = (list:
@@ -38,7 +37,7 @@ function EntryList({ title, data }: Props) {
   return (
     <section id={"cv-" + title} className="cv-section" >
       <header>
-        <Heading level="h2" text={title} />
+        <h2>{title}</h2>
       </header>
       <section className="cv-section-items">{setList(data)}</section>
     </section >

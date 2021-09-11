@@ -1,5 +1,3 @@
-import Heading from "../../text/heading/heading";
-import Paragraph from "../../text/paragraph/Paragraph";
 import TagList from "../tagList/tagList";
 
 import './projectHeader.css';
@@ -22,14 +20,14 @@ const setText = (heading: string, subheading?: string) => {
     if (subheading) {
         return (
             <section className="opening">
-                <Heading level="h1" text={heading} />
-                <Paragraph text={subheading} />
+                <h1>{heading}</h1>
+                <p>{subheading}</p>
             </section>
         )
     } else {
         return (
             <section className="opening">
-                <Heading level="h1" text={heading} />
+                <h1>{heading}</h1>
             </section>
         )
     }

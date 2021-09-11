@@ -1,10 +1,10 @@
 import Grid from "../../layout/grid/grid";
 
 interface Props {
-    tags: Array<string>
+    tags: string[]
 }
 
-const setList = (list: Array<string>) => {
+const setList = (list: string[]) => {
     const tagList = list.map((element) => (
         <label className="tag" key={element}>{element}</label>
     ));
@@ -13,7 +13,11 @@ const setList = (list: Array<string>) => {
 }
 
 function TagList({ tags }: Props) {
-    return (<Grid elements={setList(tags)} styling={{ width: "contained", align: "center" }} />)
+    return (
+        <Grid width="contained" align="center">
+            {setList(tags)}
+        </Grid>
+    )
 }
 
 

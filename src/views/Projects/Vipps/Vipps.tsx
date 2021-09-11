@@ -1,7 +1,6 @@
 import Button from "../../../components/buttons/generic/Button";
 import ProjectHeader from "../../../components/project/projectHeader/projectHeader";
 import projects from "../../../assets/data/projects";
-import Paragraph from "../../../components/text/paragraph/Paragraph";
 
 import './vipps.css';
 
@@ -22,17 +21,12 @@ function Vipps() {
                     content={{ text: { heading: project.workplace }, tags: project.tags }}
                     styling={{ background: project.image, color: project.color }}
                 />
-                <Paragraph
-                    heading={{ level: "h2", text: "Problemstilling" }}
-                    text="Hvordan kan vi samle inn mer penger til veldedighet"
-                    styling={
-                        {
-                            textAlign: "left",
-                            color: "#fff"
-                        }
-                    }
-                />
-                <Button text={"Til alle prosjekter"} link="/prosjekter" />
+                <section className="intro">
+                    <h2>Problemstilling</h2>
+                    <p>Hvordan kan vi samle inn mer penger til veldedighet</p>
+                </section>
+
+                <Button link="/prosjekter">Til alle prosjekter</Button>
             </main>
         )
     } else {

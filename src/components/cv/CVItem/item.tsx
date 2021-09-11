@@ -1,5 +1,3 @@
-import Heading from "../../text/heading/heading";
-import Paragraph from "../../text/paragraph/Paragraph";
 import "./item.css";
 
 interface Props {
@@ -73,15 +71,15 @@ function CVItem({ place, title, time, description }: Props) {
     <article className="cv-entry" >
       <section className="content">
         <header>
-          <Heading level="h3" text={place} className="place" />
-          <Heading level="h4" text={title} className="role" />
+          <h3 className="place">{place}</h3>
+          <h4 className="role">{title}</h4>
           <p className="date">
             <time dateTime={toDate(time).startYYYYMM}>{toDate(time).startText}</time>
             &nbsp;–&nbsp;
             <time dateTime={toDate(time).endYYYYMM}>{toDate(time).endText}</time>
           </p>
         </header>
-        <Paragraph text={description} />
+        <p>{description}</p>
       </section>
     </article >
   );

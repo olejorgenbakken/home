@@ -1,3 +1,18 @@
+.internal-link {
+  border: 1px solid var(--link);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  transition: 0.3s ease-in-out;
+}
+
+.internal-link:hover {
+  border-color: var(--link-hover);
+}
+
 .external-link {
   position: relative;
   display: inline-flex;

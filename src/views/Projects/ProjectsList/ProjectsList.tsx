@@ -1,26 +1,37 @@
-import ProjectCard from "../../../components/cards/project/project";
+import ProjectCard from "../../../components/cards/projectCard/project";
 import Grid from "../../../components/layout/grid/grid";
-
-import projects from "../../../assets/data/projects";
 
 import './projectsList.css';
 
-const setProjects = () => {
+interface Props {
+    projects: {
+        slug: string,
+        workplace: string,
+        description: string,
+        image: string,
+        color: string
+    }[]
+}
+
+const setProjects = (projects: {
+    slug: string, workplace: string,
+    description: string,
+    image: string,
+    color: string
+}[]) => {
     const externalList = projects.map((project) => (
-        <ProjectCard
-            key={project.slug}
-            link={project.slug}
-            content={{ text: { heading: { level: "h1", text: project.workplace }, description: project.description }, image: project.image }}
-            color={project.color}
-        />
+        <ProjectCard key={project.slug} link={project.slug} color={project.color} image={project.image}>
+            <h1>{project.workplace}</h1>
+            <p>{project.description}</p>
+        </ProjectCard>
     ));
     return externalList;
 }
 
-function ProjectsList() {
+function ProjectsList({ projects }: Props) {
     return (
         <main id="projects">
-            <Grid elements={setProjects()} styling={{ columns: 1, width: "contained", align: "center" }} />
+            <Grid columns={1} width="contained" align="center"> {setProjects(projects)} </Grid>
         </main>
     );
 }

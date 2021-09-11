@@ -1,6 +1,6 @@
 import "./footer.css";
 
-import Link from "../text/link/link";
+import InlineLink from "../inlineLink/inlineLink";
 
 function Footer() {
   return (
@@ -8,11 +8,7 @@ function Footer() {
       <section className="content">
         <p>
           Takk for at du sjekket ut nettsiden min. &nbsp;
-          <Link
-            href="https://github.com/olejorgenbakken/home"
-            text="Du kan se kildekoden på GitHub her"
-            title="Gå til GitHub"
-          />
+          <InlineLink type="external" link="https://github.com/olejorgenbakken/home">Du kan se kildekoden på GitHub her</InlineLink>
         </p>
       </section>
     </footer>

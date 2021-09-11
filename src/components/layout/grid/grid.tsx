@@ -1,16 +1,15 @@
+import { ReactNode } from "react";
 import "./grid.css";
 
 interface Props {
-  styling: {
-    columns?: 8 | 6 | 4 | 2 | 1,
-    width: 'contained' | 'full',
-    align?: 'flex-start' | 'center' | 'flex-end'
-  }
-  elements: Array<object>
+  columns?: 8 | 6 | 4 | 2 | 1,
+  width?: 'contained' | 'full',
+  align?: 'flex-start' | 'center' | 'flex-end',
+  children: ReactNode
 }
 
-const setStyle = (styling: { columns?: number, width: string, align?: string }) => {
-  switch (styling.width) {
+const setStyle = (align?: string, width?: string,) => {
+  switch (width) {
     case "contained":
       let containedStyle = {
         maxWidth: 'var(--max-width)',
@@ -21,7 +20,7 @@ const setStyle = (styling: { columns?: number, width: string, align?: string }) 
 
     case 'full':
       let fullStyle = {
-        justifyContent: styling.align
+        justifyContent: align
       }
       return fullStyle;
 
@@ -34,17 +33,17 @@ const setStyle = (styling: { columns?: number, width: string, align?: string }) 
   }
 }
 
-function Grid({ styling, elements }: Props) {
-  if (styling.columns) {
+function Grid({ columns, align, width, children }: Props) {
+  if (columns) {
     return (
-      <section className='grid' data-grids={styling.columns} style={setStyle(styling)}>
-        {elements}
+      <section className='grid' data-grids={columns} style={setStyle(align, width)}>
+        {children}
       </section >
     );
   } else {
     return (
-      <section className='grid flex' style={setStyle(styling)}>
-        {elements}
+      <section className='grid flex' style={setStyle(align, width)}>
+        {children}
       </section >
     );
   }

@@ -1,26 +1,14 @@
-import Heading from "../text/heading/heading";
+import { ReactNode } from "react";
 import "./hero.css";
 
 interface Props {
   background: 'gradient' | string,
-  content: {
-    heading?: { level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5', text: string }
-    description?: string
-  }
-}
-
-const setDescription = (text?: string) => {
-  if (text) {
-    return (<p>{text}</p>)
-  } else {
-    return null
-  }
+  children: ReactNode
 }
 
 const setStyle = (background: string) => {
   let style = {
   }
-
   switch (background) {
     case 'gradient':
       style = {
@@ -36,26 +24,14 @@ const setStyle = (background: string) => {
   }
 }
 
-function Hero({ background, content }: Props) {
-  if (content.heading) {
-    return (
-      <section className={`hero`} style={setStyle(background)}>
-        <article className="hero-content">
-          <Heading level={content.heading.level} text={content.heading.text} />
-          {setDescription(content.description)}
-        </article>
-      </section>
-    );
-  } else {
-    return (
-      <section className={`hero`} style={setStyle(background)}>
-        <article className="hero-content">
-          {setDescription(content.description)}
-        </article>
-      </section>
-    );
-  }
-
+function Hero({ background, children }: Props) {
+  return (
+    <section className={`hero`} style={setStyle(background)}>
+      <article className="hero-content">
+        {children}
+      </article>
+    </section>
+  );
 }
 
 export default Hero;

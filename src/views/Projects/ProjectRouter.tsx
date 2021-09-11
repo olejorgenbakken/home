@@ -7,6 +7,8 @@ import Header from "../../components/header/header";
 import NotFound from "../NotFound/NotFound";
 import ProjectsList from "./ProjectsList/ProjectsList";
 
+import projects from "../../assets/data/projects";
+
 import './project.css';
 
 const Vipps = loadable(() => import(`./Vipps/Vipps`));
@@ -19,9 +21,14 @@ function ProjectRouter() {
                 <Vipps />
                 <Footer />
             </Route>
+            {/* <Route exact path="/prosjekter/:project">
+                <Header />
+                <ProjectsList projects={ } />
+                <Footer />
+            </Route> */}
             <Route exact path="/prosjekter">
                 <Header />
-                <ProjectsList />
+                <ProjectsList projects={projects} />
                 <Footer />
             </Route>
             <Route path="/">

@@ -1,6 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { contrast } from "../../assets/functions";
-
 import "./header.css";
 
 interface Props {

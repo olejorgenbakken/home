@@ -1,5 +1,6 @@
 import loadable from '@loadable/component';
 
+
 import { Component } from "react";
 import { RouteComponentProps, withRouter } from 'react-router';
 import { Route, Switch } from "react-router-dom";
@@ -14,9 +15,7 @@ import "./styles/global.css";
 
 const ProjectsRouter = loadable(() => import("./Views/Projects/ProjectRouter"));
 
-
 class App extends Component<RouteComponentProps, any> {
-
   componentDidUpdate() {
     window.scrollTo(0, 0);
   }

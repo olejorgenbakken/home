@@ -1,13 +1,7 @@
 #home {
-  display: grid;
-  grid-template-rows: 1fr max-content;
   min-height: calc(100vh - var(--header-height));
-  padding-bottom: var(--spacing);
-}
-
-@media (min-width: 1000px) {
-  #home {
-    gap: var(--spacing);
-    padding-bottom: calc(var(--spacing) * 2);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
 }

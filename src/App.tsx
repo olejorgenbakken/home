@@ -5,17 +5,25 @@ import Home from "./Views/Home/Home";
 import CV from "./Views/CV/cv";
 import NotFound from "./Views/NotFound/NotFound";
 import Footer from "./components/footer/footer";
-import ProjectRouter from "./Views/Projects/ProjectRouter";
 
 import "./styles/global.css";
+import Vipps from "./Views/Vipps/Vipps";
+import Projects from "./Views/Projects/Projects";
 
 
 
 function App() {
   return (
     <Switch>
+      <Route path="/prosjekter/vipps">
+        <Header position="fixed" transparent={true} />
+        <Vipps />
+        <Footer />
+      </Route>
       <Route path="/prosjekter">
-        <ProjectRouter />
+        <Header />
+        <Projects />
+        <Footer />
       </Route>
       <Route exact path="/cv">
         <Header />

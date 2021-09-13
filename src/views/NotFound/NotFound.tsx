@@ -1,4 +1,4 @@
-import Button from "../../components/buttons/generic/Button";
+import Button from "../../components/button/Button";
 
 import './not-found.css';
 

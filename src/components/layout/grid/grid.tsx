@@ -3,46 +3,27 @@ import "./grid.css";
 
 interface Props {
   columns?: 8 | 6 | 4 | 2 | 1,
-  width?: 'contained' | 'full',
   align?: 'flex-start' | 'center' | 'flex-end',
   children: ReactNode
 }
 
-const setStyle = (align?: string, width?: string,) => {
-  switch (width) {
-    case "contained":
-      let containedStyle = {
-        maxWidth: 'var(--max-width)',
-        padding: '0 var(--spacing)',
-        justifyContent: 'flex-start'
-      }
-      return containedStyle;
-
-    case 'full':
-      let fullStyle = {
-        justifyContent: align
-      }
-      return fullStyle;
-
-    default:
-      let defaultStyle = {
-        maxWidth: 'unset',
-        padding: '0',
-      }
-      return defaultStyle;
+const setStyle = (align?: string) => {
+  let styling = {
+    justifyContent: align
   }
+  return styling;
 }
 
-function Grid({ columns, align, width, children }: Props) {
+function Grid({ columns, align, children }: Props) {
   if (columns) {
     return (
-      <section className='grid' data-grids={columns} style={setStyle(align, width)}>
+      <section className='grid' data-grids={columns} style={setStyle(align)}>
         {children}
       </section >
     );
   } else {
     return (
-      <section className='grid flex' style={setStyle(align, width)}>
+      <section className='grid flex' style={setStyle(align)}>
         {children}
       </section >
     );

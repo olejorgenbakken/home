@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 
 import Header from "./components/header/header";
 import Home from "./Views/Home/Home";
-import CV from "./Views/CV/Cv";
+import CV from "./Views/CV/cv";
 import NotFound from "./Views/NotFound/NotFound";
 import Footer from "./components/footer/footer";
 import ProjectRouter from "./Views/Projects/ProjectRouter";

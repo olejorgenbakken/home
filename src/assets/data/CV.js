@@ -53,8 +53,8 @@ const CV = {
       title:
         "Bachelorgrad innen informatikk med spesialisering i interaksjonsdesign",
       time: {
-        start: Date.UTC(2021, 8),
-        end: Date.UTC(2018, 6),
+        start: Date.UTC(2018, 6),
+        end: Date.UTC(2021, 8),
       },
       description:
         "Innføring i mange ulike informatikkemner, som databaser, programmering og datamaskinens oppbygging. Etter et felles førsteår ble vi delt inn i spesialiseringene våre hvor jeg hadde tre emner om interaksjonsdesign, hvor vi lærte om alt fra prototyping av brukergrensesnitt, og testing av disse, til innholdsproduksjon. Samtidig tok jeg også emner om utvikling i javascriptrammeverk som Vue og React, og Wordpress.",

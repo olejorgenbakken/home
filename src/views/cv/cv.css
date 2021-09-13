@@ -1,13 +1,34 @@
 #cv {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 3em;
+}
+
+#cv .cv-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#cv .cv-section header {
+  padding-bottom: 1em;
+}
+
+#cv .cv-section::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--separator);
+  margin-bottom: 1em;
+}
+
+#cv #education::before {
+  display: none;
 }
 
 #cv .cv-section section {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
 }
 
 #cv .date {
@@ -16,7 +37,11 @@
 
 @media (min-width: 900px) {
   #cv {
-    gap: 8em;
+    gap: 6em;
+  }
+
+  #cv .cv-section::before {
+    margin-bottom: 6em;
   }
 
   #cv .cv-section section {

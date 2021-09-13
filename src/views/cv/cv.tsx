@@ -79,7 +79,7 @@ const getData = (section: { title: string, place: string, time: { start: number,
 function Cv() {
   return (
     <main id="cv">
-      <article className="cv-section">
+      <article className="cv-section" id="education">
         <header>
           <h2>Erfaring</h2>
         </header>
@@ -87,7 +87,7 @@ function Cv() {
           {getData(experience)}
         </section>
       </article >
-      <article className="cv-section" >
+      <article className="cv-section" id="experience">
         <header>
           <h2>Utdanning</h2>
         </header>

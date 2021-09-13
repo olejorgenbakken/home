@@ -1,5 +1,25 @@
 #cv {
   display: flex;
   flex-direction: column;
+  gap: 4em;
+}
+
+#cv .cv-section section {
+  display: flex;
+  flex-direction: column;
   gap: 2em;
+}
+
+#cv .date {
+  color: var(--text-lighter);
+}
+
+@media (min-width: 900px) {
+  #cv {
+    gap: 8em;
+  }
+
+  #cv .cv-section section {
+    gap: 4em;
+  }
 }

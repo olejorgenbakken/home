@@ -60,18 +60,17 @@ const toDate = (time: { start: number, end: number }) => {
   return ({ startYYYYMM, startText, endYYYYMM, endText })
 }
 
-const setList = (section: { title: string, place: string, time: { start: number, end: number }, description: string }[]) => {
+const getData = (section: { title: string, place: string, time: { start: number, end: number }, description: string }[]) => {
   const dataList = section.map((entry) => (
     <article>
       <h3 className="place">{entry.place}</h3>
       <h4 className="role">{entry.title}</h4>
       <p className="date">
-        <time dateTime={toDate(entry.time).startYYYYMM}>{toDate(entry.time).startText}</time>
+        <time dateTime={toDate(entry.time).startYYYYMM}>{toDate(entry.time).startText.charAt(0).toUpperCase()}{toDate(entry.time).startText.replace(toDate(entry.time).startText.charAt(0), '')}</time>
         &nbsp;–&nbsp;
-        <time dateTime={toDate(entry.time).endYYYYMM}>{toDate(entry.time).endText}</time>
+        <time dateTime={toDate(entry.time).endYYYYMM}>{toDate(entry.time).endText.charAt(0).toUpperCase()}{toDate(entry.time).endText.replace(toDate(entry.time).endText.charAt(0), '')}</time>
       </p>
       <p>{entry.description}</p>
-      <Card type="default" link="https://figma.com/@olejorgen">Figma</Card>
     </article>
   ));
   return (dataList)
@@ -80,14 +79,22 @@ const setList = (section: { title: string, place: string, time: { start: number,
 function Cv() {
   return (
     <main id="cv">
-      <section className="cv-section" >
+      <article className="cv-section">
+        <header>
+          <h2>Erfaring</h2>
+        </header>
+        <section>
+          {getData(experience)}
+        </section>
+      </article >
+      <article className="cv-section" >
         <header>
           <h2>Utdanning</h2>
         </header>
-
-      </section >
-      <hr />
-
+        <section>
+          {getData(education)}
+        </section>
+      </article >
     </main>
   );
 }

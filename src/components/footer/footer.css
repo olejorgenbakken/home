@@ -2,14 +2,11 @@
   width: 100%;
   background: var(--background-darker);
   border-top: 1px solid var(--separator);
+  padding: 6em 0;
 }
 
 #global-footer .content {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding: 1em;
 }

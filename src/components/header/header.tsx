@@ -13,7 +13,7 @@ function Header({ position, transparent }: Props) {
       data-bg={transparent}
       data-pos={position}
       className={`header-fixed`}>
-      <nav id="global-menu">
+      <nav id="global-menu" className="contain">
         <NavLink to="/" title="Til hovedsiden" className="home" activeClassName="active">
           Hovedside
         </NavLink>

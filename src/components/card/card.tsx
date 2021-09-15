@@ -2,22 +2,12 @@ import { Link } from "react-router-dom";
 import { ReactNode } from "react";
 
 import './card.css';
-import { contrast } from "../../assets/functions";
 
 interface Props {
     link?: string,
-    color?: any,
     image?: string,
-    type: 'default' | 'large',
+    large?: boolean,
     children: ReactNode
-}
-
-const setStyle = (color: string) => {
-    let style = {
-        background: color,
-        color: contrast(color)
-    }
-    return style;
 }
 
 const setImg = (image?: string) => {
@@ -32,11 +22,11 @@ const setImg = (image?: string) => {
     }
 }
 
-function Card({ type, link, children, image, color }: Props) {
+function Card({ large, link, image, children }: Props) {
     if (link !== undefined) {
         if (link.includes('https://')) {
             return (
-                <a href={link} className={`card card-${type} card-link`} style={setStyle(color)}>
+                <a href={link} className={`card card-link`} data-large={large}>
                     {setImg(image)}
                     <article className="card-content">
                         {children}
@@ -45,7 +35,7 @@ function Card({ type, link, children, image, color }: Props) {
             )
         } else {
             return (
-                <Link to={link} className={`card card-${type} card-link`} style={setStyle(color)}>
+                <Link to={link} className={`card card-link`} data-large={large}>
                     {setImg(image)}
                     <article className="card-content">
                         {children}
@@ -55,7 +45,7 @@ function Card({ type, link, children, image, color }: Props) {
         }
     } else {
         return (
-            <article className={`card card-${type}`} style={setStyle(color)}>
+            <article className={`card`} data-large={large}>
                 {setImg(image)}
                 <article className="card-content">
                     {children}

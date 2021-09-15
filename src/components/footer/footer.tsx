@@ -8,7 +8,7 @@ function Footer() {
       <section className="content contain">
         <p>
           Takk for at du sjekket ut nettsiden min. &nbsp;
-          <InlineLink type="external" link="https://github.com/olejorgenbakken/home">Du kan se kildekoden på GitHub her</InlineLink>
+          <InlineLink type="external" link="https://github.com/olejorgenbakken/home">Du kan se kildekoden på GitHub her.</InlineLink>
         </p>
       </section>
     </footer>

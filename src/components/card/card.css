@@ -1,15 +1,18 @@
 .card {
-  border-radius: 2px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: stretch;
+  border: 1px solid var(--text);
+  border-radius: 12px;
   overflow: hidden;
+  background: var(--background);
+  color: var(--text);
 }
 
 .card .card-image {
   position: relative;
-  height: 130px;
   width: 100%;
   margin: 0;
 }
@@ -24,7 +27,6 @@
 }
 
 .card .card-content {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,43 +35,71 @@
   padding: 1em;
 }
 
-.card .card-content > * {
-  width: 100%;
-}
-
-.card-default {
-  border: 1px solid var(--separator);
-}
-
 .card-link {
-  border: 1px solid var(--link);
+  border-radius: 2px;
+  border-color: var(--link);
   transition: 0.3s ease-in-out;
 }
 
 .card-link:hover {
-  border-color: var(--link-hover);
+  color: inherit;
 }
 
-.card-large {
+.card[data-large="true"] {
+  --background: #ffffff;
+  --text: #000;
+  min-height: 40vh;
   border: none;
   padding: 0;
-  align-items: center;
+  border-radius: 0;
 }
 
-.card-large .card-image {
-  min-height: 130px;
+.card[data-large="true"] .card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
-@media (min-width: 700px) {
-  .card-large {
+.card[data-large="true"] .card-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #00000022;
+}
+
+.card[data-large="true"] .card-content {
+  z-index: 1;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .card[data-large="true"] {
     flex-direction: row;
-    min-height: 35vh;
   }
 
-  .card-large .card-image {
-    height: 100%;
-  }
-  .card-large .card-content {
+  .card[data-large="true"] .card-content {
     padding: 2em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card[data-large="true"] {
+    border-radius: 8px;
+  }
+
+  .card[data-large="true"] .card-content {
+    padding: 2em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card[data-large="true"] {
+    --background: #000;
+    --text: #fff;
   }
 }

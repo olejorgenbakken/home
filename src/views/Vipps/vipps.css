@@ -1,6 +1,13 @@
+#vipps {
+  --background: #ff5b24;
+  --text: #fff;
+}
+
 .main-project {
-  max-width: unset;
-  padding: 0;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
 }
 
 .project-header {
@@ -10,8 +17,40 @@
   gap: 1em;
 }
 
-.project-header h1 {
-  font-size: 2em;
+.task {
+  padding-bottom: 4em;
+}
+
+.testing {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.testing .tests {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.testing .tests .findings {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.flow {
+  position: relative;
+  overflow: hidden;
+}
+
+.flow > * {
+  position: relative;
+  z-index: 1;
 }
 
 .project-footer {
@@ -22,7 +61,11 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
-  background: linear-gradient(180deg, #00000000 0%, #0000000f 100%);
+  background: linear-gradient(
+    180deg,
+    #00000000 0%,
+    var(--background-darker) 100%
+  );
 }
 
 .project-footer header {

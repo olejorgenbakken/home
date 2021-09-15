@@ -1,0 +1,123 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid > * {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 1em;
+  gap: 0.5em;
+}
+
+.row > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
+@media screen and (min-width: 300px) {
+  .grid[data-columns="5"],
+  .grid[data-columns="6"],
+  .grid[data-columns="7"],
+  .grid[data-columns="8"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .grid[data-columns="4"],
+  .grid[data-columns="5"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .grid[data-columns="2"],
+  .grid[data-columns="3"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .row {
+    padding: 0 2em;
+    gap: 1em;
+  }
+
+  .grid[data-columns="5"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid[data-columns="6"],
+  .grid[data-columns="7"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .grid[data-columns="7"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .grid[data-columns="3"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid[data-columns="4"],
+  .grid[data-columns="8"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .row {
+    padding: 0 calc(25% + 8em);
+    gap: 12.5%;
+  }
+
+  .row > * {
+    min-width: calc(var(--max-width) - 4em);
+  }
+
+  .grid[data-columns="5"],
+  .grid[data-columns="7"] {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .grid[data-columns="6"],
+  .grid[data-columns="7"] {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid[data-columns="7"] {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .grid[data-columns="8"] {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}

@@ -1,7 +1,20 @@
 #home {
-  min-height: calc(100vh - var(--header-height));
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr max-content;
   gap: 1em;
+  padding-bottom: 1em;
+}
+
+@media (min-width: 700px) {
+  #home {
+    padding-bottom: 2em;
+  }
+}
+
+@media (min-width: 900px) {
+  #home {
+    padding-bottom: 4em;
+  }
 }

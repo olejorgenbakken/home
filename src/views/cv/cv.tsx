@@ -1,8 +1,6 @@
 import { education, experience } from "../../assets/data/CV";
 
 import './cv.css';
-import Card from "../../components/card/card";
-console.log(education)
 
 const setMonth = (monthNum: number) => {
   let monthName: string
@@ -78,7 +76,7 @@ const getData = (section: { title: string, place: string, time: { start: number,
 
 function Cv() {
   return (
-    <main id="cv">
+    <main id="cv" className="contain">
       <article className="cv-section" id="education">
         <header>
           <h2>Erfaring</h2>

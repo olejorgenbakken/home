@@ -16,8 +16,8 @@ function InlineLink({ type, link, children }: Props) {
       <span className="external-link">
         <a href={link} className="link">
           {children}
+          <ExternalIcon />
         </a>
-        <ExternalIcon />
       </span>
     )
   } else {

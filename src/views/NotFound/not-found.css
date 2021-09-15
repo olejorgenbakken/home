@@ -1,6 +1,6 @@
 #not-found {
   position: relative;
-  background: var(--background);
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,11 +41,6 @@
 
 #not-found article a {
   margin-top: 4em;
-}
-
-#not-found article button {
-  background: var(--background);
-  font-weight: 600;
 }
 
 @-webkit-keyframes grain {

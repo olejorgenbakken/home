@@ -1,13 +1,13 @@
 import Card from "../../components/card/card";
-import Grid from "../../components/layout/grid/grid";
 import projects from "../../assets/data/projects";
 
 import './Projects.css';
+import Gallery from "../../components/gallery/gallery";
 
 const setProjects = () => {
     const externalList = projects.map((project) => (
-        <Card type="large" key={project.slug} link={`/prosjekter/${project.slug}`} color={project.color} image={project.image}>
-            <h2>{project.workplace}</h2>
+        <Card large={true} key={project.business.name} link={`/prosjekter/${project.business.name}`} image={project.cover}>
+            <h2>{project.business.name}</h2>
         </Card>
     ));
     return externalList;
@@ -16,7 +16,7 @@ const setProjects = () => {
 function Projects() {
     return (
         <main id="projects">
-            <Grid columns={1} align="center"> {setProjects()} </Grid>
+            <Gallery type="grid" columns='1' align="center"> {setProjects()} </Gallery>
         </main>
     );
 }

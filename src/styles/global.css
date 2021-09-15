@@ -1,9 +1,13 @@
 @import "./normalize.css";
 
 :root {
-  --background: #fffcf9;
-  --background-darker: #f6ebe3;
-  --header-height: 6em;
+  --background: #fffbf3;
+  --background-darker: #f8e9de;
+  --text: #121213;
+  --text-lighter: #565656;
+  --link: #0e72ff;
+  --link-hover: #0047ab;
+  --separator: #d6d6d6;
   --max-width: 900px;
 }
 
@@ -13,32 +17,25 @@
 
 body {
   margin: 0;
-  background: var(--background);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --text: #121213;
-  --text-lighter: #838383;
-  --link: #7eb4ff;
-  --link-hover: #0061e9;
-  --separator: #d6d6d6;
+  background: var(--background);
   color: var(--text);
 }
 
-main,
+main {
+  min-height: calc(100vh - var(--header-height));
+}
+
 .contain {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em;
-}
-
-main {
-  min-height: calc(100vh - var(--header-height));
-  padding-bottom: 1em;
 }
 
 h1,
@@ -49,15 +46,13 @@ h5,
 h6,
 p,
 a,
-ul,
-li,
 label {
   padding: 0;
   margin: 0;
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 2em;
   line-height: 1.3em;
   font-weight: 700;
 }
@@ -71,7 +66,7 @@ h5 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 h3 {
@@ -93,30 +88,18 @@ li {
 
 a {
   text-decoration: none;
-  display: inline-block;
   position: relative;
-  color: inherit;
+  color: var(--link);
+  transition: 0.3s ease-in-out;
 }
 
-p a::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 3px;
-  border-radius: 3px;
-  background: var(--link);
-  transition: 0.2s ease-in-out;
-}
-
-p a:hover::after {
-  background: var(--link-hover);
+a:hover {
+  color: var(--link-hover);
 }
 
 hr {
   width: 100%;
-  background-color: var(--separator);
+  background: -var(--separator);
   height: 1px;
   border: none;
   outline: none;
@@ -125,7 +108,6 @@ hr {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-  color: blue;
 }
 
 img {
@@ -133,18 +115,9 @@ img {
 }
 
 @media (min-width: 600px) {
-  :root {
-    --header-height: 10em;
-  }
-
-  main,
   .contain {
     padding-left: 2em;
     padding-right: 2em;
-  }
-
-  main {
-    padding-bottom: 2em;
   }
 }
 
@@ -156,7 +129,7 @@ img {
 
   body {
     --text: #fff;
-    --text-lighter: #cfcfcf;
+    --text-lighter: #e9e9e9;
     --separator: #434346;
     --link: #156ce6;
     --link-hover: #4190ff;

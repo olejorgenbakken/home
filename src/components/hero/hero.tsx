@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { contrast } from "../../assets/functions";
 import "./hero.css";
 
 interface Props {
@@ -10,10 +9,9 @@ interface Props {
   children: ReactNode
 }
 
-const setStyle = (color: any, image?: string, gradient?: string, height?: string) => {
+const setStyle = (color: string, image?: string, gradient?: string, height?: string) => {
   let style = {
-    color: contrast(color),
-    background: color,
+    background: '',
     backgroundSize: '',
     backgroundPosition: '',
     minHeight: '',
@@ -22,13 +20,13 @@ const setStyle = (color: any, image?: string, gradient?: string, height?: string
   if (gradient) {
     switch (gradient) {
       case 'top':
-        style.background = `linear-gradient(180deg, ${color} 0%, ${color}00 100%)`;
+        style.background = `linear-gradient(180deg, ${color}ff 0%, ${color}00 80%)`;
         break;
       case 'middle':
-        style.background = `linear-gradient(180deg, ${color}00 0%, ${color} 50%, ${color}00 100%)`;
+        style.background = `linear-gradient(180deg, ${color}00 0%, ${color}ff 50%, ${color}00 100%)`;
         break;
       case 'bottom':
-        style.background = `linear-gradient(180deg, ${color}00 0%, ${color} 100%)`;
+        style.background = `linear-gradient(180deg, ${color}00 0%, ${color}ff 80%)`;
         break;
       default:
         break;
@@ -48,7 +46,7 @@ const setStyle = (color: any, image?: string, gradient?: string, height?: string
   return style;
 }
 
-const extraGradient = (color: any, image?: string, gradient?: string) => {
+const extraGradient = (color: string, image?: string, gradient?: string) => {
   if (color && image && gradient) {
     return (<aside style={setStyle(color, undefined, gradient)} className="gradient"></aside>)
   } else {

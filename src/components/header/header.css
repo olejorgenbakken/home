@@ -1,58 +1,80 @@
 #global-header {
   width: 100%;
-  height: var(--header-height);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2em 0;
+}
+
+#global-header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#global-header[data-transparent="true"] {
+  background: transparent;
+}
+
+#global-header[data-transparent="true"]::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #000000aa 0%, #00000000 100%);
+  z-index: 0;
+}
+
+#global-header[data-transparent="true"] #global-menu {
+  position: relative;
+  z-index: 1;
+}
+
+#global-header[data-transparent="true"] a {
+  color: #ffffff;
+}
+
+#global-header[data-position="fixed"] {
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
 }
 
-#global-header[data-bg="true"] {
-  color: #fff;
-  background: transparent;
-}
-
-#global-header[data-pos="fixed"] {
-  position: fixed;
-}
-
-#global-header[data-pos="absolute"] {
+#global-header[data-position="absolute"] {
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 #global-menu {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
 #global-menu ul {
-  list-style-type: none;
+  gap: 1em 2em;
+  flex-wrap: wrap;
   font-weight: 500;
 }
 
-#global-menu ul a::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--link);
-  transition: 0.2s ease-in-out;
-}
-
-#global-menu ul a:hover::after {
-  background: var(--link-hover);
-}
-
 #global-menu .home {
-  font-size: 1.3em;
   font-weight: 700;
+}
+
+#global-menu .home::after {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  #global-header {
+    padding: 3em 0;
+  }
 }

@@ -1,3 +1,21 @@
+#projects {
+  max-width: 1000px;
+  padding: 6em 0 0 0;
+  margin: 0 auto;
+}
+
 #projects .grid {
   gap: 2em;
+}
+
+@media (min-width: 700px) {
+  #projects {
+    padding-top: 8em;
+  }
+}
+
+@media (min-width: 1000px) {
+  #projects {
+    padding: 8em 2em 4em 2em;
+  }
 }

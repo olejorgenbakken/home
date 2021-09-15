@@ -15,19 +15,16 @@
 
 .external-link {
   position: relative;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 0.2em;
+  margin-right: 1em;
 }
 
 .external-link svg {
-  position: relative;
-  top: 0.1em;
+  position: absolute;
+  margin-left: 1px;
   height: 0.7em;
   width: 0.7em;
 }
 
 .external-link svg path {
-  fill: var(--text);
+  fill: var(--link);
 }

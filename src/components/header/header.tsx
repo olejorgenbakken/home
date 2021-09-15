@@ -8,21 +8,20 @@ interface Props {
 
 function Header({ position, transparent }: Props) {
   return (
-    <header
-      id="global-header"
-      data-bg={transparent}
-      data-pos={position}
-      className={`header-fixed`}>
-      <nav id="global-menu" className="contain">
-        <NavLink to="/" title="Til hovedsiden" className="home" activeClassName="active">
-          Hovedside
-        </NavLink>
-        <ul>
+    <header id="global-header" data-transparent={transparent} data-position={position}>
+      <nav className="contain">
+        <ul id="global-menu">
           <li>
-            <NavLink to="/cv" title="Gå til CVen min" activeClassName="active">
-              CV
-            </NavLink>
+            <NavLink to="/" className="home">Hjem</NavLink>
           </li>
+          <ul>
+            <li>
+              <NavLink to="/prosjekter" activeClassName="active">Prosjekter</NavLink>
+            </li>
+            <li>
+              <NavLink to="/cv" activeClassName="active">CV</NavLink>
+            </li>
+          </ul>
         </ul>
       </nav>
     </header>

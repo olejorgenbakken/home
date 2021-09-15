@@ -16,12 +16,12 @@ function App() {
   return (
     <Switch>
       <Route path="/prosjekter/vipps">
-        <Header position="fixed" transparent={true} />
+        <Header position="absolute" transparent={true} />
         <Vipps />
         <Footer />
       </Route>
       <Route path="/prosjekter">
-        <Header />
+        <Header position="absolute" />
         <Projects />
         <Footer />
       </Route>

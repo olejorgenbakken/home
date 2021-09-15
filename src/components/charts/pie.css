@@ -1,0 +1,33 @@
+.pie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart {
+  margin: 1em;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  clip-path: circle(50% at 50% 50%);
+  position: relative;
+}
+
+.chart figcaption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  clip-path: circle(50% at 50% 50%);
+  z-index: 1;
+  background: var(--background);
+  font-weight: 700;
+  font-size: 1.1em;
+}

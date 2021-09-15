@@ -83,4 +83,6 @@ export const experience = [
   },
 ];
 
-export default { education, experience };
+const CV = { education, experience };
+
+export default CV;

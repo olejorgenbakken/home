@@ -56,11 +56,11 @@
 #global-menu {
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 1rem;
 }
 
 #global-menu ul {
-  gap: 1em 2em;
+  gap: 1em 2rem;
   flex-wrap: wrap;
   font-weight: 500;
 }

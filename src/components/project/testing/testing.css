@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 2rem;
   padding: 3em 0 4em 0;
 }
 
@@ -26,5 +26,5 @@
 .tests {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 4rem;
 }

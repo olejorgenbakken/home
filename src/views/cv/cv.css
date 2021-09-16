@@ -1,8 +1,8 @@
 #cv {
   display: flex;
   flex-direction: column;
-  gap: 3em;
-  padding-bottom: 2em;
+  gap: 3rem;
+  padding-bottom: 2rem;
 }
 
 #cv .cv-section {
@@ -11,22 +11,22 @@
 }
 
 #cv .cv-section header {
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
 #cv .cv-section section {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
 }
 
 @media (min-width: 900px) {
   #cv {
-    gap: 6em;
-    padding-bottom: 4em;
+    gap: 6rem;
+    padding-bottom: 4rem;
   }
 
   #cv .cv-section section {
-    gap: 4em;
+    gap: 4rem;
   }
 }

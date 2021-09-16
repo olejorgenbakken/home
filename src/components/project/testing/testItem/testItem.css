@@ -1,11 +1,11 @@
 .test {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 2rem;
 }
 
 .test .results {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 4rem;
 }

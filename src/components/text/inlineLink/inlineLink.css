@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 1rem;
   transition: 0.3s ease-in-out;
 }
 
@@ -15,14 +15,14 @@
 
 .external-link {
   position: relative;
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 
 .external-link svg {
   position: absolute;
   margin-left: 1px;
-  height: 0.7em;
-  width: 0.7em;
+  height: 0.7rem;
+  width: 0.7rem;
 }
 
 .external-link svg path {

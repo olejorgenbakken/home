@@ -6,7 +6,7 @@
 }
 
 .chart {
-  margin: 1em;
+  margin: 1rem;
   width: 100px;
   height: 100px;
   display: flex;
@@ -29,5 +29,5 @@
   z-index: 1;
   background: var(--background);
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }

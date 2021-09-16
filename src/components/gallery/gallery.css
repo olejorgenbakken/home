@@ -120,7 +120,7 @@
   }
 
   .row > * {
-    min-width: calc(var(--max-width) - 4em);
+    min-width: calc(var(--max-width) - var(--padding));
   }
 
   .row[data-columns="2"] > * {

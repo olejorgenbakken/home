@@ -1,21 +1,30 @@
 #projects {
-  max-width: 1000px;
-  padding: 6em 0 0 0;
+  max-width: 1100px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#projects .projects-header {
+  padding: 2em 0;
+  text-align: center;
 }
 
 #projects .grid {
   gap: 2em;
 }
 
-@media (min-width: 700px) {
-  #projects {
-    padding-top: 8em;
-  }
+#projects .card h2 {
+  font-size: 2em;
+  text-shadow: 0 0 8px #000000;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   #projects {
-    padding: 8em 2em 4em 2em;
+    min-height: 80vh;
+  }
+
+  #projects .card h2 {
+    font-size: 4em;
   }
 }

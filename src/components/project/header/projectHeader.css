@@ -1,0 +1,15 @@
+.project-header {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+}
+
+.project-header img {
+  width: 90%;
+  max-width: 300px;
+}

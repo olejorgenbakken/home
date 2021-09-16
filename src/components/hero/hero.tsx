@@ -20,13 +20,13 @@ const setStyle = (color: string, image?: string, gradient?: string, height?: str
   if (gradient) {
     switch (gradient) {
       case 'top':
-        style.background = `linear-gradient(180deg, ${color}ff 0%, ${color}00 80%)`;
+        style.background = `linear-gradient(180deg, ${color}ff 0%, ${color}00 95%)`;
         break;
       case 'middle':
         style.background = `linear-gradient(180deg, ${color}00 0%, ${color}ff 50%, ${color}00 100%)`;
         break;
       case 'bottom':
-        style.background = `linear-gradient(180deg, ${color}00 0%, ${color}ff 80%)`;
+        style.background = `linear-gradient(180deg, ${color}00 0%, ${color}ff 95%)`;
         break;
       default:
         break;

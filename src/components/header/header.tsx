@@ -3,12 +3,11 @@ import "./header.css";
 
 interface Props {
   position?: 'relative' | 'fixed' | 'absolute',
-  transparent?: boolean,
 }
 
-function Header({ position, transparent }: Props) {
+function Header({ position }: Props) {
   return (
-    <header id="global-header" data-transparent={transparent} data-position={position}>
+    <header id="global-header" data-position={position}>
       <nav className="contain">
         <ul id="global-menu">
           <li>

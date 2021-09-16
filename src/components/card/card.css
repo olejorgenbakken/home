@@ -48,10 +48,15 @@
 .card[data-large="true"] {
   --background: #ffffff;
   --text: #000;
-  min-height: 40vh;
+  min-height: 50vh;
   border: none;
   padding: 0;
   border-radius: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.card[data-large="true"]:hover {
+  transform: scale(1.005);
 }
 
 .card[data-large="true"] .card-image {
@@ -62,19 +67,9 @@
   width: 100%;
 }
 
-.card[data-large="true"] .card-image::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #00000022;
-}
-
 .card[data-large="true"] .card-content {
   z-index: 1;
-  color: white;
+  color: #ffffff;
 }
 
 @media (min-width: 600px) {

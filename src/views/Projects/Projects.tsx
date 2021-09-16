@@ -4,9 +4,9 @@ import projects from "../../assets/data/projects";
 import './Projects.css';
 import Gallery from "../../components/gallery/gallery";
 
-const setProjects = () => {
+const getProjects = () => {
     const externalList = projects.map((project) => (
-        <Card large={true} key={project.business.name} link={`/prosjekter/${project.business.name}`} image={project.cover}>
+        <Card large={true} key={project.slug} link={`/prosjekter/${project.slug}`} image={project.cover}>
             <h2>{project.business.name}</h2>
         </Card>
     ));
@@ -16,7 +16,10 @@ const setProjects = () => {
 function Projects() {
     return (
         <main id="projects">
-            <Gallery type="grid" columns='1' align="center"> {setProjects()} </Gallery>
+            <header className="contain projects-header">
+                <h1>Prosjekter</h1>
+            </header>
+            <Gallery type="grid" columns='1' align="center"> {getProjects()} </Gallery>
         </main>
     );
 }

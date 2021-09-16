@@ -7,21 +7,17 @@ import NotFound from "./Views/NotFound/NotFound";
 import Footer from "./components/footer/footer";
 
 import "./styles/global.css";
-import Vipps from "./Views/Vipps/Vipps";
+import Project from "./Views/Project/Project.jsx";
 import Projects from "./Views/Projects/Projects";
-
-
 
 function App() {
   return (
     <Switch>
-      <Route path="/prosjekter/vipps">
-        <Header position="absolute" transparent={true} />
-        <Vipps />
-        <Footer />
+      <Route path="/prosjekter/:project">
+        <Project />
       </Route>
       <Route path="/prosjekter">
-        <Header position="absolute" />
+        <Header />
         <Projects />
         <Footer />
       </Route>
@@ -36,11 +32,14 @@ function App() {
         <Footer />
       </Route>
       <Route path="*">
-        <Header transparent={true} position="absolute" />
-        <NotFound message="Denne siden ekisterer ikke (ennå)" link="/" linkTitle="Gå til hovedsiden" />
+        <NotFound
+          message="Denne siden ekisterer ikke (ennå)"
+          link="/"
+          linkTitle="Gå til hovedsiden"
+        />
         <Footer />
       </Route>
-    </Switch >
+    </Switch>
   );
 }
 

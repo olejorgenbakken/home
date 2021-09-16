@@ -5,11 +5,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
   text-align: center;
 }
 
 .project-header img {
-  width: 90%;
+  width: 60%;
   max-width: 300px;
 }

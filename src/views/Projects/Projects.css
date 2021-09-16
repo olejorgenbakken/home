@@ -10,8 +10,9 @@
   text-align: center;
 }
 
-#projects .grid {
-  gap: 2em;
+#projects section {
+  display: flex;
+  flex-direction: column;
 }
 
 #projects .card h2 {
@@ -22,9 +23,22 @@
 @media (min-width: 900px) {
   #projects {
     min-height: 80vh;
+    padding-bottom: 6em;
+  }
+
+  #projects .projects-header {
+    padding: 2em 0 4em 0;
+  }
+
+  #projects section {
+    gap: 2em;
   }
 
   #projects .card h2 {
-    font-size: 4em;
+    font-size: 3em;
+  }
+
+  #projects .grid {
+    gap: 2em;
   }
 }

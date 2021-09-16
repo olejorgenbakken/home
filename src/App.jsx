@@ -7,40 +7,43 @@ import NotFound from "./Views/NotFound/NotFound";
 import Footer from "./components/footer/footer";
 
 import "./styles/global.css";
-import Project from "./Views/Project/Project.jsx";
+import Project from "./Views/Projects/Project/Project.jsx";
 import Projects from "./Views/Projects/Projects";
+import { Component } from "react";
 
-function App() {
-  return (
-    <Switch>
-      <Route path="/prosjekter/:project">
-        <Project />
-      </Route>
-      <Route path="/prosjekter">
-        <Header />
-        <Projects />
-        <Footer />
-      </Route>
-      <Route exact path="/cv">
-        <Header />
-        <CV />
-        <Footer />
-      </Route>
-      <Route exact path="/">
-        <Header />
-        <Home />
-        <Footer />
-      </Route>
-      <Route path="*">
-        <NotFound
-          message="Denne siden ekisterer ikke (ennå)"
-          link="/"
-          linkTitle="Gå til hovedsiden"
-        />
-        <Footer />
-      </Route>
-    </Switch>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Switch>
+        <Route path="/prosjekter/:project">
+          <Project />
+        </Route>
+        <Route path="/prosjekter">
+          <Header />
+          <Projects />
+          <Footer />
+        </Route>
+        <Route exact path="/cv">
+          <Header />
+          <CV />
+          <Footer />
+        </Route>
+        <Route exact path="/">
+          <Header />
+          <Home />
+          <Footer />
+        </Route>
+        <Route path="*">
+          <NotFound
+            message="Denne siden ekisterer ikke (ennå)"
+            link="/"
+            linkTitle="Gå til hovedsiden"
+          />
+          <Footer />
+        </Route>
+      </Switch>
+    );
+  }
 }
 
 export default App;

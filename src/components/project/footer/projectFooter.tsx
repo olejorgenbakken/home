@@ -6,9 +6,8 @@ const ProjectFooter = () => {
         <section className="project-footer">
             <header>
                 <h2>Takk for at du sjekket ut dette prosjektet!</h2>
-                <p>Se på noe annet her:</p>
             </header>
-            <Button link="/prosjekter">Til alle prosjekter</Button>
+            <Button link="/prosjekter">Se alle prosjekter</Button>
         </section>
     )
 }

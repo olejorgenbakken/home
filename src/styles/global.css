@@ -112,8 +112,10 @@ code {
     monospace;
 }
 
-img {
+img,
+figure {
   max-width: 100%;
+  margin: 0;
 }
 
 @media (min-width: 600px) {

@@ -9,7 +9,8 @@ interface Props {
             title: string,
             summary: string
         }[]
-    }[]
+    }[],
+    message?: string
 }
 
 const getTests = (tests: { title: string, type: string, findings: { title: string, summary: string }[] }[]) => {
@@ -19,17 +20,21 @@ const getTests = (tests: { title: string, type: string, findings: { title: strin
     return testArticles;
 }
 
-const Testing = ({ tests }: Props) => {
-    return (
-        <section className="flow testing">
-            <header className="contain">
-                <h2>Tester</h2>
-            </header>
-            <section className="tests">
-                {getTests(tests)}
+const Testing = ({ tests, message }: Props) => {
+    if (tests.length > 0) {
+        return (
+            <section className="testing">
+                <header className="contain">
+                    <h2>Tester</h2>
+                </header>
+                <section className="tests">
+                    {getTests(tests)}
+                </section>
             </section>
-        </section>
-    )
+        );
+    } else {
+        return null;
+    }
 }
 
 export default Testing;

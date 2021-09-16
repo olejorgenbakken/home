@@ -52,11 +52,6 @@
   border: none;
   padding: 0;
   border-radius: 0;
-  transition: 0.4s ease-in-out;
-}
-
-.card[data-large="true"]:hover {
-  transform: scale(1.005);
 }
 
 .card[data-large="true"] .card-image {

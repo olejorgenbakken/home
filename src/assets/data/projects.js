@@ -1,8 +1,10 @@
-import VippsLogo from "../projects/vipps/logo.svg";
+import VippsLogo from "../images/logos/vipps.svg";
 import VippsCover from "../projects/vipps/cover.jpeg";
+import VippsFinished from "../projects/vipps/prototype-ferdig.png";
 
-import PyskiskHelseLogo from "../projects/psykisk-helse/logo.svg";
+import PyskiskHelseLogo from "../images/logos/pyskiskhelse.svg";
 import PyskiskHelseCover from "../projects/psykisk-helse/cover.png";
+import PyskiskHelseFinished from "../projects/psykisk-helse/prototype-ferdig.png";
 
 const prototypingTags = ["Universell utforming (UU)"];
 const technologyTags = [
@@ -21,16 +23,20 @@ const allTags = [prototypingTags, technologyTags];
 export const vipps = {
   business: {
     name: "Vipps",
-    color: {
+    colors: {
       primary: "#ff5b24",
       secondary: "#551488",
     },
-    logo: VippsLogo,
   },
   slug: "vipps",
   role: "Interaksjonsdesigner",
-  cover: VippsCover,
-  tags: { prototyping: prototypingTags, tech: technologyTags[7] },
+  images: {
+    logo: VippsLogo,
+    cover: VippsCover,
+    researching: [],
+    prototyping: [],
+    finished: [VippsFinished],
+  },
   data: {
     title: "Sommerprosjekt hos Vipps",
     year: {
@@ -106,18 +112,35 @@ export const vipps = {
 };
 
 export const pykiskHelse = {
-  workplace: "Psykisk Helse Magasinet",
-  slug: "pyskisk-helse-magasinet",
-  role: "Interaksjonsdesign",
-  year: {
-    start: 2020,
-    end: 2020,
+  business: {
+    name: "Psykisk Helse Magasinet",
+    color: {
+      primary: "#F6F3EC",
+      secondary: "#1D3244",
+    },
+    logo: PyskiskHelseLogo,
   },
-  task: "",
-  logo: PyskiskHelseLogo,
-  color: "#026464",
-  image: PyskiskHelseCover,
-  tags: technologyTags,
+  slug: "psykisk-helse",
+  role: "Interaksjonsdesigner",
+  cover: PyskiskHelseFinished,
+  data: {
+    title: "Redesign av magasinet Psykisk Helse",
+    year: {
+      start: 2020,
+      end: 2020,
+    },
+    task: "Utform nettsiden til psykisk helse på en annen måte.",
+    background:
+      "Veldedige bedrifter bruker Vipps i større og større grad, og  ønsket om å lage noe for et veldedig marked innad i organisasjonen har vokst. Dette er sommerstudentene fra 2021s løsning på hvordan man kan lage et skalerbart produkt for dette segmentet.",
+    timeline:
+      "Den første uka ble brukt på innsiktsarbeid og å bli kjent med hveranre på teamet. Dette gjorde vi gjennom en Google Design Sprint. Her intervjuet, undersøkte, prototypet og testet vi en helt ny løsning. Etter dette satte vi opp prototyper basert på den endelige versjonen fra GDS. Den første uka lagde vi bare sluttbrukersiden, men nå skaffet vi også innsikt i hvordan Vippsportalen fungerte, og jobbet med den. De neste syv ukene brukte vi på å iterere de to prototypene i tandem, snakket med store og små bedrifter og å sende ut spørreundersøkelser. Den siste uken brukte vi på å ferdigstille hønivåprototypen og den tekniske prototypen, før vi presenterte den på onsdag. Her var hele Vipps tilstede for å gi tilbakemelding.",
+    tests: [],
+    images: {
+      researching: [],
+      prototyping: [],
+      finished: [VippsFinished],
+    },
+  },
 };
 
 export const repairable = {

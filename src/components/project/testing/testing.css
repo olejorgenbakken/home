@@ -1,9 +1,7 @@
 .testing {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  padding: 3em 0 4em 0;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 .testing > * {
@@ -19,12 +17,6 @@
   height: 100%;
   width: 100%;
   background: #000000;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: 0;
-}
-
-.tests {
-  display: flex;
-  flex-direction: column;
-  gap: 4em;
 }

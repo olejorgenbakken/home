@@ -1,16 +1,11 @@
 .project-footer {
-  padding: 2em 1em;
+  padding: 2em var(--padding);
   min-height: 50vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
 }
 
 .project-footer header {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;

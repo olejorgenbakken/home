@@ -14,7 +14,7 @@ function setAmount(amount: number) {
 
 function Pie({ amount }: Props) {
     return (
-        <figure className="chart" style={setAmount(amount)}>
+        <figure className="chart flex-column" style={setAmount(amount)}>
             <figcaption>{amount.toFixed(0)}%</figcaption>
         </figure>
     )

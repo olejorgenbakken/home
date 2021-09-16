@@ -39,7 +39,6 @@ class App extends Component {
             link="/"
             linkTitle="Gå til hovedsiden"
           />
-          <Footer />
         </Route>
       </Switch>
     );

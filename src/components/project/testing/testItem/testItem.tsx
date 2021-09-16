@@ -13,7 +13,7 @@ const getSegments = (findings: { title: string, summary: string }[]) => {
     const segment = findings.map(finding => {
         return (
             <article className="segment">
-                <h4>{finding.title}</h4>
+                <h4> {finding.title}</h4>
                 <p>{finding.summary}</p>
             </article>
         )
@@ -23,12 +23,12 @@ const getSegments = (findings: { title: string, summary: string }[]) => {
 
 const TestItem = ({ title, type, findings }: Props) => {
     return (
-        <article className="contain test">
+        <article className="test flex-column gap-2 constrain padding">
             <header>
                 <h3>{title}</h3>
-                <label>{type}</label>
+                <label className="method">Testmetode: <span>{type}</span></label>
             </header>
-            <article className="results">{getSegments(findings)}</article>
+            <article className="results flex-column gap-4">{getSegments(findings)}</article>
         </article>
     )
 }

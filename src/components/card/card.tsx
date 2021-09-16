@@ -26,18 +26,18 @@ function Card({ large, link, image, children }: Props) {
     if (link !== undefined) {
         if (link.includes('https://')) {
             return (
-                <a href={link} className={`card card-link`} data-large={large}>
+                <a href={link} className='card card-link flex-column' data-large={large}>
                     {setImg(image)}
-                    <article className="card-content">
+                    <article className="card-content flex-column">
                         {children}
                     </article>
                 </a >
             )
         } else {
             return (
-                <Link to={link} className={`card card-link`} data-large={large}>
+                <Link to={link} className='card card-link flex-column' data-large={large}>
                     {setImg(image)}
-                    <article className="card-content">
+                    <article className="card-content flex-column">
                         {children}
                     </article>
                 </Link >
@@ -45,9 +45,9 @@ function Card({ large, link, image, children }: Props) {
         }
     } else {
         return (
-            <article className={`card`} data-large={large}>
+            <article className='card flex-column' data-large={large}>
                 {setImg(image)}
-                <article className="card-content">
+                <article className="card-content flex-column">
                     {children}
                 </article>
             </article >

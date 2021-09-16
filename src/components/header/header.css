@@ -1,20 +1,8 @@
 #global-header {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2em 0;
+  padding: 1em 0;
   background: transparent;
   font-size: 1.3em;
-}
-
-#global-header ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
 }
 
 #global-header[data-position="absolute"]::after,
@@ -54,10 +42,19 @@
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
+#global-menu,
+#global-menu ul {
+  padding: 0;
+  list-style: none;
+}
+
 #global-menu {
+  list-style-type: none;
   justify-content: space-between;
   flex-wrap: wrap;
+  list-style: none;
   gap: 1em;
+  padding: 0 var(--padding);
 }
 
 #global-menu ul {
@@ -76,6 +73,7 @@
 
 @media (min-width: 700px) {
   #global-header {
-    padding: 3em 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 }

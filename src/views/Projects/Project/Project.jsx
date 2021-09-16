@@ -38,7 +38,7 @@ function Project() {
       <div id="project">
         <Header position="absolute" />
         <main
-          className="main-project"
+          className="main-project flex-column gap-4"
           style={setColors(thisProject.business.colors.secondary)}
         >
           <ProjectHeader

@@ -24,7 +24,7 @@
   overflow: auto;
   scroll-snap-type: x mandatory;
   scroll-snap-align: center;
-  padding: 0 1em;
+  padding: 0 var(--padding);
   gap: 0.5em;
 }
 
@@ -62,19 +62,17 @@
 
 @media screen and (min-width: 600px) {
   .row {
-    padding: 0 2em;
     gap: 1em;
   }
 
   .row[data-columns="2"],
   .row[data-columns="3"] {
-    padding: 0 4em;
     gap: 2em;
   }
 
   .row[data-columns="2"] > *,
   .row[data-columns="3"] > * {
-    min-width: calc(var(--max-width) / 2 - 4em);
+    min-width: calc(var(--max-width) / 2 - (var(--padding) * 2));
   }
 
   .grid[data-columns="5"] {
@@ -105,8 +103,13 @@
 }
 
 @media screen and (min-width: 900px) {
+  .row,
+  .row[data-columns="2"],
+  .row[data-columns="3"] {
+    padding: 0 calc(25% + (var(--padding) * 2));
+  }
+
   .row {
-    padding: 0 calc(25% + 8em);
     gap: 12.5%;
   }
 

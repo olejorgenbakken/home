@@ -14,11 +14,13 @@ const getProjects = () => {
 
 function Projects() {
     return (
-        <main id="projects">
-            <header className="contain projects-header">
+        <main id="projects" className="flex-column gap-2">
+            <header className="projects-header constrain padding">
                 <h1>Prosjekter</h1>
             </header>
-            <section> {getProjects()} </section>
+            <section className="flex-column">
+                {getProjects()}
+            </section>
         </main>
     );
 }

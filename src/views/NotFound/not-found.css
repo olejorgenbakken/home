@@ -1,9 +1,6 @@
 #not-found {
   position: relative;
-
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -22,25 +19,10 @@
 }
 
 #not-found article {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   z-index: 1;
-}
-
-#not-found article h1 {
-  font-size: 4em;
-  font-weight: 900;
-}
-
-#not-found article h2 {
-  font-size: 1.2em;
-  font-weight: 500;
-}
-
-#not-found article a {
-  margin-top: 4em;
 }
 
 @-webkit-keyframes grain {
@@ -142,12 +124,5 @@
   }
   90% {
     transform: translate(-1%, 1%);
-  }
-}
-
-@media (min-width: 900px) {
-  #not-found article h1 {
-    font-size: 6em;
-    font-weight: 700;
   }
 }

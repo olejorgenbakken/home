@@ -23,11 +23,11 @@ const getTests = (tests: { title: string, type: string, findings: { title: strin
 const Testing = ({ tests, message }: Props) => {
     if (tests.length > 0) {
         return (
-            <section className="testing">
-                <header className="contain">
+            <section className="testing flex-column gap-2">
+                <header className="constrain padding">
                     <h2>Tester</h2>
                 </header>
-                <section className="tests">
+                <section className="flex-column gap-8">
                     {getTests(tests)}
                 </section>
             </section>

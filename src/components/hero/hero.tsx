@@ -11,7 +11,7 @@ interface Props {
 
 const setStyle = (color: string, image?: string, gradient?: string, height?: string) => {
   let style = {
-    background: '',
+    background: color,
     backgroundSize: '',
     backgroundPosition: '',
     minHeight: '',
@@ -56,7 +56,7 @@ const extraGradient = (color: string, image?: string, gradient?: string) => {
 
 function Hero({ color, gradient, image, children, height }: Props) {
   return (
-    <section className="hero" style={setStyle(color, image, gradient, height)}>
+    <section className="hero flex-column" style={setStyle(color, image, gradient, height)}>
       {children}
       {extraGradient(color, image, gradient)}
     </section>

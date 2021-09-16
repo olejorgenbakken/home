@@ -1,0 +1,39 @@
+.constrain {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.padding {
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+}
+
+.flex-column,
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.gap-1 {
+  gap: 1em;
+}
+
+.gap-2 {
+  gap: 2em;
+}
+
+.gap-4 {
+  gap: 4em;
+}
+
+.gap-8 {
+  gap: 8em;
+}

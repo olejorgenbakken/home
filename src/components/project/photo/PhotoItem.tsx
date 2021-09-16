@@ -7,7 +7,7 @@ interface Props {
 
 const PhotoItem = ({ caption, image }: Props) => {
     return (
-        <figure className="photo">
+        <figure className="photo flex-column gap-1">
             <img src={image} />
             <figcaption>{caption}</figcaption>
         </figure>

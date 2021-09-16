@@ -1,11 +1,5 @@
 #global-footer {
   width: 100%;
   background: var(--background-darker);
-  padding: 3em 0;
-}
-
-#global-footer .content {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  padding: 3em var(--padding);
 }

@@ -1,6 +1,4 @@
 .pie {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -9,7 +7,6 @@
   margin: 1em;
   width: 100px;
   height: 100px;
-  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -18,10 +15,6 @@
 }
 
 .chart figcaption {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   height: 80%;
   width: 80%;

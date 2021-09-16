@@ -7,7 +7,7 @@ interface Props {
 
 const ProjectAbout = ({ task, background }: Props) => {
     return (
-        <section className="contain project-about">
+        <section className="flex-column constrain padding gap-2">
             <header>
                 <h2>Om prosjektet</h2>
             </header>

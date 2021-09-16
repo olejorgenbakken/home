@@ -6,6 +6,7 @@
   align-items: center;
   padding: 2em 0;
   background: transparent;
+  font-size: 1.3em;
 }
 
 #global-header ul {
@@ -56,11 +57,11 @@
 #global-menu {
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1em;
 }
 
 #global-menu ul {
-  gap: 1em 2rem;
+  gap: 1em 2em;
   flex-wrap: wrap;
   font-weight: 500;
 }

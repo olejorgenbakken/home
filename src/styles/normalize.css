@@ -38,7 +38,7 @@ main {
  */
 
 h1 {
-  font-size: 2rem;
+  font-size: 2em;
   margin: 0.67em 0;
 }
 
@@ -63,7 +63,7 @@ hr {
 
 pre {
   font-family: monospace, monospace; /* 1 */
-  font-size: 1rem; /* 2 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -106,7 +106,7 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
-  font-size: 1rem; /* 2 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -131,11 +131,11 @@ sup {
 }
 
 sub {
-  bottom: -0.25rem;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -0.5rem;
+  top: -0.5em;
 }
 
 /* Embedded content
@@ -229,7 +229,7 @@ button:-moz-focusring,
  */
 
 fieldset {
-  padding: 0.35em 0.75em 0.625rem;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -328,7 +328,7 @@ details {
  */
 
 summary {
-  display: list-itrem;
+  display: list-item;
 }
 
 /* Misc

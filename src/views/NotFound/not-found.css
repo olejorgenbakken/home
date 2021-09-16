@@ -30,17 +30,17 @@
 }
 
 #not-found article h1 {
-  font-size: 4rem;
+  font-size: 4em;
   font-weight: 900;
 }
 
 #not-found article h2 {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 500;
 }
 
 #not-found article a {
-  margin-top: 4rem;
+  margin-top: 4em;
 }
 
 @-webkit-keyframes grain {
@@ -147,7 +147,7 @@
 
 @media (min-width: 900px) {
   #not-found article h1 {
-    font-size: 6rem;
+    font-size: 6em;
     font-weight: 700;
   }
 }

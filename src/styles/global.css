@@ -34,8 +34,8 @@ main {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 h1,
@@ -52,7 +52,7 @@ label {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 130%;
   font-weight: 700;
 }
@@ -66,23 +66,24 @@ h5 {
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.7em;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.4em;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.2em;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.1em;
 }
 
 p,
 li {
+  font-size: 1em;
   line-height: 180%;
 }
 
@@ -116,8 +117,8 @@ img {
 
 @media (min-width: 600px) {
   .contain {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 

@@ -34,8 +34,8 @@ main {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 h1,
@@ -118,8 +118,8 @@ img {
 
 @media (min-width: 600px) {
   .contain {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

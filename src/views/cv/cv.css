@@ -1,0 +1,9 @@
+#cv {
+  padding-bottom: var(--padding);
+}
+
+@media (min-width: 900px) {
+  #cv {
+    padding-bottom: 4em;
+  }
+}

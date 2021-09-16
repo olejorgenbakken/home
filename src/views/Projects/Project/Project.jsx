@@ -9,8 +9,6 @@ import { useParams } from "react-router";
 import NotFound from "../../NotFound/NotFound";
 import Footer from "../../../components/footer/footer";
 import Header from "../../../components/header/header";
-import Gallery from "../../../components/gallery/gallery";
-import PhotoItem from "../../../components/project/photo/PhotoItem";
 
 const setColors = (color) => {
   const style = {
@@ -53,36 +51,6 @@ function Project() {
             background={thisProject.data.background}
           />
           <Testing tests={thisProject.data.tests} />
-          <Gallery type="row" columns="3">
-            <PhotoItem
-              image={thisProject.images.finished[0]}
-              caption="Ferdig prototype"
-            />
-            <PhotoItem
-              image={thisProject.images.finished[0]}
-              caption="Ferdig prototype"
-            />
-            <PhotoItem
-              image={thisProject.images.finished[0]}
-              caption="Ferdig prototype"
-            />
-            <PhotoItem
-              image={thisProject.images.finished[0]}
-              caption="Ferdig prototype"
-            />
-            <PhotoItem
-              image={thisProject.images.finished[0]}
-              caption="Ferdig prototype"
-            />
-            <PhotoItem
-              image={thisProject.images.finished[0]}
-              caption="Ferdig prototype"
-            />
-            <PhotoItem
-              image={thisProject.images.finished[0]}
-              caption="Ferdig prototype"
-            />
-          </Gallery>
           <ProjectFooter />
         </main>
         <Footer />

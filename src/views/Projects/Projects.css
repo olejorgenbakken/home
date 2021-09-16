@@ -3,17 +3,8 @@
   margin: 0 auto;
 }
 
-#projects .card h2 {
-  font-size: 2em;
-  text-shadow: 0 0 8px #000000;
-}
-
 @media (min-width: 1000px) {
   #projects {
     padding: 0 var(--padding) 4em var(--padding);
-  }
-
-  #projects .card h2 {
-    font-size: 3em;
   }
 }

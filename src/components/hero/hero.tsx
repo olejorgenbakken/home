@@ -40,7 +40,7 @@ const setStyle = (color: string, image?: string, gradient?: string, height?: str
   if (image) {
     style.background = `url(${image})`;
     style.backgroundSize = 'cover';
-    style.backgroundPosition = 'center';
+    style.backgroundPosition = 'center center';
   }
 
   return style;
@@ -48,7 +48,8 @@ const setStyle = (color: string, image?: string, gradient?: string, height?: str
 
 const extraGradient = (color: string, image?: string, gradient?: string) => {
   if (color && image && gradient) {
-    return (<aside style={setStyle(color, undefined, gradient)} className="gradient"></aside>)
+    return (
+      <aside style={setStyle(color, undefined, gradient)} className="gradient"></aside>)
   } else {
     return null
   }

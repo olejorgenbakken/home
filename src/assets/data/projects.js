@@ -122,7 +122,7 @@ export const pykiskHelse = {
   },
   slug: "psykisk-helse",
   role: "Interaksjonsdesigner",
-  cover: PyskiskHelseFinished,
+  cover: PyskiskHelseCover,
   data: {
     title: "Redesign av magasinet Psykisk Helse",
     year: {
@@ -138,7 +138,7 @@ export const pykiskHelse = {
     images: {
       researching: [],
       prototyping: [],
-      finished: [VippsFinished],
+      finished: [PyskiskHelseFinished],
     },
   },
 };

@@ -82,8 +82,9 @@ h5 {
 }
 
 p,
-li {
-  font-size: 1em;
+li,
+label {
+  font-size: 1.1em;
   line-height: 180%;
 }
 

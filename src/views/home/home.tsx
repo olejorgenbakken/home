@@ -6,7 +6,6 @@ import projects from '../../assets/data/projects';
 import Hero from "../../components/hero/hero";
 import Card from "../../components/card/card";
 import Gallery from "../../components/gallery/gallery";
-import Button from "../../components/button/Button";
 
 
 const setWebpages = () => {

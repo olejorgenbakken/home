@@ -1,3 +1,7 @@
+#home .latest-project {
+  color: #ffffff;
+}
+
 #home .latest-project h3 {
   text-shadow: 0 0 8px #000000;
   font-size: 2em;

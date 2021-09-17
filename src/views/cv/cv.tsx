@@ -4,7 +4,7 @@ import CVList from "../../components/cv/CVList";
 import './cv.css';
 
 
-function Cv() {
+const Cv = () => {
   return (
     <main id="cv" className="flex-column gap-2 constrain padding">
       <header>

@@ -17,7 +17,7 @@ const setWebpages = () => {
   return (externalList);
 }
 
-function Home() {
+const Home = () => {
   return (
     <main id="home" className="flex-column">
       <Hero height="50">
@@ -38,7 +38,7 @@ function Home() {
         </article>
       </Hero>
 
-      <Hero color={projects[0].business.colors.secondary} height="80">
+      <Hero color={projects[0].business.colors.secondary} height="60">
         <article className="flex-column gap-2 constrain padding latest-project">
           <h2>Sjekk ut mitt siste prosjekt</h2>
           <Card large={true} key={projects[0].slug} link={`/prosjekter/${projects[0].slug}`} image={projects[0].images.cover}>

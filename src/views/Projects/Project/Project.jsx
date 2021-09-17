@@ -12,14 +12,13 @@ import Header from "../../../components/header/header";
 
 const setColors = (color) => {
   const style = {
-    color: "#ffffff",
     background: color,
   };
 
   return style;
 };
 
-function Project() {
+const Project = () => {
   const { project } = useParams();
   let thisProject = null;
 
@@ -57,7 +56,6 @@ function Project() {
       </div>
     );
   } else {
-    console.log(true);
     return (
       <NotFound
         message="Dette prosjektet eksisterer ikke (ennå)"
@@ -66,6 +64,6 @@ function Project() {
       ></NotFound>
     );
   }
-}
+};
 
 export default Project;

@@ -2,7 +2,7 @@ import "./footer.css";
 
 import InlineLink from "../text/inlineLink/inlineLink";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer id="global-footer" >
       <section className="flex-column gap-2 constrain">

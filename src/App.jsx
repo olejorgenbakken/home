@@ -3,18 +3,20 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./components/header/header";
 import Home from "./Views/Home/Home";
 import CV from "./Views/CV/cv";
+import Project from "./Views/Project/Project.jsx";
+import Projects from "./Views/Projects/Projects";
 import NotFound from "./Views/NotFound/NotFound";
 import Footer from "./components/footer/footer";
 
 import "./styles/global.css";
-import Project from "./Views/Projects/Project/Project.jsx";
-import Projects from "./Views/Projects/Projects";
 
 const App = () => {
   return (
     <Switch>
       <Route path="/prosjekter/:project">
+        <Header />
         <Project />
+        <Footer />
       </Route>
       <Route path="/prosjekter">
         <Header />
@@ -32,11 +34,9 @@ const App = () => {
         <Footer />
       </Route>
       <Route path="*">
-        <NotFound
-          message="Denne siden ekisterer ikke (ennå)"
-          link="/"
-          linkTitle="Gå til hovedsiden"
-        />
+        <Header position="absolute" />
+        <NotFound />
+        <Footer />
       </Route>
     </Switch>
   );

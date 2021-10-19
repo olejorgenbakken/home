@@ -1,3 +1,4 @@
-.test .method span {
+.test .method {
+  text-transform: uppercase;
   font-weight: 700;
 }

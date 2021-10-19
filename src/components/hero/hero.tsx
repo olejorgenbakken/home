@@ -9,28 +9,12 @@ interface Props {
   children: ReactNode
 }
 
-const setStyle = (color: string, image?: string, gradient?: string, height?: string) => {
+const setStyle = (color: string, image?: string, height?: string) => {
   let style = {
     background: color,
     backgroundSize: '',
     backgroundPosition: '',
     minHeight: '',
-  }
-
-  if (gradient) {
-    switch (gradient) {
-      case 'top':
-        style.background = `linear-gradient(180deg, ${color}ff 0%, ${color}00 95%)`;
-        break;
-      case 'middle':
-        style.background = `linear-gradient(180deg, ${color}00 0%, ${color}ff 50%, ${color}00 100%)`;
-        break;
-      case 'bottom':
-        style.background = `linear-gradient(180deg, ${color}00 0%, ${color}ff 95%)`;
-        break;
-      default:
-        break;
-    }
   }
 
   if (height) {
@@ -46,20 +30,10 @@ const setStyle = (color: string, image?: string, gradient?: string, height?: str
   return style;
 }
 
-const extraGradient = (color: string, image?: string, gradient?: string) => {
-  if (color && image && gradient) {
-    return (
-      <aside style={setStyle(color, undefined, gradient)} className="gradient"></aside>)
-  } else {
-    return null
-  }
-}
-
-function Hero({ color, gradient, image, children, height }: Props) {
+const Hero = ({ color, image, children, height }: Props) => {
   return (
-    <section className="hero flex-column" style={setStyle(color, image, gradient, height)}>
+    <section className="hero flex-column" style={setStyle(color, image, height)}>
       {children}
-      {extraGradient(color, image, gradient)}
     </section>
   );
 }

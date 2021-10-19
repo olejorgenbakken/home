@@ -1,20 +1,19 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as ExternalIcon } from "../../../assets/icons/link_external.svg";
+import { ReactComponent as ExternalIcon } from "../../assets/icons/link_external.svg";
 import './inlineLink.css'
 
 interface Props {
-  type: 'internal' | 'external',
-  link: string,
+  href: string,
   children: ReactNode
 }
 
-function InlineLink({ type, link, children }: Props) {
-  if (type === 'external') {
+function InlineLink({ href, children }: Props) {
+  if (href.includes('https://')) {
     return (
       <span className="external-link">
-        <a href={link} className="link">
+        <a href={href} className="link">
           {children}
           <ExternalIcon />
         </a>
@@ -22,7 +21,7 @@ function InlineLink({ type, link, children }: Props) {
     )
   } else {
     return (
-      <Link className="internal-link" to={link}>
+      <Link className="internal-link link" to={href}>
         {children}
       </Link >
     )

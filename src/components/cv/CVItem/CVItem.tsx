@@ -64,13 +64,14 @@ const CVItem = ({ place, title, start, end, description }: Props) => {
     return (
         <article className="cv-item flex-column gap-1">
             <header>
-                <h3 className="place">{place}</h3>
-                <h4 className="role">{title}</h4>
-                <p className="date">
+                <label className="date">
                     <time dateTime={toDate(start).YYYYMM}>{toDate(start).text.charAt(0).toUpperCase()}{toDate(start).text.replace(toDate(start).text.charAt(0), '')}</time>
                     &nbsp;–&nbsp;
                     <time dateTime={toDate(end).YYYYMM}>{toDate(end).text.charAt(0).toUpperCase()}{toDate(end).text.replace(toDate(end).text.charAt(0), '')}</time>
-                </p>
+                </label>
+                <h3 className="role">{title}</h3>
+                <h4 className="place">{place}</h4>
+
             </header>
             <p>{description}</p>
         </article>

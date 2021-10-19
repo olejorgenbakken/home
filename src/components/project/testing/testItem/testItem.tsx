@@ -23,10 +23,10 @@ const getSegments = (findings: { title: string, summary: string }[]) => {
 
 const TestItem = ({ title, type, findings }: Props) => {
     return (
-        <article className="test flex-column gap-2 constrain padding">
+        <article className="test flex-column gap-1 constrain padding">
             <header>
+                <label className="method">{type}</label>
                 <h3>{title}</h3>
-                <label className="method">Testmetode: <span>{type}</span></label>
             </header>
             <article className="results flex-column gap-4">{getSegments(findings)}</article>
         </article>

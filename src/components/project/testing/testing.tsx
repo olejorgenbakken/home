@@ -10,7 +10,6 @@ interface Props {
             summary: string
         }[]
     }[],
-    message?: string
 }
 
 const getTests = (tests: { title: string, type: string, findings: { title: string, summary: string }[] }[]) => {
@@ -20,14 +19,14 @@ const getTests = (tests: { title: string, type: string, findings: { title: strin
     return testArticles;
 }
 
-const Testing = ({ tests, message }: Props) => {
+const Testing = ({ tests }: Props) => {
     if (tests.length > 0) {
         return (
             <section className="testing flex-column gap-2">
                 <header className="constrain padding">
-                    <h2>Tester</h2>
+                    <h2>Innsikt</h2>
                 </header>
-                <section className="flex-column gap-8">
+                <section className="flex-column gap-12">
                     {getTests(tests)}
                 </section>
             </section>

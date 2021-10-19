@@ -1,22 +1,27 @@
 import { Link } from "react-router-dom";
+import { ReactComponent as ExternalIcon } from "../../assets/icons/link_external.svg";
 
 import './button.css';
 
 interface Props {
-    link?: string,
+    href: string,
     children: string
 }
 
-function Button({ link, children }: Props) {
-    if (link) {
+function Button({ href, children }: Props) {
+    if (href.includes('https://')) {
         return (
-            <Link to={link}>
-                <button className="button link-button"><p>{children}</p></button>
+            <a href={href} className="button external">
+                {children}
+                <ExternalIcon />
+            </a>
+        )
+    } else {
+        return (
+            <Link to={href} className="button">
+                {children}
             </Link>
         )
-
-    } else {
-        return (<button className="button"><p>{children}</p></button>)
     }
 }
 

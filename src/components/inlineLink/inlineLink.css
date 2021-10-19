@@ -1,0 +1,24 @@
+.link {
+  color: var(--link);
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: var(--link-hover);
+}
+
+.link svg {
+  position: absolute;
+  margin-left: 1px;
+  height: 0.7em;
+  width: 0.7em;
+}
+
+.link svg path {
+  fill: var(--link);
+}
+
+.external-link {
+  margin-right: 1em;
+}

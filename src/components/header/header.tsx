@@ -11,14 +11,14 @@ function Header({ position }: Props) {
       <nav>
         <ul id="global-menu" className="flex-row constrain">
           <li>
-            <NavLink to="/" className="home">Hjem</NavLink>
+            <NavLink to="/" exact activeClassName="active" className="home">Hjem</NavLink>
           </li>
           <ul className="flex-row">
             <li>
-              <NavLink to="/prosjekter" activeClassName="active">Prosjekter</NavLink>
+              <NavLink activeClassName="active" to="/prosjekter">Prosjekter</NavLink>
             </li>
             <li>
-              <NavLink to="/cv" activeClassName="active">CV</NavLink>
+              <NavLink activeClassName="active" to="/cv">CV</NavLink>
             </li>
           </ul>
         </ul>

@@ -2,7 +2,6 @@
   width: 100%;
   padding: 1em 0;
   background: transparent;
-  font-size: 1.3em;
 }
 
 #global-header[data-position="absolute"]::after,
@@ -60,15 +59,28 @@
 #global-menu ul {
   gap: 1em 2em;
   flex-wrap: wrap;
-  font-weight: 500;
 }
 
-#global-menu .home {
-  font-weight: 700;
+#global-menu li {
+  font-weight: 600;
 }
 
 #global-menu .home::after {
   display: none;
+}
+
+#global-menu .active {
+  position: relative;
+}
+
+#global-menu .active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #000000;
 }
 
 @media (min-width: 700px) {

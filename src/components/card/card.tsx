@@ -4,55 +4,36 @@ import { ReactNode } from "react";
 import './card.css';
 
 interface Props {
-    link?: string,
     image?: string,
-    large?: boolean,
+    href: string,
     children: ReactNode
 }
 
-const setImg = (image?: string) => {
-    if (image !== undefined) {
+function Card({ href, image, children }: Props) {
+    if (href.includes('http')) {
         return (
-            <figure className="card-image">
-                <img src={image} alt="" />
-            </figure>
-        )
-    } else {
-        return null
-    }
-}
-
-function Card({ large, link, image, children }: Props) {
-    if (link !== undefined) {
-        if (link.includes('https://')) {
-            return (
-                <a href={link} className='card card-link flex-column' data-large={large}>
-                    {setImg(image)}
-                    <article className="card-content flex-column">
-                        {children}
-                    </article>
-                </a >
-            )
-        } else {
-            return (
-                <Link to={link} className='card card-link flex-column' data-large={large}>
-                    {setImg(image)}
-                    <article className="card-content flex-column">
-                        {children}
-                    </article>
-                </Link >
-            )
-        }
-    } else {
-        return (
-            <article className='card flex-column' data-large={large}>
-                {setImg(image)}
-                <article className="card-content flex-column">
+            <a href={href} className='card card-link flex-column'>
+                <figure className="card-image">
+                    <img src={image} alt="" />
+                </figure>
+                <section className="card-content flex-column">
                     {children}
-                </article>
-            </article >
+                </section>
+            </a >
+        )
+    } else {
+        return (
+            <Link to={href} className='card card-link flex-column'>
+                <figure className="card-image">
+                    <img src={image} alt="" />
+                </figure>
+                <section className="card-content flex-column">
+                    {children}
+                </section>
+            </Link >
         )
     }
+
 }
 
 export default Card;

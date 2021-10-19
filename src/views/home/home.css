@@ -1,14 +1,10 @@
-#home .latest-project {
-  color: #ffffff;
+.latest-project img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
-#home .latest-project h3 {
-  text-shadow: 0 0 8px #000000;
-  font-size: 2em;
-}
-
-@media (min-width: 1000px) {
-  #home .latest-project h3 {
-    font-size: 3em;
-  }
+.latest-project label {
+  text-transform: uppercase;
+  font-weight: 700;
 }

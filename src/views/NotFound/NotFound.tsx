@@ -1,30 +1,18 @@
 import Button from "../../components/button/Button";
-import Footer from "../../components/footer/footer";
-import Header from "../../components/header/header";
 
 import './not-found.css';
 
-interface Props {
-    message: string,
-    link: string
-    linkTitle: string
-}
-
-function NotFound({ message, link, linkTitle }: Props) {
+const NotFound = () => {
     return (
-        <div>
-            <Header position="absolute" />
-            <main id="not-found" className="flex-column">
-                <article className="flex-column gap-4">
-                    <header>
-                        <h1>404</h1>
-                        <p>{message}</p>
-                    </header>
-                    <Button link={link}>{linkTitle}</Button>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        <main id="not-found" className="flex-column">
+            <article className="flex-column gap-2">
+                <header>
+                    <h1>404</h1>
+                    <p>Denne siden ekisterer ikke</p>
+                </header>
+                <Button href="/">Gå til hovedsiden</Button>
+            </article>
+        </main>
     );
 }
 

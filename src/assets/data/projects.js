@@ -45,7 +45,7 @@ export const vipps = {
     },
     task: "Hvordan kan vi samle inn mer penger til veldedighet?",
     background:
-      "Veldedige bedrifter bruker Vipps i større og større grad, og  ønsket om å lage noe for et veldedig marked innad i organisasjonen har vokst. Dette er sommerstudentene fra 2021s løsning på hvordan man kan lage et skalerbart produkt for dette segmentet.",
+      "Veldedige bedrifter bruker Vipps i større og større grad, og  ønsket om å lage noe for et veldedig marked innad i organisasjonen har vokst. Her er sommerstudentene fra 2021s løsning på hvordan man kan lage et skalerbart produkt for dette segmentet.",
     timeline:
       "Den første uka ble brukt på innsiktsarbeid og å bli kjent med hveranre på teamet. Dette gjorde vi gjennom en Google Design Sprint. Her intervjuet, undersøkte, prototypet og testet vi en helt ny løsning. Etter dette satte vi opp prototyper basert på den endelige versjonen fra GDS. Den første uka lagde vi bare sluttbrukersiden, men nå skaffet vi også innsikt i hvordan Vippsportalen fungerte, og jobbet med den. De neste syv ukene brukte vi på å iterere de to prototypene i tandem, snakket med store og små bedrifter og å sende ut spørreundersøkelser. Den siste uken brukte vi på å ferdigstille hønivåprototypen og den tekniske prototypen, før vi presenterte den på onsdag. Her var hele Vipps tilstede for å gi tilbakemelding.",
     tests: [
@@ -108,6 +108,7 @@ export const vipps = {
         ],
       },
     ],
+    href: "https://www.figma.com/community/file/1016826393815010584",
   },
 };
 

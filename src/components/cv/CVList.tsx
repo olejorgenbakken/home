@@ -19,11 +19,11 @@ const CVList = ({ title, section }: Props) => {
     ));
 
     return (
-        <section className="flex-column gap-1">
+        <section className="flex-column gap-2">
             <header>
                 <h2>{title}</h2>
             </header>
-            <section className="flex-column gap-4">
+            <section className="flex-column gap-8">
                 {dataList}
             </section>
         </section>

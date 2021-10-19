@@ -2,8 +2,7 @@ export const education = [
   {
     id: 1,
     place: "Høyskolen Kristiania",
-    title:
-      "Bachelorgrad innen informatikk med spesialisering i interaksjonsdesign",
+    title: "Bachelorgrad i informatikk med spesialisering i interaksjonsdesign",
     time: {
       start: Date.UTC(2018, 6),
       end: Date.UTC(2021, 8),

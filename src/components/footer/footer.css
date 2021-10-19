@@ -1,6 +1,22 @@
 #global-footer {
   width: 100%;
-  background: var(--background-darker);
-  color: var(--text);
-  padding: 3em var(--padding);
+  background: rgb(241, 241, 241);
+}
+
+.global-footer-content {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  justify-content: center;
+}
+
+.external-pages {
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+}
+
+.external-pages img {
+  height: 30px;
+  object-fit: contain;
+  border-radius: 0;
 }

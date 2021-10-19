@@ -2,11 +2,9 @@
 @import "./utils.css";
 
 :root {
-  --background: #fffbf3;
-  --background-darker: #f8e9de;
+  --background: #ffffff;
   --text: #121213;
-  --text-lighter: #565656;
-  --link: #0e72ff;
+  --link: #005ee2;
   --link-hover: #0047ab;
   --separator: #d6d6d6;
   --padding: 1em;
@@ -45,52 +43,56 @@ label {
   margin: 0;
 }
 
-h1 {
-  font-size: 2em;
-  line-height: 130%;
-  font-weight: 700;
-}
-
+h1,
 h2,
 h3,
 h4,
 h5 {
   line-height: 150%;
+}
+
+h1 {
+  font-size: 2em;
   font-weight: 700;
 }
 
 h2 {
   font-size: 1.7em;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 1.4em;
+  font-weight: 700;
 }
 
 h4 {
   font-size: 1.2em;
+  font-weight: 500;
 }
 
 h5 {
-  font-size: 1.1em;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 p,
 li,
-label {
-  font-size: 1.1em;
-  line-height: 180%;
+label,
+figcaption {
+  font-size: 1em;
+  line-height: 175%;
+}
+
+figcaption {
+  cursor: default;
 }
 
 a {
   text-decoration: none;
   position: relative;
-  color: var(--link);
-  transition: 0.3s ease-in-out;
-}
-
-a:hover {
-  color: var(--link-hover);
+  color: inherit;
+  transition: 0.2s ease-in-out;
 }
 
 hr {
@@ -110,19 +112,38 @@ img,
 figure {
   max-width: 100%;
   margin: 0;
+  border-radius: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #15191f;
-    --background-darker: #090f13;
+@media (min-width: 700px) {
+  h1 {
+    font-size: 2.5em;
+    font-weight: 700;
   }
 
-  body {
-    --text: #fff;
-    --text-lighter: #e9e9e9;
-    --separator: #434346;
-    --link: #156ce6;
-    --link-hover: #4190ff;
+  h2 {
+    font-size: 1.9em;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: 1em;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --padding: 2em;
   }
 }

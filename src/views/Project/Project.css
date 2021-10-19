@@ -1,0 +1,46 @@
+.main-project {
+  padding-bottom: 4em;
+}
+
+.no-project {
+  padding: 6em;
+}
+
+.project-header {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.project-header-image {
+  width: 100%;
+  max-width: calc(var(--max-width) + 20%);
+  height: 40vh;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.project-about {
+  position: relative;
+  overflow: hidden;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.project-prototype img {
+  height: 50vh;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+@media (min-width: 1000px) {
+  .project-header {
+    gap: 4em;
+  }
+
+  .project-header-lead {
+    margin: 0 auto;
+    width: 80%;
+  }
+}

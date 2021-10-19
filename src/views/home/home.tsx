@@ -3,7 +3,7 @@ import './home.css'
 import projects from '../../assets/data/projects';
 
 import Hero from "../../components/hero/hero";
-import ProjectItem from '../../components/project/projectItem/projectItem';
+import ProjectItem from '../../components/projectItem/projectItem';
 
 
 const Home = () => {
@@ -16,9 +16,7 @@ const Home = () => {
         </article>
       </Hero>
 
-      <Hero height="60">
-        <ProjectItem key={projects[0].slug} href={`prosjekter/${projects[0].slug}`} image={projects[0].images.cover} label='Siste prosjekt' title={projects[0].data.task} />
-      </Hero>
+      <ProjectItem key={projects[0].slug} href={`prosjekter/${projects[0].slug}`} image={projects[0].images.cover} label='Siste prosjekt' title={projects[0].data.task} />
     </main >
   );
 }

@@ -9,6 +9,7 @@ import NotFound from "./Views/NotFound/NotFound";
 import Footer from "./components/footer/footer";
 
 import "./styles/global.css";
+import Button from "./components/button/Button";
 
 const App = () => {
   return (
@@ -34,8 +35,10 @@ const App = () => {
         <Footer />
       </Route>
       <Route path="*">
-        <Header position="absolute" />
-        <NotFound />
+        <Header />
+        <NotFound error={404} message="Denne siden eksisterer ikke.">
+          <Button href="/">Gå tilbake til hovedsiden</Button>
+        </NotFound>
         <Footer />
       </Route>
     </Switch>

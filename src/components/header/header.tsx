@@ -1,13 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./header.css";
 
-interface Props {
-  position?: 'relative' | 'fixed' | 'absolute',
-}
-
-function Header({ position }: Props) {
+const Header = () => {
   return (
-    <header id="global-header" data-position={position}>
+    <header id="global-header">
       <nav>
         <ul id="global-menu" className="flex-row constrain">
           <li>

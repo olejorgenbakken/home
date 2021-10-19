@@ -4,43 +4,6 @@
   background: transparent;
 }
 
-#global-header[data-position="absolute"]::after,
-#global-header[data-position="fixed"]::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(180deg, #0000006a 0%, #00000000 100%);
-  z-index: 0;
-}
-
-#global-header[data-position="absolute"] > *,
-#global-header[data-position="fixed"] > * {
-  position: relative;
-  z-index: 1;
-}
-
-#global-header[data-position="fixed"] {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-#global-header[data-position="absolute"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-#global-header[data-position="absolute"] a {
-  color: #ffffff;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-}
-
 #global-menu,
 #global-menu ul {
   padding: 0;

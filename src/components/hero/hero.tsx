@@ -4,7 +4,6 @@ import "./hero.css";
 interface Props {
   color?: any,
   height?: string,
-  gradient?: 'top' | 'middle' | 'bottom',
   image?: string,
   children: ReactNode
 }

@@ -1,5 +1,5 @@
 import projects from '../../assets/data/projects';
-import ProjectItem from '../../components/project/projectItem/projectItem';
+import ProjectItem from '../../components/projectItem/projectItem';
 import './Projects.css';
 
 const externalList = projects.map((project) => (

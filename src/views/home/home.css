@@ -1,10 +1,3 @@
-.latest-project img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.latest-project label {
-  text-transform: uppercase;
-  font-weight: 700;
+#home {
+  padding-bottom: 4em;
 }

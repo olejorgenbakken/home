@@ -12,11 +12,11 @@
 .external-pages {
   display: flex;
   flex-direction: row;
-  gap: 4em;
+  gap: 2em;
 }
 
 .external-pages img {
-  height: 30px;
+  height: 24px;
   object-fit: contain;
   border-radius: 0;
 }

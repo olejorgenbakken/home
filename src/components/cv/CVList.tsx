@@ -1,7 +1,6 @@
 import CVItem from './CVItem/CVItem'
 
 interface Props {
-    title: string,
     section: {
         title: string,
         place: string,
@@ -13,19 +12,14 @@ interface Props {
     }[]
 }
 
-const CVList = ({ title, section }: Props) => {
-    const dataList = section.map((entry) => (
+const CVList = ({ section }: Props) => {
+    const CVEntries = section.map((entry) => (
         <CVItem title={entry.title} place={entry.place} start={entry.time.start} end={entry.time.end} description={entry.description} />
     ));
 
     return (
-        <section className="flex-column gap-2">
-            <header>
-                <h2>{title}</h2>
-            </header>
-            <section className="flex-column gap-8">
-                {dataList}
-            </section>
+        <section className="flex-column gap-8">
+            {CVEntries}
         </section>
     );
 }

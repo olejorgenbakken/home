@@ -1,11 +1,39 @@
 import { useParams } from "react-router";
 import projects from "../../assets/data/projects";
 
-import Testing from "../../components/project/testing/testing";
+import Button from "../../components/button/Button";
 import NotFound from "../NotFound/NotFound";
 
 import "./Project.css";
-import Button from "../../components/button/Button";
+
+const getTests = (tests) => {
+  const getSegments = (findings) => {
+    const segment = findings.map((finding) => {
+      return (
+        <article className="segment">
+          <h4> {finding.title}</h4>
+          <p>{finding.summary}</p>
+        </article>
+      );
+    });
+    return segment;
+  };
+
+  const testArticles = tests.map((test) => {
+    return (
+      <article className="test flex-column gap-1 constrain padding">
+        <header>
+          <label className="method">{test.type}</label>
+          <h3>{test.title}</h3>
+        </header>
+        <article className="results flex-column gap-4">
+          {getSegments(test.findings)}
+        </article>
+      </article>
+    );
+  });
+  return testArticles;
+};
 
 const Project = () => {
   const { project } = useParams();
@@ -49,7 +77,14 @@ const Project = () => {
           </article>
         </section>
 
-        <Testing tests={thisProject.data.tests} />
+        <section className="testing flex-column gap-2">
+          <header className="constrain padding">
+            <h2>Innsikt</h2>
+          </header>
+          <section className="flex-column gap-12">
+            {getTests(thisProject.data.tests)}
+          </section>
+        </section>
 
         <section className="project-prototype flex-column gap-2 constrain padding">
           <header className="flex-column gap-2">
@@ -70,16 +105,12 @@ const Project = () => {
   } else {
     return (
       <main className="main-project">
-        <article className="no-project constrain flex-column padding gap-2">
-          <header>
-            <h1>Oida 😯</h1>
-            <p>
-              Dette prosjektet har jeg enten ikke jobbet på, eller lagt til
-              ennå. Sjekk heller ut noe jeg har jobbet på.
-            </p>
-          </header>
+        <NotFound
+          error={404}
+          message="Dette prosjektet har jeg ikke jobba på :("
+        >
           <Button href="/prosjekter">Gå til alle prosjekter</Button>
-        </article>
+        </NotFound>
       </main>
     );
   }

@@ -1,4 +1,6 @@
-import Button from "../../button/Button";
+import Button from "../button/Button";
+
+import './projectItem.css'
 
 interface Props {
     image: string,
@@ -9,7 +11,7 @@ interface Props {
 
 const ProjectItem = ({ image, title, href, label }: Props) => {
     return (
-        <article className="latest-project flex-column gap-2 constrain padding">
+        <article className="project-item flex-column gap-2 constrain padding">
             <img src={image} alt="" />
             <section>
                 <label>{label}</label>

@@ -1,0 +1,10 @@
+.project-item img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-item label {
+  text-transform: uppercase;
+  font-weight: 700;
+}

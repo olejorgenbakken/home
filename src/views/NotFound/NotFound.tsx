@@ -1,16 +1,23 @@
+import { ReactNode } from "react";
 import Button from "../../components/button/Button";
 
 import './not-found.css';
 
-const NotFound = () => {
+interface Props {
+    error: number,
+    message: string,
+    children: ReactNode
+}
+
+const NotFound = ({ error, message, children }: Props) => {
     return (
-        <main id="not-found" className="flex-column">
-            <article className="flex-column gap-2">
+        <main className="not-found">
+            <article className="flex-column constrain padding gap-2">
                 <header>
-                    <h1>404</h1>
-                    <p>Denne siden ekisterer ikke</p>
+                    <h1>{error}</h1>
+                    <p>{message}</p>
                 </header>
-                <Button href="/">Gå til hovedsiden</Button>
+                {children}
             </article>
         </main>
     );

@@ -2,10 +2,6 @@
   padding-bottom: 4em;
 }
 
-.no-project {
-  padding: 6em;
-}
-
 .project-header {
   position: relative;
   height: 100%;
@@ -19,6 +15,7 @@
   height: 40vh;
   max-height: 500px;
   object-fit: cover;
+  border-radius: 0;
 }
 
 .project-about {
@@ -32,6 +29,11 @@
   height: 50vh;
   max-height: 300px;
   object-fit: cover;
+}
+
+.test .method {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 @media (min-width: 1000px) {

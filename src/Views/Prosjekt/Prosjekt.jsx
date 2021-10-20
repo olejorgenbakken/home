@@ -22,14 +22,12 @@ const hentFunn = (funn) => {
 const hentTester = (tester) => {
   const testSeksjon = tester.map((test) => {
     return (
-      <section className="test flex-column gap-1 ">
+      <section className="test  gap-1 ">
         <header>
           <label className="method">{test.type}</label>
           <h3>{test.title}</h3>
         </header>
-        <section className="results flex-column gap-4">
-          {hentFunn(test.funn)}
-        </section>
+        <section className="results  gap-4">{hentFunn(test.funn)}</section>
       </section>
     );
   });
@@ -44,16 +42,14 @@ const Prosjekt = () => {
     const prosjektet = prosjekter.find((p) => p.slug === prosjekt);
 
     return (
-      <main className="main-project flex-column gap-8">
-        <header className="project-header flex-column gap-2">
+      <main className="main-project  gap-8">
+        <header className="project-header  gap-2">
           <img
             src={prosjektet.bilder.forside}
             className="project-header-image"
             alt=""
           />
-          <article className="project-header-lead flex-column gap-1 ">
-            <h1>{prosjektet.tittel}</h1>
-          </article>
+          <h1>{prosjektet.tittel}</h1>
         </header>
 
         <InfoPanel>
@@ -72,26 +68,26 @@ const Prosjekt = () => {
           </article>
         </InfoPanel>
 
-        <section className="flex-column gap-2">
+        <section className="gap-2">
           <h2>Prosjektets gang</h2>
           <p>{prosjektet.oppgave.bakgrunn}</p>
         </section>
 
-        <section className="testing flex-column gap-2">
+        <section className="testing  gap-2">
           <header className="">
             <h2>Innsikt</h2>
           </header>
-          <section className="flex-column gap-12">
+          <section className="gap-12">
             {hentTester(prosjektet.oppgave.tester)}
           </section>
         </section>
 
-        <section className="project-prototype flex-column gap-2 ">
-          <header className="flex-column gap-2">
+        <section className="project-prototype  gap-2 ">
+          <header className="gap-2">
             <h2>Interaktiv prototype</h2>
           </header>
 
-          <figure className="flex-column gap-1">
+          <figure className="gap-1">
             <img src={prosjektet.bilder.fullført[0]} alt="" />
 
             <figcaption>

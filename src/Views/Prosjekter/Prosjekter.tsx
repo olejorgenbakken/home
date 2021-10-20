@@ -9,12 +9,12 @@ const externalList = prosjekter.map((prosjekt) => (
 
 const Prosjekter = () => {
     return (
-        <main className="flex-column gap-2">
+        <main className="gap-2">
             <header className="">
                 <h1>Prosjekter</h1>
             </header>
 
-            <section className="flex-column gap-2">
+            <section className="gap-2">
                 {externalList}
             </section>
         </main>

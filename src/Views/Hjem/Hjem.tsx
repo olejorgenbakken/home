@@ -7,9 +7,9 @@ import prosjekter from '../../assets/data/prosjekter';
 
 const Hjem = () => {
   return (
-    <main id="home" className="flex-column">
+    <main id="home" className="column">
       <Banner høyde="40">
-        <article className="flex-column gap-1 ">
+        <article className="gap-1 ">
           <h1>Hei, <span>Ole Jørgen her</span></h1>
           <p>Jeg designer og utvikler ting på internett. Denne nettsiden bygges fortsatt på, men kikk deg gjerne rundt allikevel.</p>
         </article>

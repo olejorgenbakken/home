@@ -20,7 +20,7 @@ const setStyle = (høyde?: string) => {
 
 const Banner = ({ høyde, children }: Props) => {
   return (
-    <section className="banner flex-column" style={setStyle(høyde)}>
+    <section className="banner" style={setStyle(høyde)}>
       <section className="content">
         {children}
       </section>

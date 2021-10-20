@@ -1,4 +1,6 @@
 #global-menu {
+  display: flex;
+  flex-direction: row;
   max-width: var(--max-width);
   margin: 0 auto;
   list-style: none;

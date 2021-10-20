@@ -5,7 +5,7 @@ const ToppMeny = () => {
   return (
     <header>
       <nav>
-        <ul id="global-menu" className="flex-row">
+        <ul id="global-menu">
           <li>
             <NavLink activeClassName="active" to="/om-meg">Om</NavLink>
           </li>

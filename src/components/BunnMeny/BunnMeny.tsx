@@ -17,7 +17,7 @@ const setWebpages = () => {
 const BunnMeny = () => {
   return (
     <footer id="global-footer" >
-      <section className="global-footer-content flex-column gap-2">
+      <section className="global-footer-content gap-2">
         <p>
           Takk for at du sjekket ut nettsiden min. &nbsp;
           <Lenke href="https://github.com/olejorgenbakken/home">Du kan se kildekoden på GitHub her.</Lenke>

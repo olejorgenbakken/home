@@ -18,7 +18,7 @@ const CVElementer = ({ section }: Props) => {
     ));
 
     return (
-        <section className="flex-column gap-8">
+        <section className="gap-8">
             {CVData}
         </section>
     );

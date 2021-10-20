@@ -5,18 +5,18 @@ import './Om.css';
 
 const Om = () => {
   return (
-    <main className="flex-column gap-2 ">
+    <main className="gap-2 ">
       <header>
         <h1>Om meg</h1>
       </header>
 
-      <section className="flex-column gap-2">
+      <section className="gap-2">
         <header>
           <h2>CV</h2>
         </header>
 
-        <section className="flex-column gap-8">
-          <section className="flex-column gap-2">
+        <section className="gap-8">
+          <section className="gap-2">
             <header>
               <h3>Erfaring</h3>
             </header>
@@ -24,7 +24,7 @@ const Om = () => {
             <CVElementer section={utdanning} />
           </section>
 
-          <section className="flex-column gap-2">
+          <section className="gap-2">
             <header>
               <h3>Utdanning</h3>
             </header>

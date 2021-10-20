@@ -62,7 +62,7 @@ const toDate = (t: number) => {
 
 const CVElement = ({ place, title, start, end, description }: Props) => {
     return (
-        <article className="cv-item flex-column gap-1">
+        <article className="cv-item  gap-1">
             <header>
                 <label className="date">
                     <time dateTime={toDate(start).YYYYMM}>{toDate(start).text.charAt(0).toUpperCase()}{toDate(start).text.replace(toDate(start).text.charAt(0), '')}</time>

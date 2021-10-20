@@ -11,7 +11,7 @@ interface Props {
 
 const ProsjektElement = ({ bilde, tittel, href, label }: Props) => {
     return (
-        <article className="project-item flex-column gap-2 ">
+        <article className="project-item  gap-2 ">
             <img src={bilde} alt="" />
             <section>
                 <label>{label}</label>

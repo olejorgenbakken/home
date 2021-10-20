@@ -1,0 +1,17 @@
+.project-header-image {
+  width: 100%;
+  height: 40vh;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.project-prototype img {
+  height: 50vh;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.test label {
+  text-transform: uppercase;
+  font-weight: 700;
+}

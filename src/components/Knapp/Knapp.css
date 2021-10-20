@@ -1,0 +1,34 @@
+button,
+.knapp {
+  position: relative;
+  font-size: 1em;
+  padding: 0.9em 1.2em;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--link);
+  color: #ffffff;
+  cursor: pointer;
+  width: max-content;
+}
+
+.knapp,
+.ekstern svg path {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.ekstern svg {
+  position: absolute;
+  margin-left: 1px;
+  margin-top: -2px;
+  height: 0.7em;
+  width: 0.7em;
+  margin-right: 1.7em;
+}
+
+.ekstern {
+  padding-right: 1.7em;
+}

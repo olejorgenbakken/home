@@ -8,9 +8,9 @@ interface Props {
 
 const InfoPanel = ({ children }: Props) => {
     return (
-        <aside className="info-panel">
+        <section className="info-panel">
             {children}
-        </aside>
+        </section>
     )
 }
 

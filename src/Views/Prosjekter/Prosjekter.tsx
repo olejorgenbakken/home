@@ -1,22 +1,21 @@
-import prosjekter from '../../assets/data/prosjekter';
+import prosjekter from '../../assets/Prosjekter/Prosjekter';
 import ProsjektElement from '../../components/ProsjektElement/ProsjektElement';
+import Sidetittel from '../../components/Sidetittel/Sidetittel';
 
 import './Prosjekter.css';
 
 const externalList = prosjekter.map((prosjekt) => (
-    <ProsjektElement key={prosjekt.slug} href={`prosjekter/${prosjekt.slug}`} bilde={prosjekt.bilder.forside} label={prosjekt.rolle} tittel={prosjekt.oppgave.tittel} />
+    <ProsjektElement key={prosjekt.slug()} href={`prosjekter/${prosjekt.slug()}`} bilde={prosjekt.bilder.forsidebilde} label={prosjekt.rolle} tittel={prosjekt.tittel} />
 ));
 
 const Prosjekter = () => {
     return (
-        <main className="gap-2">
-            <header className="">
-                <h1>Prosjekter</h1>
-            </header>
+        <main>
+            <Sidetittel tittel="Prosjekter" />
 
-            <section className="gap-2">
+            <article className="gap-4">
                 {externalList}
-            </section>
+            </article>
         </main>
     );
 }

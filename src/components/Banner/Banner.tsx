@@ -21,9 +21,9 @@ const setStyle = (høyde?: string) => {
 const Banner = ({ høyde, children }: Props) => {
   return (
     <section className="banner" style={setStyle(høyde)}>
-      <section className="content">
+      <article className="content">
         {children}
-      </section>
+      </article>
     </section>
   );
 }

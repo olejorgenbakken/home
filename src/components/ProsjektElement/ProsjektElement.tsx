@@ -11,13 +11,17 @@ interface Props {
 
 const ProsjektElement = ({ bilde, tittel, href, label }: Props) => {
     return (
-        <article className="project-item  gap-2 ">
+        <article className="prosjekt  gap-2 ">
             <img src={bilde} alt="" />
-            <section>
-                <label>{label}</label>
-                <h2>{tittel}</h2>
+
+            <section className="gap-2">
+                <header>
+                    <label>{label}</label>
+                    <h2>{tittel}</h2>
+                </header>
+
+                <Knapp href={href}>Se prosjektet</Knapp>
             </section>
-            <Knapp href={href}>Se prosjektet</Knapp>
         </article>
     )
 }

@@ -1,21 +1,16 @@
 import './Hjem.css'
 
-import Banner from "../../components/Banner/Banner";
 import ProsjektElement from '../../components/ProsjektElement/ProsjektElement';
-import prosjekter from '../../assets/data/prosjekter';
+import Sidetittel from '../../components/Sidetittel/Sidetittel';
+import Vipps from '../../assets/Prosjekter/Vipps/Info';
 
 
 const Hjem = () => {
   return (
-    <main id="home" className="column">
-      <Banner høyde="40">
-        <article className="gap-1 ">
-          <h1>Hei, <span>Ole Jørgen her</span></h1>
-          <p>Jeg designer og utvikler ting på internett. Denne nettsiden bygges fortsatt på, men kikk deg gjerne rundt allikevel.</p>
-        </article>
-      </Banner>
+    <main>
+      <Sidetittel tittel="Hei, Ole Jørgen her" beskrivelse="Jeg jobber om dagen med å få opp en side som samler alle mine prosjekter. Det tar litt tid, men du kan jo se gjennom det som er her." />
 
-      <ProsjektElement key={prosjekter[0].slug} href={`prosjekter/${prosjekter[0].slug}`} bilde={prosjekter[0].bilder.forside} label='Siste prosjekt' tittel={prosjekter[0].oppgave.tittel} />
+      <ProsjektElement href={`prosjekter/${Vipps.slug()}`} bilde={Vipps.bilder.forsidebilde} label='Siste prosjekt' tittel={Vipps.tittel} />
     </main >
   );
 }

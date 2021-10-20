@@ -6,7 +6,7 @@ import ToppMeny from "./components/ToppMeny/ToppMeny";
 import Prosjekt from "./Views/Prosjekt/Prosjekt";
 import BunnMeny from "./components/BunnMeny/BunnMeny";
 import Prosjekter from "./Views/Prosjekter/Prosjekter";
-import IkkeFunnet from "./Views/IkkeFunnet/IkkeFunnet";
+import Feilside from "./Views/Feilside/Feilside";
 import Hjem from "./Views/Hjem/Hjem";
 import Om from "./Views/Om/Om";
 
@@ -35,9 +35,9 @@ const App = () => {
       </Route>
       <Route path="*">
         <ToppMeny />
-        <IkkeFunnet error={404} message="Denne siden eksisterer ikke.">
+        <Feilside feilkode="404" forklaring="Denne siden eksisterer ikke.">
           <Button href="/">Gå tilbake til hovedsiden</Button>
-        </IkkeFunnet>
+        </Feilside>
         <BunnMeny />
       </Route>
     </Switch>

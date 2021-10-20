@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as LenkeIkon } from "../../assets/ikoner/lenke.svg";
+import { ReactComponent as EksternLenke } from "../../assets/Ikoner/ekstern-lenke.svg";
 
 import './Knapp.css';
 
@@ -13,7 +13,7 @@ function Button({ href, children }: Props) {
         return (
             <a href={href} className="knapp ekstern">
                 {children}
-                <LenkeIkon />
+                <EksternLenke />
             </a>
         )
     } else {

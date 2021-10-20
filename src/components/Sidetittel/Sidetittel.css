@@ -1,0 +1,14 @@
+.sidetittel {
+  width: 100%;
+  max-width: calc(var(--max-width) + 15%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidetittel-bilde {
+  width: 100%;
+  height: 60vh;
+  max-height: 450px;
+  object-fit: cover;
+}

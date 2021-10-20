@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as LenkeIkon } from "../../assets/ikoner/lenke.svg";
+import { ReactComponent as EksternLenke } from "../../assets/Ikoner/ekstern-lenke.svg";
 
 import './Lenke.css'
 
@@ -14,7 +14,7 @@ function InlineLink({ href, children }: Props) {
       <span className="external-link">
         <a href={href} className="link">
           {children}
-          <LenkeIkon />
+          <EksternLenke />
         </a>
       </span>
     )

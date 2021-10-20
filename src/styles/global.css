@@ -1,13 +1,12 @@
 @import "./normalize.css";
-@import "./utils.css";
 
 :root {
   --background: #ffffff;
   --text: #121213;
   --link: #005ee2;
   --link-hover: #0047ab;
-  --separator: #d6d6d6;
   --max-width: 900px;
+  --border-radius: 0px;
 }
 
 * {
@@ -23,10 +22,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--background);
   color: var(--text);
-}
-
-main {
-  min-height: calc(100vh - var(--header-height));
 }
 
 h1,
@@ -45,13 +40,12 @@ label {
 h1,
 h2,
 h3,
-h4,
 h5 {
-  line-height: 150%;
+  line-height: 175%;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 700;
 }
 
@@ -66,13 +60,19 @@ h3 {
 }
 
 h4 {
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+h5 {
   font-size: 1.2em;
   font-weight: 500;
 }
 
-h5 {
-  font-size: 1em;
-  font-weight: 700;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 p,
@@ -80,11 +80,25 @@ li,
 label,
 figcaption {
   font-size: 1em;
+}
+
+p {
+  line-height: 200%;
+}
+
+li,
+label,
+figcaption {
   line-height: 175%;
 }
 
+label,
 figcaption {
   cursor: default;
+}
+
+label {
+  font-weight: 500;
 }
 
 a {
@@ -96,54 +110,112 @@ a {
 
 hr {
   width: 100%;
-  background: -var(--separator);
+  background: var(--text);
+  opacity: 0.1;
   height: 1px;
   border: none;
   outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+img,
+figure,
+section,
+article,
+main,
+figcaption {
+  margin: 0 auto;
+}
+
+section,
+article,
+main,
+figure {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+section,
+article,
+figcaption {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+section,
+figcaption {
+  padding: 0 2em;
 }
 
 img,
 figure {
-  max-width: 100%;
-  margin: 0;
-  border-radius: 4px;
+  width: 100%;
+  max-width: calc(var(--max-width) + 15%);
+}
+
+img {
+  border-radius: var(--border-radius);
+}
+
+figure img {
+  border-radius: 0;
 }
 
 main {
-  padding: 2em;
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  min-height: 60vh;
+  gap: 4em;
+  padding-bottom: 4em;
+  justify-content: center;
 }
 
-@media (min-width: 700px) {
+.gap-1,
+.gap-2,
+.gap-4,
+.gap-8,
+.gap-12,
+.gap-16 {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 1em;
+}
+
+.gap-2 {
+  gap: 2em;
+}
+
+.gap-4 {
+  gap: 4em;
+}
+
+.gap-8 {
+  gap: 8em;
+}
+
+.gap-12 {
+  gap: 12em;
+}
+
+.gap-16 {
+  gap: 16em;
+}
+
+@media (min-width: 1050px) {
+  :root {
+    --border-radius: 8px;
+  }
+
   h1 {
-    font-size: 2.5em;
-    font-weight: 700;
+    font-size: 2.9em;
   }
 
   h2 {
     font-size: 1.9em;
-    font-weight: 700;
   }
 
   h3 {
     font-size: 1.5em;
-    font-weight: 700;
-  }
-
-  h4 {
-    font-size: 1.2em;
-    font-weight: 500;
-  }
-
-  h5 {
-    font-size: 1em;
-    font-weight: 700;
   }
 }

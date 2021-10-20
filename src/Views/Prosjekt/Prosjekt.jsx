@@ -3,15 +3,16 @@ import Button from "../../components/Knapp/Knapp";
 import InfoPanel from "../../components/InfoPanel/InfoPanel";
 
 import "./Prosjekt.css";
-import IkkeFunnet from "../IkkeFunnet/IkkeFunnet";
-import prosjekter from "../../assets/data/prosjekter";
+import prosjekter from "../../assets/Prosjekter/Prosjekter";
+import Sidetittel from "../../components/Sidetittel/Sidetittel";
+import Feilside from "../Feilside/Feilside";
 
 const hentFunn = (funn) => {
-  const funnArticle = funn.map((funne) => {
+  const funnArticle = funn.map((f) => {
     return (
       <article className="segment">
-        <h4>{funne.tittel}</h4>
-        <p>{funne.beskrivelse}</p>
+        <h4>{f.tittel}</h4>
+        <p>{f.beskrivelse}</p>
       </article>
     );
   });
@@ -22,13 +23,13 @@ const hentFunn = (funn) => {
 const hentTester = (tester) => {
   const testSeksjon = tester.map((test) => {
     return (
-      <section className="test  gap-1 ">
+      <article className="test gap-1">
         <header>
           <label className="method">{test.type}</label>
-          <h3>{test.title}</h3>
+          <h3>{test.tittel}</h3>
         </header>
-        <section className="results  gap-4">{hentFunn(test.funn)}</section>
-      </section>
+        <article className="results gap-4">{hentFunn(test.funn)}</article>
+      </article>
     );
   });
 
@@ -39,18 +40,16 @@ const Prosjekt = () => {
   const { prosjekt } = useParams();
 
   try {
-    const prosjektet = prosjekter.find((p) => p.slug === prosjekt);
+    const prosjektet = prosjekter.find((p) => p.slug() === prosjekt);
+
+    console.log(prosjektet.tidsperiode());
 
     return (
-      <main className="main-project  gap-8">
-        <header className="project-header  gap-2">
-          <img
-            src={prosjektet.bilder.forside}
-            className="project-header-image"
-            alt=""
-          />
-          <h1>{prosjektet.tittel}</h1>
-        </header>
+      <main id="prosjekt">
+        <Sidetittel
+          bilde={prosjektet.bilder.forsidebilde}
+          tittel={prosjektet.tittel}
+        />
 
         <InfoPanel>
           <header>
@@ -59,56 +58,57 @@ const Prosjekt = () => {
 
           <article>
             <h3>Problemstilling</h3>
-            <p>{prosjektet.oppgave.tittel}</p>
+            <q>{prosjektet.tittel}</q>
           </article>
 
           <article>
-            <h3>Bakgrunn</h3>
-            <p>{prosjektet.oppgave.beskrivelse}</p>
+            <h3>Utførelse</h3>
+            <p>
+              {prosjektet
+                .tidsperiode()
+                .replace(
+                  prosjektet.tidsperiode().charAt(0),
+                  prosjektet.tidsperiode().charAt(0).toUpperCase()
+                )}
+            </p>
           </article>
         </InfoPanel>
 
-        <section className="gap-2">
-          <h2>Prosjektets gang</h2>
-          <p>{prosjektet.oppgave.bakgrunn}</p>
-        </section>
-
         <section className="testing  gap-2">
-          <header className="">
+          <header>
             <h2>Innsikt</h2>
           </header>
-          <section className="gap-12">
-            {hentTester(prosjektet.oppgave.tester)}
-          </section>
+          <article className="gap-8">{hentTester(prosjektet.tester)}</article>
         </section>
 
-        <section className="project-prototype  gap-2 ">
-          <header className="gap-2">
+        <figure className="gap-1">
+          <img src={prosjektet.bilder.prototype} alt="" />
+
+          <figcaption>Den ferdige prototypen for sluttbrukere.</figcaption>
+        </figure>
+
+        <section className="prosjekt-prototype gap-2">
+          <header>
             <h2>Interaktiv prototype</h2>
-          </header>
-
-          <figure className="gap-1">
-            <img src={prosjektet.bilder.fullført[0]} alt="" />
-
-            <figcaption>
+            <p>
               Prototypen ble utviklet og testet med bruk av Figma, og du kan se
               den ferdige versjonen ved å klikke på lenken under.
-            </figcaption>
-          </figure>
+            </p>
+          </header>
 
-          <Button href={prosjektet.prototype}>Se prototypen</Button>
+          <Button href={prosjektet.href}>Se prototypen</Button>
         </section>
       </main>
     );
   } catch {
     return (
       <main className="main-project">
-        <IkkeFunnet
-          error={404}
-          message="Dette prosjektet har jeg ikke jobba på :("
+        <Feilside
+          feilkode="404"
+          forklaring="Dette prosjektet har jeg ikke jobba på :("
         >
           <Button href="/prosjekter">Gå til alle prosjekter</Button>
-        </IkkeFunnet>
+        </Feilside>
       </main>
     );
   }

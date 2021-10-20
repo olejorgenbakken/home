@@ -1,13 +1,6 @@
 .banner {
-  width: 100%;
   justify-content: center;
   align-items: center;
-  position: relative;
   padding-top: 4em;
   padding-bottom: 4em;
-}
-
-.banner .content {
-  max-width: var(--max-width);
-  margin: 0 auto;
 }

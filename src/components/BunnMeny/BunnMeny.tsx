@@ -1,14 +1,13 @@
+import { nettsider } from "../../assets/Nettsider/Nettsider";
 import Lenke from "../Lenke/Lenke";
-
-import webpages from "../../assets/data/nettsider";
 
 import "./BunnMeny.css";
 
 
 const setWebpages = () => {
-  const externalList = webpages.map((page) => (
-    <a href={page.href}>
-      <img src={page.logo} alt={page.title} />
+  const externalList = nettsider.map((side) => (
+    <a href={side.href}>
+      <img src={side.logo} alt={side.navn} />
     </a>
   ));
   return (externalList);
@@ -22,9 +21,9 @@ const BunnMeny = () => {
           Takk for at du sjekket ut nettsiden min. &nbsp;
           <Lenke href="https://github.com/olejorgenbakken/home">Du kan se kildekoden på GitHub her.</Lenke>
         </p>
-        <section className="external-pages">
+        <article className="external-pages">
           {setWebpages()}
-        </section>
+        </article>
       </section>
     </footer>
   )

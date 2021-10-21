@@ -1,7 +1,5 @@
-#feilside {
+.cv {
   max-width: var(--max-width);
-}
-
-#feilside .innhold {
+  margin: 0 auto;
   padding: 0 1em;
 }

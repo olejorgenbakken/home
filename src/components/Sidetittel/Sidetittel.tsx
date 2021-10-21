@@ -12,7 +12,7 @@ const hentBilde = (bilde?: string) => {
         return (
             <img
                 src={bilde}
-                className="sidetittel-bilde"
+                className="bilde"
                 alt=""
             />
         )
@@ -35,7 +35,7 @@ const Sidetittel = ({ tittel, beskrivelse, bilde }: Props) => {
     return (
         <header className="sidetittel gap-2">
             {hentBilde(bilde)}
-            <section className="sidetittel-tekst">
+            <section className="tekst">
                 <h1>{tittel}</h1>
                 {hentBeskrivelse(beskrivelse)}
             </section>

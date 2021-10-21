@@ -7,6 +7,7 @@ import { Tester } from "./Tester";
 const Vipps = new Prosjekt(
   "Vipps",
   "Hvordan kan vi samle inn mer penger til veldedighet med Vipps?",
+  "Vipps har blitt den ledende betalingsløsningen for veldedighet i Norge siden 2020, og ville derfor at vi skulle utforske mulighetene som kunne åpne seg for dem våde Vipps og for veldedighetsmarkedet.",
   "Interaksjonsdesign",
   "https://www.figma.com/community/file/1016826207776299287",
   {

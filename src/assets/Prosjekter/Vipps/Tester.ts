@@ -55,7 +55,7 @@ const FerdigPrototypeVipps = new Resultat(
   "Vipps",
   "Vipps ga mange hjerter og tomler opp på MS Teams.",
   {
-    sitat: "Skulle gjerne satt det ut på markedet 'allerede i morgen'.",
+    sitat: "Skulle gjerne satt det ut på markedet allerede i morgen.",
     kilde: {
       navn: "Rune Garborg",
       kredibilitet: "Sjef for Vipps",

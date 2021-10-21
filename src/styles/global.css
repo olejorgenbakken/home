@@ -117,57 +117,37 @@ hr {
   outline: none;
 }
 
-img,
-figure,
+main,
 section,
 article,
-main,
-figcaption,
-blockquote {
+blockquote,
+figure,
+img,
+figcaption {
+  width: 100%;
   margin: 0 auto;
 }
 
-section,
-article,
-main,
-figure,
-blockquote {
+main {
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: center;
 }
 
-section,
 article,
 figcaption {
-  width: 100%;
   max-width: var(--max-width);
-}
-
-section,
-figcaption {
-  padding: 0 2em;
 }
 
 img,
 figure {
   width: 100%;
-  max-width: calc(var(--max-width) + 15%);
+  max-width: calc(var(--max-width) + 10%);
 }
 
-img {
-  border-radius: var(--border-radius);
-}
-
-figure img {
-  border-radius: 0;
-}
-
-main {
-  min-height: 60vh;
-  gap: 4em;
-  padding-bottom: 4em;
-  justify-content: center;
+figcaption {
+  padding: 0 1em;
 }
 
 .gap-1,

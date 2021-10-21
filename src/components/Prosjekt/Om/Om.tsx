@@ -1,9 +1,10 @@
-import InfoPanel from "../../InfoPanel/InfoPanel"
 
+import Infopanel from '../../Infopanel/Infopanel';
 import './Om.css';
 
 interface Props {
     kunde: string,
+    bakgrunn: string,
     start: {
         måned: string,
         år: number
@@ -14,9 +15,9 @@ interface Props {
     },
 }
 
-const OmProsjektet = ({ kunde, start, slutt }: Props) => {
+const OmProsjektet = ({ kunde, bakgrunn, start, slutt }: Props) => {
     return (
-        <InfoPanel>
+        <Infopanel>
             <header>
                 <h2>Om prosjektet</h2>
             </header>
@@ -24,6 +25,11 @@ const OmProsjektet = ({ kunde, start, slutt }: Props) => {
             <article>
                 <h3>Kunde</h3>
                 <p>{kunde}</p>
+            </article>
+
+            <article>
+                <h3>Bakgrunn for prosjektet</h3>
+                <p>{bakgrunn}</p>
             </article>
 
             <article className="tidsrom">
@@ -37,7 +43,7 @@ const OmProsjektet = ({ kunde, start, slutt }: Props) => {
                     <p>{slutt.måned.replace(slutt.måned.charAt(0), slutt.måned.charAt(0).toUpperCase())} {slutt.år}</p>
                 </article>
             </article>
-        </InfoPanel>
+        </Infopanel>
     )
 }
 

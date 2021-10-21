@@ -2,19 +2,22 @@ import { Route, Switch } from "react-router-dom";
 
 import "./styles/global.css";
 import Button from "./components/Knapp/Knapp";
-import Prosjekter from "./Views/Prosjekter/Prosjekter";
 import Feilside from "./Views/Feilside/Feilside";
 import Hjem from "./Views/Hjem/Hjem";
 import Om from "./Views/OmMeg/OmMeg";
 import Vipps from './Views/Prosjekt/Vipps/Vipps';
+import Prosjekter from "./Views/Prosjekter/Prosjekter";
 
 const App = () => {
   return (
     <Switch>
+      <Route path="/prosjekter/psykisk-helse">
+        <Vipps />
+      </Route>
       <Route path="/prosjekter/vipps">
         <Vipps />
       </Route>
-      <Route path="/prosjekter">
+      <Route exact path="/prosjekter">
         <Prosjekter />
       </Route>
       <Route path="/prosjekter/*">

@@ -1,17 +1,17 @@
 import { ReactNode } from "react"
 
-import './InfoPanel.css';
+import './Infopanel.css';
 
 interface Props {
     children: ReactNode
 }
 
-const InfoPanel = ({ children }: Props) => {
+const Infopanel = ({ children }: Props) => {
     return (
-        <section className="info-panel">
+        <article className="info-panel">
             {children}
-        </section>
+        </article>
     )
 }
 
-export default InfoPanel;
+export default Infopanel;

@@ -1,5 +1,5 @@
 .sitat {
-  padding: 2.5em 2em;
+  padding: 2em 1em;
   position: relative;
 }
 
@@ -37,4 +37,10 @@
 .sitat figcaption cite {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .sitat {
+    padding: 2em;
+  }
 }

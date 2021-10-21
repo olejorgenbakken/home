@@ -1,6 +1,22 @@
 .banner {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  height: 50vh;
+  min-height: 400px;
+  padding: 2em 1em;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner .innhold {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  max-width: calc(var(--max-width) * 10%);
+  margin: 0 auto;
+  background: white;
+  padding: 2em;
+  border-radius: var(--border-radius);
 }

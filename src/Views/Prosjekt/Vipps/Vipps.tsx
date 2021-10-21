@@ -6,17 +6,17 @@ import Sidetittel from "../../../components/Sidetittel/Sidetittel";
 import prosjekt from '../../../assets/Prosjekter/Vipps/Vipps';
 import OmProsjektet from "../../../components/Prosjekt/Om/Om";
 import Testing from "../../../components/Prosjekt/Testing/Tester";
+import Banner from "../../../components/Banner/Banner";
 
 const Vipps = () => {
-  console.log(prosjekt)
   return (
-    <main id="prosjekt">
+    <main id="vipps" className="gap-4">
       <Sidetittel
         bilde={prosjekt.bilder.forsidebilde}
         tittel={prosjekt.tittel}
       />
 
-      <OmProsjektet kunde={prosjekt.bedrift} start={prosjekt.start()} slutt={prosjekt.slutt()} />
+      <OmProsjektet kunde={prosjekt.bedrift} bakgrunn={prosjekt.bakgrunn} start={prosjekt.start()} slutt={prosjekt.slutt()} />
 
       <Testing tester={prosjekt.tester} />
 
@@ -26,7 +26,7 @@ const Vipps = () => {
         <figcaption>Den ferdige prototypen for sluttbrukere.</figcaption>
       </figure>
 
-      <section className="prosjekt-prototype gap-2">
+      <Banner bakgrunn="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3000&q=80">
         <header>
           <h2>Interaktiv prototype</h2>
           <p>
@@ -36,7 +36,7 @@ const Vipps = () => {
         </header>
 
         <Button href={prosjekt.href}>Se prototypen</Button>
-      </section>
+      </Banner>
     </main>
   );
 };

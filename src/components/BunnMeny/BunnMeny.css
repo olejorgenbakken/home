@@ -3,20 +3,19 @@
   background: rgb(241, 241, 241);
 }
 
-.global-footer-content {
+.global-footer-innhold {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 4em 2em;
-  justify-content: center;
+  padding: 2em 1em;
 }
 
-.external-pages {
+.eksterne-sider {
   display: flex;
   flex-direction: row;
   gap: 3em;
 }
 
-.external-pages img {
+.eksterne-sider img {
   height: 27px;
   width: auto;
   object-fit: contain;

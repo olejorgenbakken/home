@@ -5,6 +5,7 @@ export default class Prosjekt {
   constructor(
     public bedrift: string,
     public tittel: string,
+    public bakgrunn: string,
     public rolle: string,
     public href: string,
     public bilder: {
@@ -20,6 +21,7 @@ export default class Prosjekt {
   ) {
     this.bedrift = bedrift;
     this.tittel = tittel;
+    this.bakgrunn = bakgrunn;
     this.rolle = rolle;
     this.href = href;
     this.bilder = bilder;

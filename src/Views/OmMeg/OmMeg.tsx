@@ -5,7 +5,7 @@ import './OmMeg.css';
 
 const OmMeg = () => {
   return (
-    <main>
+    <main id="om-meg" className="gap-2">
       <Sidetittel tittel="Om meg" />
 
       <CV />

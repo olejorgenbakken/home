@@ -1,7 +1,8 @@
-#feilside {
+.tester {
   max-width: var(--max-width);
+  margin: 0 auto;
 }
 
-#feilside .innhold {
+.tester > header {
   padding: 0 1em;
 }

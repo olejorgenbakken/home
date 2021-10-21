@@ -2,30 +2,30 @@ import { ReactNode } from "react";
 import "./Banner.css";
 
 interface Props {
-  høyde?: string,
+  bakgrunn: string,
   children: ReactNode
 }
 
-const setStyle = (høyde?: string) => {
-  let style = {
-    minHeight: ''
+const Banner = ({ bakgrunn, children }: Props) => {
+
+  if (bakgrunn.includes(".")) {
+    return (
+      <section className="banner" style={{ backgroundImage: `url(${bakgrunn}` }}>
+        <div className="innhold">
+          {children}
+        </div>
+      </section>
+    );
+  } else {
+    return (
+      <section className="banner" style={{ background: bakgrunn }}>
+        <div className="innhold">
+          {children}
+        </div>
+      </section>
+    );
   }
 
-  if (høyde) {
-    style.minHeight = `${høyde}vh`;
-  }
-
-  return style;
-}
-
-const Banner = ({ høyde, children }: Props) => {
-  return (
-    <section className="banner" style={setStyle(høyde)}>
-      <article className="content">
-        {children}
-      </article>
-    </section>
-  );
 }
 
 export default Banner;

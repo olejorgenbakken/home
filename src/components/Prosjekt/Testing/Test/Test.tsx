@@ -26,7 +26,7 @@ const Test = ({ tittel, type, resultater }: Props) => {
                 <label className="type">{type}</label>
                 <h3>{tittel}</h3>
             </header>
-            <article className="results gap-4">
+            <div className="results gap-4">
                 {
                     resultater.map((resultat) => {
                         return (
@@ -34,7 +34,7 @@ const Test = ({ tittel, type, resultater }: Props) => {
                         )
                     })
                 }
-            </article>
+            </div>
         </article>
     );
 }

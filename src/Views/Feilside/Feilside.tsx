@@ -11,9 +11,9 @@ interface Props {
 
 const Feilside = ({ feilkode, forklaring, children }: Props) => {
     return (
-        <main className="gap-2">
+        <main id="feilside" className="gap-2">
             <Sidetittel tittel={feilkode} beskrivelse={forklaring} />
-            <section>
+            <section className="innhold">
                 {children}
             </section>
         </main>

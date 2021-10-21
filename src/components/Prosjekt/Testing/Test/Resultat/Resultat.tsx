@@ -24,9 +24,11 @@ const sitatElement = (sitat?: { sitat: string, kilde: { navn: string, kredibilit
 
 const Resultat = ({ tittel, beskrivelse, sitat }: Props) => {
     return (
-        <article className="test-funn">
-            <h4>{tittel}</h4>
-            <p>{beskrivelse}</p>
+        <article className="resultat gap-1">
+            <div className="tekst">
+                <h4>{tittel}</h4>
+                <p>{beskrivelse}</p>
+            </div>
             {sitatElement(sitat)}
         </article>
     );

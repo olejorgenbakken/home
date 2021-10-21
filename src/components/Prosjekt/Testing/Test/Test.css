@@ -2,3 +2,7 @@
   text-transform: uppercase;
   font-weight: 700;
 }
+
+.test > header {
+  padding: 0 1em;
+}

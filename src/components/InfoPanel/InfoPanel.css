@@ -23,7 +23,7 @@
   z-index: 0;
   border-radius: var(--border-radius);
   opacity: 0.1;
-  background: rgb(0, 115, 255);
+  background: var(--blå);
 }
 
 @media (min-width: 900px) {

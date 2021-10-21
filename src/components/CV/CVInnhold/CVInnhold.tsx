@@ -12,7 +12,7 @@ const CVInnhold = ({ tittel, sted, start, slutt, beskrivelse }: Props) => {
     const sjekkTiden = () => {
         if (start !== slutt) {
             return (
-                <label>
+                <label className="tid">
                     <time>{start}</time>
                     &nbsp;–&nbsp;
                     <time>{slutt}</time>
@@ -20,7 +20,7 @@ const CVInnhold = ({ tittel, sted, start, slutt, beskrivelse }: Props) => {
             )
         } else {
             return (
-                <label>
+                <label className="tid">
                     <time>{slutt}</time>
                 </label>
             )
@@ -28,11 +28,11 @@ const CVInnhold = ({ tittel, sted, start, slutt, beskrivelse }: Props) => {
     }
 
     return (
-        <article>
+        <article className="gap-1">
             <header>
-                {sjekkTiden()}
                 <h4 className="role">{tittel}</h4>
                 <h5 className="place">{sted}</h5>
+                {sjekkTiden()}
             </header>
             <p>{beskrivelse}</p>
         </article >

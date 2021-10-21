@@ -21,10 +21,10 @@ interface Props {
 
 const Test = ({ tittel, type, resultater }: Props) => {
     return (
-        <article className="test gap-1">
+        <article className="test gap-2">
             <header>
-                <label className="type">{type}</label>
                 <h3>{tittel}</h3>
+                <label>{type}</label>
             </header>
             <div className="results gap-4">
                 {

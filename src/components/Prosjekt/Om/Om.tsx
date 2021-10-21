@@ -4,7 +4,7 @@ import './Om.css';
 
 interface Props {
     kunde: string,
-    bakgrunn: string,
+    rolle: string,
     start: {
         måned: string,
         år: number
@@ -15,24 +15,23 @@ interface Props {
     },
 }
 
-const OmProsjektet = ({ kunde, bakgrunn, start, slutt }: Props) => {
+const OmProsjektet = ({ kunde, rolle, start, slutt }: Props) => {
     return (
         <Infopanel>
             <header>
                 <h2>Om prosjektet</h2>
             </header>
+            <section className="om-prosjektet">
+                <article>
+                    <label>Kunde</label>
+                    <p>{kunde}</p>
+                </article>
 
-            <article>
-                <h3>Kunde</h3>
-                <p>{kunde}</p>
-            </article>
+                <article>
+                    <label>Min rolle</label>
+                    <p>{rolle}</p>
+                </article>
 
-            <article>
-                <h3>Bakgrunn for prosjektet</h3>
-                <p>{bakgrunn}</p>
-            </article>
-
-            <article className="tidsrom">
                 <article>
                     <label>Start</label>
                     <p>{start.måned.replace(start.måned.charAt(0), start.måned.charAt(0).toUpperCase())} {start.år}</p>
@@ -42,8 +41,8 @@ const OmProsjektet = ({ kunde, bakgrunn, start, slutt }: Props) => {
                     <label>Slutt</label>
                     <p>{slutt.måned.replace(slutt.måned.charAt(0), slutt.måned.charAt(0).toUpperCase())} {slutt.år}</p>
                 </article>
-            </article>
-        </Infopanel>
+            </section>
+        </Infopanel >
     )
 }
 

@@ -1,16 +1,5 @@
-.tidsrom {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 4em;
-}
-
-.tidsrom article {
-  width: max-content;
-  margin: 0;
-}
-
-.tidsrom label {
-  font-weight: 700;
-  text-transform: uppercase;
+.om-prosjektet {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2em 4em;
 }

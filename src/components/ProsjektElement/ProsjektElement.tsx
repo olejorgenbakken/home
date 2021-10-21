@@ -3,13 +3,13 @@ import Knapp from '../Knapp/Knapp';
 import './ProsjektElement.css'
 
 interface Props {
-    bilde: string,
     tittel: string,
     href: string
+    bilde?: string,
     label?: string,
 }
 
-const ProsjektElement = ({ bilde, tittel, href, label }: Props) => {
+const ProsjektElement = ({ tittel, href, bilde, label }: Props) => {
     return (
         <article className="prosjekt gap-1 ">
             <img src={bilde} alt="" />

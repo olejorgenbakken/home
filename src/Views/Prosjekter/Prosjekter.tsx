@@ -14,7 +14,7 @@ const Prosjekter = () => {
             <section className="gap-8">
                 {
                     prosjekter.map((prosjekt) => (
-                        <ProsjektElement key={prosjekt.slug()} href={`prosjekter/${prosjekt.slug()}`} bilde={prosjekt.bilder.forsidebilde} label={prosjekt.rolle} tittel={prosjekt.tittel} />
+                        <ProsjektElement key={prosjekt.slug()} href={`prosjekter/${prosjekt.slug()}`} bilde={prosjekt.bilder?.forsidebilde} label={prosjekt.rolle} tittel={prosjekt.tittel} />
                     ))
                 }
             </section>

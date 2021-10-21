@@ -5,6 +5,8 @@
   --text: #121213;
   --link: #005ee2;
   --link-hover: #0047ab;
+  --grønn: rgb(0, 151, 33);
+  --blå: rgb(0, 115, 255);
   --max-width: 900px;
   --border-radius: 0px;
 }
@@ -55,13 +57,13 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: 700;
 }
 
 h4 {
-  font-size: 1.3em;
-  font-weight: 700;
+  font-size: 1.4em;
+  font-weight: 500;
   line-height: 150%;
 }
 

@@ -7,25 +7,25 @@ export default class Prosjekt {
     public tittel: string,
     public bakgrunn: string,
     public rolle: string,
-    public href: string,
-    public bilder: {
-      forsidebilde: string;
-      prosess?: string[];
-      prototype?: string;
-    },
     private tid: {
       start: Date;
       slutt: Date;
     },
-    public tester: Test[]
+    public href?: string,
+    public bilder?: {
+      forsidebilde?: string;
+      prosess?: string[];
+      prototype?: string;
+    },
+    public tester?: Test[]
   ) {
     this.bedrift = bedrift;
     this.tittel = tittel;
     this.bakgrunn = bakgrunn;
     this.rolle = rolle;
+    this.tid = tid;
     this.href = href;
     this.bilder = bilder;
-    this.tid = tid;
     this.tester = tester;
   }
 
@@ -39,13 +39,5 @@ export default class Prosjekt {
 
   slutt() {
     return tidsKonvertering(this.tid.slutt);
-  }
-
-  tidsperiode() {
-    return `${tidsKonvertering(this.tid.start).måned} ${
-      tidsKonvertering(this.tid.start).år
-    } til ${tidsKonvertering(this.tid.slutt).måned} ${
-      tidsKonvertering(this.tid.slutt).år
-    }`;
   }
 }

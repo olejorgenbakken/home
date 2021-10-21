@@ -1,4 +1,4 @@
-import Vipps from "./Vipps/Info";
+import Vipps from "./Vipps/Vipps";
 
 const prosjekter = [Vipps];
 

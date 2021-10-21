@@ -1,4 +1,4 @@
-import Knapp from "../Knapp/Knapp";
+import Knapp from '../../Knapp/Knapp';
 
 import './ProsjektElement.css'
 
@@ -11,7 +11,7 @@ interface Props {
 
 const ProsjektElement = ({ bilde, tittel, href, label }: Props) => {
     return (
-        <article className="prosjekt  gap-2 ">
+        <article className="prosjekt gap-2 ">
             <img src={bilde} alt="" />
 
             <section className="gap-2">

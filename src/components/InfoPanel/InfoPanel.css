@@ -20,5 +20,6 @@
   width: 100%;
   z-index: 0;
   border-radius: var(--border-radius);
-  background: rgb(237, 245, 255);
+  opacity: 0.1;
+  background: rgb(0, 115, 255);
 }

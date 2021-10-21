@@ -1,0 +1,40 @@
+.sitat {
+  padding: 2em;
+  position: relative;
+}
+
+.sitat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: rgb(0, 151, 33);
+  border-radius: 20px;
+}
+
+.sitat::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  background: rgb(0, 255, 55);
+}
+
+.sitat p {
+  font-size: 1.2em;
+}
+
+.sitat figcaption {
+  padding: 0;
+  font-weight: 700;
+}
+
+.sitat figcaption cite {
+  display: flex;
+  flex-direction: column;
+}

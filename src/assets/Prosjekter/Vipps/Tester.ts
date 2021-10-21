@@ -53,7 +53,14 @@ const FerdigPrototypeOrganisasjonene = new Funn(
 
 const FerdigPrototypeVipps = new Funn(
   "Vipps",
-  "Vipps ga mange hjerter og tomler opp på MS Teams, og Rune selv sa han gjerne skulle satt det ut på markedet “allerede i morgen”"
+  "Vipps ga mange hjerter og tomler opp på MS Teams.",
+  {
+    sitat: "Skulle gjerne satt det ut på markedet 'allerede i morgen'",
+    kilde: {
+      navn: "Rune Garborg",
+      kredibilitet: "Sjef for Vipps",
+    },
+  }
 );
 
 const FerdigPrototype = new Test("Fullført prototype", "Intervju", [

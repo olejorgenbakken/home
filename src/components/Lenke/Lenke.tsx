@@ -11,12 +11,10 @@ interface Props {
 function InlineLink({ href, children }: Props) {
   if (href.includes('https://')) {
     return (
-      <span className="external-link">
-        <a href={href} className="link">
-          {children}
-          <EksternLenke />
-        </a>
-      </span>
+      <a href={href} target="_blank" rel="noreferrer" className="ekstern-link link">
+        {children}
+        <EksternLenke />
+      </a>
     )
   } else {
     return (

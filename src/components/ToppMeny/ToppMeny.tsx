@@ -7,7 +7,7 @@ const ToppMeny = () => {
       <nav>
         <ul id="global-menu">
           <li>
-            <NavLink activeClassName="active" to="/om-meg">Om</NavLink>
+            <NavLink activeClassName="active" to="/om-meg">Om meg</NavLink>
           </li>
           <li>
             <NavLink to="/" exact activeClassName="active" className="home">Hjem</NavLink>

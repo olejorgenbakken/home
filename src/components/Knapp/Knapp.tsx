@@ -11,7 +11,7 @@ interface Props {
 function Button({ href, children }: Props) {
     if (href.includes('https://')) {
         return (
-            <a href={href} className="knapp ekstern">
+            <a href={href} target="_blank" rel="noreferrer" className="knapp ekstern">
                 {children}
                 <EksternLenke />
             </a>

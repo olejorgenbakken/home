@@ -122,14 +122,16 @@ figure,
 section,
 article,
 main,
-figcaption {
+figcaption,
+blockquote {
   margin: 0 auto;
 }
 
 section,
 article,
 main,
-figure {
+figure,
+blockquote {
   display: flex;
   flex-direction: column;
   width: 100%;

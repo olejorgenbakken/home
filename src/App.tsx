@@ -8,7 +8,7 @@ import BunnMeny from "./components/BunnMeny/BunnMeny";
 import Prosjekter from "./Views/Prosjekter/Prosjekter";
 import Feilside from "./Views/Feilside/Feilside";
 import Hjem from "./Views/Hjem/Hjem";
-import Om from "./Views/Om/Om";
+import Om from "./Views/OmMeg/OmMeg";
 
 const App = () => {
   return (

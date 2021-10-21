@@ -1,8 +1,8 @@
 import './Hjem.css'
 
-import ProsjektElement from '../../components/ProsjektElement/ProsjektElement';
+import ProsjektElement from '../../components/Prosjekt/ProsjektElement/ProsjektElement';
 import Sidetittel from '../../components/Sidetittel/Sidetittel';
-import Vipps from '../../assets/Prosjekter/Vipps/Info';
+import Vipps from '../../assets/Prosjekter/Vipps/Vipps';
 
 
 const Hjem = () => {

@@ -1,5 +1,12 @@
 .om-prosjektet {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 2em 4em;
+  grid-template-columns: 1fr;
+  gap: 1em 2em;
+}
+
+@media (min-width: 440px) {
+  .om-prosjektet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
 }

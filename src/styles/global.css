@@ -42,8 +42,9 @@ label {
 h1,
 h2,
 h3,
+h4,
 h5 {
-  line-height: 175%;
+  line-height: 150%;
 }
 
 h1 {
@@ -64,17 +65,11 @@ h3 {
 h4 {
   font-size: 1.4em;
   font-weight: 500;
-  line-height: 150%;
 }
 
 h5 {
   font-size: 1.2em;
   font-weight: 500;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 p,
@@ -84,14 +79,10 @@ figcaption {
   font-size: 1em;
 }
 
-p {
-  line-height: 200%;
-}
-
 li,
-label,
+p,
 figcaption {
-  line-height: 175%;
+  line-height: 200%;
 }
 
 label,
@@ -100,7 +91,8 @@ figcaption {
 }
 
 label {
-  font-weight: 500;
+  line-height: 145%;
+  font-weight: 600;
 }
 
 a {

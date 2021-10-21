@@ -25,3 +25,9 @@
   height: 2px;
   background: #000000;
 }
+
+@media (min-width: 1050px) {
+  #global-menu {
+    padding: 4em 1em;
+  }
+}

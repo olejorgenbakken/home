@@ -4,7 +4,7 @@ interface Props {
     beskrivelse: string
 }
 
-const Figur = ({ src, alt, beskrivelse }: Props) => {
+const Bilde = ({ src, alt, beskrivelse }: Props) => {
     return (
         <figure className="gap-1">
             <img src={src} alt={alt} loading="lazy" />
@@ -14,4 +14,4 @@ const Figur = ({ src, alt, beskrivelse }: Props) => {
     )
 }
 
-export default Figur;
+export default Bilde;

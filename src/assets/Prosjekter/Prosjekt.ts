@@ -5,7 +5,6 @@ export default class Prosjekt {
   constructor(
     public bedrift: string,
     public tittel: string,
-    public beskrivelse: string,
     public rolle: string,
     public href: string,
     public bilder: {
@@ -17,11 +16,10 @@ export default class Prosjekt {
       start: Date;
       slutt: Date;
     },
-    public tester?: Test[]
+    public tester: Test[]
   ) {
     this.bedrift = bedrift;
     this.tittel = tittel;
-    this.beskrivelse = beskrivelse;
     this.rolle = rolle;
     this.href = href;
     this.bilder = bilder;

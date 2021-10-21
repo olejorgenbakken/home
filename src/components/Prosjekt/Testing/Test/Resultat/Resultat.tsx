@@ -1,6 +1,6 @@
-import Sitat from "../../../Sitat/Sitat";
+import Sitat from "../../../../Sitat/Sitat";
 
-import './Funn.css';
+import './Resultat.css';
 
 interface Props {
     tittel: string,
@@ -9,8 +9,8 @@ interface Props {
         sitat: string,
         kilde: {
             navn: string,
-            kredibilitet: string
-        },
+            kredibilitet: string,
+        }
     }
 }
 
@@ -22,7 +22,7 @@ const sitatElement = (sitat?: { sitat: string, kilde: { navn: string, kredibilit
     }
 }
 
-const Funn = ({ tittel, beskrivelse, sitat }: Props) => {
+const Resultat = ({ tittel, beskrivelse, sitat }: Props) => {
     return (
         <article className="test-funn">
             <h4>{tittel}</h4>
@@ -32,4 +32,4 @@ const Funn = ({ tittel, beskrivelse, sitat }: Props) => {
     );
 };
 
-export default Funn;
+export default Resultat;

@@ -1,8 +1,10 @@
-import prosjekter from '../../assets/Prosjekter/Prosjekter';
+import Vipps from '../../assets/Prosjekter/Vipps/Vipps';
 import ProsjektElement from '../../components/Prosjekt/ProsjektElement/ProsjektElement';
 import Sidetittel from '../../components/Sidetittel/Sidetittel';
 
 import './Prosjekter.css';
+
+const prosjekter = [Vipps];
 
 const Prosjekter = () => {
     return (

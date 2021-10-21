@@ -1,22 +1,25 @@
-import Funn from "./Funn/Funn";
+import Resultat from "./Resultat/Resultat";
+
+import './Test.css';
 
 interface Props {
     tittel: string,
     type: string,
-    funn: {
+    resultater: {
         tittel: string,
         beskrivelse: string,
-        sitat: {
+        sitat?: {
             sitat: string,
             kilde: {
                 navn: string,
                 kredibilitet: string
+                href?: string
             }
         }
     }[]
 }
 
-const Test = ({ tittel, type, funn }: Props) => {
+const Test = ({ tittel, type, resultater }: Props) => {
     return (
         <article className="test gap-1">
             <header>
@@ -25,9 +28,9 @@ const Test = ({ tittel, type, funn }: Props) => {
             </header>
             <article className="results gap-4">
                 {
-                    funn.map((f) => {
+                    resultater.map((resultat) => {
                         return (
-                            <Funn key={f.tittel} tittel={f.tittel} beskrivelse={f.beskrivelse} sitat={f.sitat} />
+                            <Resultat key={resultat.tittel} tittel={resultat.tittel} beskrivelse={resultat.beskrivelse} sitat={resultat.sitat} />
                         )
                     })
                 }

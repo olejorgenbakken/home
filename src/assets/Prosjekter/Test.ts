@@ -1,13 +1,13 @@
-import Funn from "./Funn";
+import Resultat from "./Resultat";
 
 export default class Test {
   constructor(
     public tittel: string,
     public type: "Spørreundersøkelse" | "Intervju",
-    public funn?: Funn[]
+    public resultater: Resultat[]
   ) {
     this.tittel = tittel;
     this.type = type;
-    this.funn = funn;
+    this.resultater = resultater;
   }
 }

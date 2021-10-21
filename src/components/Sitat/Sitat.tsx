@@ -5,6 +5,7 @@ interface Props {
     kilde: {
         navn: string,
         kredibilitet: string
+        href?: string,
     }
 
 }
@@ -12,7 +13,7 @@ interface Props {
 const Sitat = ({ sitat, kilde }: Props) => {
     return (
         <figure className="sitat gap-1">
-            <blockquote>
+            <blockquote cite={kilde.href}>
                 <p>
                     {sitat}
                 </p>

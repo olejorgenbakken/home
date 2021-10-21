@@ -7,7 +7,6 @@ import { Tester } from "./Tester";
 const Vipps = new Prosjekt(
   "Vipps",
   "Hvordan kan vi samle inn mer penger til veldedighet med Vipps?",
-  "Sommerjobb som UX-designer hos Vipps sammen med andre studenter.",
   "Interaksjonsdesign",
   "https://www.figma.com/community/file/1016826207776299287",
   {

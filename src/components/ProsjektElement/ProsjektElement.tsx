@@ -6,20 +6,15 @@ interface Props {
     tittel: string,
     href: string
     bilde?: string,
-    label?: string,
 }
 
-const ProsjektElement = ({ tittel, href, bilde, label }: Props) => {
+const ProsjektElement = ({ tittel, href, bilde }: Props) => {
     return (
         <article className="prosjekt gap-1 ">
-            <img src={bilde} alt="" />
+            <img src={bilde} alt="" loading="lazy" />
 
             <section className="prosjekt-info gap-2">
-                <header>
-                    <label>{label}</label>
-                    <h2>{tittel}</h2>
-                </header>
-
+                <h2>{tittel}</h2>
                 <Knapp href={href}>Se prosjektet</Knapp>
             </section>
         </article>

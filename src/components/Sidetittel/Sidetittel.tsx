@@ -14,6 +14,7 @@ const hentBilde = (bilde?: string) => {
                 src={bilde}
                 className="bilde"
                 alt=""
+                loading="lazy"
             />
         )
     } else {

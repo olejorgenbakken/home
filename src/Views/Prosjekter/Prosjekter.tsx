@@ -4,7 +4,7 @@ import Sidetittel from '../../components/Sidetittel/Sidetittel';
 
 import './Prosjekter.css';
 
-const prosjekter = [Vipps, Vipps];
+const prosjekter = [Vipps];
 
 const Prosjekter = () => {
     return (

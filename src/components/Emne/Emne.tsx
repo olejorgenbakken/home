@@ -3,12 +3,12 @@ import { ReactNode } from "react";
 import './Emne.css';
 
 interface Props {
-    children: ReactNode
+    tekst: string
 }
 
-const Emne = ({ children }: Props) => {
+const Emne = ({ tekst }: Props) => {
     return (
-        <article className="emne">{children}</article>
+        <label className="emne">{tekst}</label>
     )
 }
 

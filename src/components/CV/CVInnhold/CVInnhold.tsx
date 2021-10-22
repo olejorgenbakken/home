@@ -16,7 +16,7 @@ const sjekkEmner = (emner?: string[]) => {
         return (
             <aside className="emner">
                 {emner.sort().map((emne) => {
-                    return (<Emne>{emne}</Emne>)
+                    return (<Emne tekst={emne} />)
                 })}
             </aside>
         )

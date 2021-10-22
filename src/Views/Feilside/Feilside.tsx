@@ -9,12 +9,9 @@ interface Props {
 
 const Feilside = ({ children }: Props) => {
     return (
-        <main id="feilside">
-            <article className="gap-2">
-                <section>
-                    <h1>Oida...</h1>
-                    <p>Her var det ingenting :(</p>
-                </section>
+        <main id="feilside" className="gap-2">
+            <Sidetittel tittel="Oida..." beskrivelse="Her var det ingenting" />
+            <article>
                 {children}
             </article>
         </main>

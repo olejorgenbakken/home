@@ -1,10 +1,11 @@
-.sitat {
-  padding: 2em 1em;
+.sitatblokk {
+  padding: 2em var(--padding);
   position: relative;
   background: var(--grønn);
+  color: var(--svart);
 }
 
-.sitat::before {
+.sitatblokk::before {
   content: "";
   position: absolute;
   top: 0;
@@ -14,22 +15,29 @@
   background: var(--grønn-mørk);
 }
 
-.sitat p {
-  font-size: 1.2em;
-}
-
-.sitat figcaption {
+.sitatblokk figcaption {
   padding: 0;
   font-weight: 700;
 }
 
-.sitat figcaption cite {
+.sitatblokk .sitat {
+  font-size: 1.2em;
+}
+
+.sitatblokk figcaption cite {
   display: flex;
   flex-direction: column;
 }
 
-@media (min-width: 900px) {
-  .sitat {
-    padding: 2em;
-  }
+.sitatblokk cite .navn,
+.sitatblokk cite .kredibilitet {
+  opacity: 0.8;
+}
+
+.sitatblokk cite .navn {
+  font-size: 1em;
+}
+
+.sitatblokk cite .kredibilitet {
+  font-size: 0.95em;
 }

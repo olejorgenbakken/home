@@ -11,13 +11,13 @@ const Prosjekter = () => {
         <main id="prosjekter" className="gap-2">
             <Sidetittel tittel="Prosjekter" />
 
-            <section className="gap-8">
+            <article className="gap-8">
                 {
                     prosjekter.map((prosjekt) => (
                         <ProsjektElement key={prosjekt.slug()} href={`prosjekter/${prosjekt.slug()}`} bilde={prosjekt.bilder?.forsidebilde} tittel={prosjekt.tittel} />
                     ))
                 }
-            </section>
+            </article>
         </main>
     );
 }

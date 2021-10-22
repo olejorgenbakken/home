@@ -1,6 +1,7 @@
 import Button from "../../../components/Knapp/Knapp";
 
-import "./Vipps.css";
+import '../Prosjekt.css';
+
 import Sidetittel from "../../../components/Sidetittel/Sidetittel";
 
 import prosjekt from '../../../assets/Prosjekter/Vipps/Vipps';
@@ -12,7 +13,7 @@ import Bilde from "../../../components/Bilde/Bilde";
 
 const Vipps = () => {
   return (
-    <main id="vipps" className="gap-4">
+    <main id="prosjekt" className="gap-4">
       <Sidetittel
         bilde={prosjekt.bilder!.forsidebilde}
         tittel={prosjekt.tittel}
@@ -20,11 +21,13 @@ const Vipps = () => {
 
       <OmProsjektet kunde={prosjekt.bedrift} rolle={prosjekt.rolle} start={prosjekt.start()} slutt={prosjekt.slutt()} />
 
-      <Bakgrunn bakgrunn={prosjekt.bakgrunn} />
+      <article>
+        <Bakgrunn bakgrunn={prosjekt.bakgrunn} />
 
-      <Bilde src={prosjekt.bilder!.prototype!} beskrivelse="Den ferdige prototypen for sluttbrukere." />
+        <Bilde src={prosjekt.bilder!.prototype!} beskrivelse="Den ferdige prototypen for sluttbrukere." />
 
-      <Testing tester={prosjekt.tester!} />
+        <Testing tester={prosjekt.tester!} />
+      </article>
 
       <Banner bakgrunn="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3000&q=80">
         <div>

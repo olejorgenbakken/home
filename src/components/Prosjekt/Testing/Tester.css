@@ -1,8 +1,0 @@
-.tester {
-  max-width: var(--vidde);
-  margin: 0 auto;
-}
-
-.tester > header {
-  padding: 0 1em;
-}

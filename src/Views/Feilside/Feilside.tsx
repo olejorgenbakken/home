@@ -4,18 +4,19 @@ import Sidetittel from "../../components/Sidetittel/Sidetittel";
 import './Feilside.css';
 
 interface Props {
-    feilkode: string,
-    forklaring: string,
     children: ReactNode
 }
 
-const Feilside = ({ feilkode, forklaring, children }: Props) => {
+const Feilside = ({ children }: Props) => {
     return (
-        <main id="feilside" className="gap-2">
-            <Sidetittel tittel={feilkode} beskrivelse={forklaring} />
-            <section className="innhold">
+        <main id="feilside">
+            <article className="gap-2">
+                <section>
+                    <h1>Oida...</h1>
+                    <p>Her var det ingenting :(</p>
+                </section>
                 {children}
-            </section>
+            </article>
         </main>
     );
 }

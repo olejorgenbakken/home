@@ -1,17 +1,13 @@
 .infopanel {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: var(--vidde);
   margin: 0 auto;
   gap: 2em;
-  padding: 2em 1em;
+  padding: 2em var(--padding);
   position: relative;
   border-radius: var(--radius);
   background: var(--blå);
-}
-
-@media (min-width: 900px) {
-  .infopanel {
-    padding: 2em;
-  }
+  color: var(--svart);
 }

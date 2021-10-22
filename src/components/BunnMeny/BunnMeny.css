@@ -6,7 +6,7 @@
 .global-footer-innhold {
   max-width: var(--vidde);
   margin: 0 auto;
-  padding: 2em 1em;
+  padding: 2em var(--padding);
 }
 
 .eksterne-sider {

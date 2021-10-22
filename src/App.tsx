@@ -21,10 +21,7 @@ const App = () => {
         <Prosjekter />
       </Route>
       <Route path="/prosjekter/*">
-        <Feilside
-          feilkode="404"
-          forklaring="Dette prosjektet har jeg ikke jobba på :("
-        >
+        <Feilside>
           <Button href="/prosjekter">Gå til alle prosjekter</Button>
         </Feilside>
       </Route>
@@ -35,7 +32,7 @@ const App = () => {
         <Hjem />
       </Route>
       <Route path="*">
-        <Feilside feilkode="404" forklaring="Denne siden eksisterer ikke.">
+        <Feilside>
           <Button href="/">Gå tilbake til hovedsiden</Button>
         </Feilside>
       </Route>

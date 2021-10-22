@@ -1,8 +1,6 @@
 import { arbeidserfaring, utdanning } from '../../assets/CV/CV';
 import CVInnhold from './CVInnhold/CVInnhold';
 
-import './CV.css';
-
 const CV = () => {
     return (
         <section className="cv gap-1">
@@ -11,7 +9,7 @@ const CV = () => {
             </header>
 
             <section className="gap-4">
-                <article className="gap-1">
+                <section className="gap-1">
                     <header>
                         <h3>Arbeidserfaring</h3>
                     </header>
@@ -24,9 +22,9 @@ const CV = () => {
                             })
                         }
                     </section>
-                </article>
+                </section>
                 <hr />
-                <article className="gap-1">
+                <section className="gap-1">
                     <header>
                         <h3>Utdanning</h3>
                     </header>
@@ -39,7 +37,7 @@ const CV = () => {
                             })
                         }
                     </section>
-                </article>
+                </section>
             </section>
         </section>
     );

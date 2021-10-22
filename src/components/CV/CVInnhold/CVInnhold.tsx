@@ -44,7 +44,7 @@ const sjekkTiden = (start: number, slutt: number) => {
 
 const CVInnhold = ({ tittel, sted, start, slutt, beskrivelse, emner }: Props) => {
     return (
-        <article className="cv-innhold gap-1">
+        <div className="cv-innhold gap-1">
             <header>
                 <h4 className="role">{tittel}</h4>
                 <h5 className="place">{sted}</h5>
@@ -52,7 +52,7 @@ const CVInnhold = ({ tittel, sted, start, slutt, beskrivelse, emner }: Props) =>
             </header>
             <p>{beskrivelse}</p>
             {sjekkEmner(emner)}
-        </article >
+        </div >
     )
 }
 

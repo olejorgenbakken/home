@@ -1,14 +1,16 @@
 @import "./normalize.css";
 
 :root {
-  --bakgrunn: rgb(255, 255, 255);
-  --tekst: rgb(18, 18, 19);
-  --lenke: rgb(0, 94, 226);
-  --lenke-mørk: rgb(0, 71, 171);
+  --bakgrunn: #ffffff;
+  --tekst: #121213;
+  --lenke: #005ee2;
   --grønn: #e5f4e8;
   --grønn-mørk: #009721;
   --blå: #e5f1ff;
+  --blå-mørk: #0047ab;
+  --svart: #000000;
   --vidde: 900px;
+  --padding: 1em;
   --radius: 0px;
 }
 
@@ -130,19 +132,18 @@ main {
   justify-content: center;
 }
 
-article,
-figcaption {
+main > article {
   max-width: var(--vidde);
+  padding: 0 var(--padding);
 }
 
 img,
 figure {
   width: 100%;
-  max-width: calc(var(--vidde) + 10%);
 }
 
-figcaption {
-  padding: 0 1em;
+svg {
+  fill: var(--svart);
 }
 
 .gap-1,
@@ -177,6 +178,12 @@ figcaption {
 
 .gap-16 {
   gap: 16em;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --padding: 2em;
+  }
 }
 
 @media (min-width: 1050px) {

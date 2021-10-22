@@ -8,7 +8,9 @@ const OmMeg = () => {
     <main id="om-meg" className="gap-2">
       <Sidetittel tittel="Om meg" />
 
-      <CV />
+      <article>
+        <CV />
+      </article>
     </main>
   );
 }

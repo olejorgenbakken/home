@@ -12,16 +12,18 @@ interface Props {
 
 const Sitat = ({ sitat, kilde }: Props) => {
     return (
-        <figure className="sitat gap-1">
+        <figure className="sitatblokk gap-1">
             <blockquote cite={kilde.href}>
-                <p>
+                <p className="sitat">
                     {sitat}
                 </p>
             </blockquote>
             <figcaption>
                 <cite>
-                    {kilde.navn}
-                    <label>
+                    <p className="navn">
+                        {kilde.navn}
+                    </p>
+                    <label className="kredibilitet">
                         {kilde.kredibilitet}
                     </label>
                 </cite>

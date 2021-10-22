@@ -1,4 +1,5 @@
 .sidetittel {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -14,5 +15,5 @@
 .sidetittel .tekst {
   max-width: var(--vidde);
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 var(--padding);
 }

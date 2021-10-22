@@ -1,7 +1,7 @@
 .sitatblokk {
   padding: 2em var(--padding);
   position: relative;
-  background: var(--grønn);
+  background: var(--grønn-lys);
 }
 
 .sitatblokk::before {
@@ -47,6 +47,6 @@
   }
 
   .sitatblokk::before {
-    background: var(--grønn);
+    background: var(--grønn-lys);
   }
 }

@@ -6,10 +6,10 @@ import "./BunnMeny.css";
 const BunnMeny = () => {
   return (
     <footer id="global-footer" >
-      <div className="global-footer-innhold gap-2">
+      <div className="global-footer-innhold gap-4">
         <p>
           Takk for at du sjekket ut nettsiden min.&nbsp;
-          <Lenke href="https://github.com/olejorgenbakken/home" tittel="Se kildekoden på Github">Kildekoden er tilgjengelig på GitHub.</Lenke>
+          <Lenke href="https://github.com/olejorgenbakken/home" tittel="Se kildekoden på GitHub">Kildekoden er tilgjengelig på GitHub.</Lenke>
         </p>
         <div className="eksterne-sider">
           {

@@ -8,7 +8,7 @@
   padding: 2em var(--padding);
   position: relative;
   border-radius: var(--radius);
-  background: var(--blå);
+  background: var(--blå-lys);
 }
 
 .infopanel header label {

@@ -1,8 +1,8 @@
 import Nettside from "./Nettside";
-import githubLogo from "./logoer/github.svg";
-import figmaLogo from "./logoer/figma.svg";
-import behanceLogo from "./logoer/behance.png";
-import linkedInLogo from "./logoer/linkedin.svg";
+import githubLogo from "../Ikoner/logoer/github.svg";
+import figmaLogo from "../Ikoner/logoer/figma.svg";
+import behanceLogo from "../Ikoner/logoer/behance.png";
+import linkedInLogo from "../Ikoner/logoer/linkedin.svg";
 
 const GitHub = new Nettside(
   "Github",

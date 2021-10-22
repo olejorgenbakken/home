@@ -1,15 +1,17 @@
 @import "./normalize.css";
 
 :root {
-  --grønn: #e5f4e8;
-  --grønn-mørk: hsl(133, 100%, 10%);
-  --blå: #e5f1ff;
-  --blå-mørk: hsl(215, 100%, 14%);
+  --grønn: hsl(133, 100%, 40%);
+  --grønn-lys: hsl(133, 100%, 90%);
+  --grønn-mørk: hsl(133, 100%, 12%);
+  --blå: hsl(215, 100%, 40%);
+  --blå-lys: hsl(215, 100%, 90%);
+  --blå-mørk: hsl(215, 100%, 20%);
+  --lenke: hsl(215, 100%, 40%);
   --hvit: #ffffff;
   --svart: #121213;
   --bakgrunn: var(--hvit);
   --tekst: var(--svart);
-  --lenke: hsl(215, 100%, 40%);
   --vidde: 900px;
   --padding: 1em;
   --radius: 0px;
@@ -138,8 +140,8 @@ figure {
   width: 100%;
 }
 
-svg {
-  fill: var(--svart);
+svg path {
+  fill: var(--tekst);
 }
 
 .gap-1,

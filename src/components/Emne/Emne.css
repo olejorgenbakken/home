@@ -4,13 +4,18 @@
   gap: 0.5em;
   margin: 0;
   padding: 0.5em 1.2em;
-  background: var(--blå);
   border-radius: 24px;
-  color: var(--svart);
+  background: var(--blå-lys);
   font-size: 1em;
 }
 
 .emne svg {
   height: 1em;
   width: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .emne {
+    background: var(--blå-mørk);
+  }
 }

@@ -21,7 +21,8 @@ const UiO = new Utdanning(
   {
     start: new Date(2017, 7),
     slutt: new Date(2018, 5),
-  }
+  },
+  ["Likestilling", "Historie", "Sosiologi"]
 );
 
 const HiVolda = new Utdanning(
@@ -32,7 +33,8 @@ const HiVolda = new Utdanning(
   {
     start: new Date(2016, 7),
     slutt: new Date(2017, 5),
-  }
+  },
+  ["Videproduksjon", "Markedsføring", "Akademisk skriving"]
 );
 
 export const utdanning = [HKU, UiO, HiVolda];
@@ -45,7 +47,7 @@ const Vipps = new Arbeidserfaring(
     start: new Date(2021, 5),
     slutt: new Date(2021, 7),
   },
-  ["Figma", "Google Design Sprint", "Design system", "Smidig metodikk"]
+  ["Figma", "Google Design Sprint", "Designsystem", "Smidig metodikk"]
 );
 
 const Shortcut = new Arbeidserfaring(

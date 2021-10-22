@@ -15,7 +15,7 @@
   flex-direction: column;
   gap: 2em;
   width: 100%;
-  max-width: var(--vidde);
+  max-width: calc(var(--vidde) - calc(var(--padding) * 2));
   margin: 0 auto;
   background: var(--bakgrunn);
   padding: 2em;

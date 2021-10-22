@@ -3,15 +3,15 @@ import CVInnhold from './CVInnhold/CVInnhold';
 
 const CV = () => {
     return (
-        <article className="cv gap-1">
+        <article className="cv gap-2">
             <h2>CV</h2>
 
-            <div className="gap-4">
-                <article className="gap-1">
+            <section className="gap-8">
+                <article className="gap-2">
                     <header>
                         <h3>Arbeidserfaring</h3>
                     </header>
-                    <div className="innhold gap-4">
+                    <section className="innhold gap-4">
                         {
                             arbeidserfaring.map(jobb => {
                                 return (
@@ -19,13 +19,13 @@ const CV = () => {
                                 )
                             })
                         }
-                    </div>
+                    </section>
                 </article>
                 <article className="gap-1">
                     <header>
                         <h3>Utdanning</h3>
                     </header>
-                    <div className="innhold gap-4">
+                    <section className="innhold gap-4">
                         {
                             utdanning.map(skole => {
                                 return (
@@ -33,9 +33,9 @@ const CV = () => {
                                 )
                             })
                         }
-                    </div>
+                    </section>
                 </article>
-            </div>
+            </section>
         </article>
     );
 }

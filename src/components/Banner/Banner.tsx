@@ -10,19 +10,19 @@ const Banner = ({ bakgrunn, children }: Props) => {
 
   if (bakgrunn.includes(".")) {
     return (
-      <section className="banner" style={{ backgroundImage: `url(${bakgrunn}` }}>
-        <div className="innhold">
+      <div className="banner" style={{ backgroundImage: `url(${bakgrunn}` }}>
+        <div className="banner-innhold">
           {children}
         </div>
-      </section>
+      </div>
     );
   } else {
     return (
-      <section className="banner" style={{ background: bakgrunn }}>
-        <div className="innhold">
+      <div className="banner" style={{ background: bakgrunn }}>
+        <div className="banner-innhold">
           {children}
         </div>
-      </section>
+      </div>
     );
   }
 

@@ -1,5 +1,9 @@
-#prosjekt > article {
-  display: flex;
-  flex-direction: column;
-  gap: 4em;
+#prosjekt .innhold > section,
+#prosjekt .innhold > figure figcaption {
+  max-width: var(--vidde);
+  padding: 0 var(--padding);
+}
+
+#prosjekt .innhold > figure {
+  max-width: calc(var(--vidde) + 10%);
 }

@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet';
+
 import './Sidetittel.css';
 
 interface Props {
@@ -35,8 +37,12 @@ const hentBeskrivelse = (beskrivelse?: string) => {
 const Sidetittel = ({ tittel, beskrivelse, bilde }: Props) => {
     return (
         <header className="sidetittel gap-2">
+            <Helmet>
+                <title>{tittel} – Ole Jørgen</title>
+                <meta name="description" content={beskrivelse}></meta>
+            </Helmet>
             {hentBilde(bilde)}
-            <section className="tekst">
+            <section className="tekst gap-1">
                 <h1>{tittel}</h1>
                 {hentBeskrivelse(beskrivelse)}
             </section>

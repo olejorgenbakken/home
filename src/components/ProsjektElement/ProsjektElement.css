@@ -3,3 +3,7 @@
   object-fit: cover;
   border-radius: var(--radius);
 }
+
+.prosjekt-info {
+  padding: 0 var(--padding);
+}

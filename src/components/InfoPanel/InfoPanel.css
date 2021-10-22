@@ -9,5 +9,16 @@
   position: relative;
   border-radius: var(--radius);
   background: var(--blå);
-  color: var(--svart);
+}
+
+.infopanel header label {
+  cursor: text;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .infopanel {
+    background: var(--blå-mørk);
+  }
 }

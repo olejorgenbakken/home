@@ -2,7 +2,6 @@
   padding: 2em var(--padding);
   position: relative;
   background: var(--grønn);
-  color: var(--svart);
 }
 
 .sitatblokk::before {
@@ -40,4 +39,14 @@
 
 .sitatblokk cite .kredibilitet {
   font-size: 0.95em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sitatblokk {
+    background: var(--grønn-mørk);
+  }
+
+  .sitatblokk::before {
+    background: var(--grønn);
+  }
 }

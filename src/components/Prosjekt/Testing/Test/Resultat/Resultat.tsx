@@ -16,7 +16,11 @@ interface Props {
 
 const sitatElement = (sitat?: { sitat: string, kilde: { navn: string, kredibilitet: string } }) => {
     if (sitat) {
-        return (<Sitat sitat={sitat.sitat} kilde={sitat.kilde} />)
+        return (
+            <footer className="sitat">
+                <Sitat sitat={sitat.sitat} kilde={sitat.kilde} />
+            </footer>
+        )
     } else {
         return null;
     }
@@ -24,11 +28,9 @@ const sitatElement = (sitat?: { sitat: string, kilde: { navn: string, kredibilit
 
 const Resultat = ({ tittel, beskrivelse, sitat }: Props) => {
     return (
-        <article className="resultat gap-2">
-            <div className="tekst">
-                <h4>{tittel}</h4>
-                <p>{beskrivelse}</p>
-            </div>
+        <article className="resultat">
+            <h4>{tittel}</h4>
+            <p>{beskrivelse}</p>
             {sitatElement(sitat)}
         </article>
     );

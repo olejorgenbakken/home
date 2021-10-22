@@ -1,14 +1,15 @@
 @import "./normalize.css";
 
 :root {
-  --bakgrunn: #ffffff;
-  --tekst: #121213;
-  --lenke: #005ee2;
   --grønn: #e5f4e8;
-  --grønn-mørk: #009721;
+  --grønn-mørk: hsl(133, 100%, 10%);
   --blå: #e5f1ff;
-  --blå-mørk: #0047ab;
-  --svart: #000000;
+  --blå-mørk: hsl(215, 100%, 14%);
+  --hvit: #ffffff;
+  --svart: #121213;
+  --bakgrunn: var(--hvit);
+  --tekst: var(--svart);
+  --lenke: hsl(215, 100%, 40%);
   --vidde: 900px;
   --padding: 1em;
   --radius: 0px;
@@ -132,11 +133,6 @@ main {
   justify-content: center;
 }
 
-main > article {
-  max-width: var(--vidde);
-  padding: 0 var(--padding);
-}
-
 img,
 figure {
   width: 100%;
@@ -201,5 +197,12 @@ svg {
 
   h3 {
     font-size: 1.5em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bakgrunn: var(--svart);
+    --tekst: var(--hvit);
   }
 }

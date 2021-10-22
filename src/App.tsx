@@ -22,7 +22,7 @@ const App = () => {
       </Route>
       <Route path="/prosjekter/*">
         <Feilside>
-          <Button href="/prosjekter">Gå til alle prosjekter</Button>
+          <Button href="/prosjekter" tittel="Til alle prosjekter">Gå til alle prosjekter</Button>
         </Feilside>
       </Route>
       <Route exact path="/om-meg">
@@ -33,7 +33,7 @@ const App = () => {
       </Route>
       <Route path="*">
         <Feilside>
-          <Button href="/">Gå tilbake til hovedsiden</Button>
+          <Button href="/" tittel="Til hovedsiden">Gå tilbake til hovedsiden</Button>
         </Feilside>
       </Route>
     </Switch>

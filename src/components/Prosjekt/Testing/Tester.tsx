@@ -23,15 +23,13 @@ interface Props {
 
 const Tester = ({ tester }: Props) => {
     return (
-        <section className="tester gap-2">
-            <header>
-                <h2>Innsikt og testing</h2>
-            </header>
-            <div className="gap-8">
+        <section className="gap-2">
+            <h2>Innsikt og testing</h2>
+            <section className="gap-8">
                 {tester.map(test => {
                     return (<Test tittel={test.tittel} type={test.type} resultater={test.resultater} />)
                 })}
-            </div>
+            </section>
         </section >
     );
 }

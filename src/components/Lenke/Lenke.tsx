@@ -5,20 +5,21 @@ import './Lenke.css'
 
 interface Props {
   href: string,
+  tittel: string,
   children: string
 }
 
-function InlineLink({ href, children }: Props) {
+function InlineLink({ href, tittel, children }: Props) {
   if (href.includes('https://')) {
     return (
-      <a href={href} target="_blank" rel="noreferrer" className="ekstern-link link">
+      <a href={href} target="_blank" rel="noreferrer" title={tittel} className="ekstern-link link">
         {children}
         <EksternLenke />
       </a>
     )
   } else {
     return (
-      <Link className="internal-link link" to={href}>
+      <Link className="internal-link link" title={tittel} to={href}>
         {children}
       </Link >
     )

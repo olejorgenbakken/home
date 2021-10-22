@@ -10,7 +10,9 @@ const Hjem = () => {
     <main id="hjem" className="gap-4">
       <Sidetittel tittel="Hei, Ole Jørgen her" beskrivelse="Jeg jobber om dagen med å få opp en side som samler alle mine prosjekter. Det tar litt tid, men du kan jo se gjennom det som er her." />
 
-      <ProsjektElement href={`prosjekter/${Vipps.slug()}`} bilde={Vipps.bilder!.forsidebilde} tittel={Vipps.tittel} />
+      <article className="innhold">
+        <ProsjektElement href={`prosjekter/${Vipps.slug()}`} bilde={Vipps.bilder!.forsidebilde} tittel={Vipps.tittel} />
+      </article>
     </main >
   );
 }

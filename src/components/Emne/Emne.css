@@ -1,7 +1,16 @@
 .emne {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
   margin: 0;
   padding: 0.5em 1.2em;
   background: var(--blå);
   border-radius: 24px;
   color: var(--svart);
+  font-size: 1em;
+}
+
+.emne svg {
+  height: 1em;
+  width: auto;
 }

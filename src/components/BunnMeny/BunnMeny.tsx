@@ -6,12 +6,12 @@ import "./BunnMeny.css";
 const BunnMeny = () => {
   return (
     <footer id="global-footer" >
-      <section className="global-footer-innhold gap-2">
+      <div className="global-footer-innhold gap-2">
         <p>
           Takk for at du sjekket ut nettsiden min.&nbsp;
-          <Lenke href="https://github.com/olejorgenbakken/home">Kildekoden er tilgjengelig på GitHub.</Lenke>
+          <Lenke href="https://github.com/olejorgenbakken/home" tittel="Se kildekoden på Github">Kildekoden er tilgjengelig på GitHub.</Lenke>
         </p>
-        <section className="eksterne-sider">
+        <div className="eksterne-sider">
           {
             nettsider.map((side) => (
               <a href={side.href} key={side.href}>
@@ -19,8 +19,8 @@ const BunnMeny = () => {
               </a>
             ))
           }
-        </section>
-      </section>
+        </div>
+      </div>
     </footer>
   )
 }

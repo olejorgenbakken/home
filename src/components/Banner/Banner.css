@@ -10,7 +10,7 @@
   background-position: center center;
 }
 
-.banner .innhold {
+.banner .banner-innhold {
   display: flex;
   flex-direction: column;
   gap: 2em;

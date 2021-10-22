@@ -15,7 +15,7 @@ const ProsjektElement = ({ tittel, href, bilde }: Props) => {
 
             <section className="prosjekt-info gap-2">
                 <h2>{tittel}</h2>
-                <Knapp href={href}>Se prosjektet</Knapp>
+                <Knapp href={href} tittel="Til prosjektet">Se prosjektet</Knapp>
             </section>
         </article>
     )

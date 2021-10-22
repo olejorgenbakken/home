@@ -1,3 +1,4 @@
 #hjem {
+  max-width: var(--vidde);
   padding-bottom: 4em;
 }

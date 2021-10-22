@@ -14,11 +14,11 @@ interface Props {
 const sjekkEmner = (emner?: string[]) => {
     if (emner) {
         return (
-            <aside className="emner">
+            <footer className="emner">
                 {emner.sort().map((emne) => {
                     return (<Emne tekst={emne} />)
                 })}
-            </aside>
+            </footer>
         )
     }
 }
@@ -27,32 +27,32 @@ const sjekkEmner = (emner?: string[]) => {
 const sjekkTiden = (start: number, slutt: number) => {
     if (start !== slutt) {
         return (
-            <label className="tid">
-                <time>{start}</time>
+            <p className="tid">
+                <time dateTime={start.toString()}>{start}</time>
                 &nbsp;–&nbsp;
-                <time>{slutt}</time>
-            </label>
+                <time dateTime={slutt.toString()}>{slutt}</time>
+            </p>
         )
     } else {
         return (
-            <label className="tid">
-                <time>{slutt}</time>
-            </label>
+            <p className="tid">
+                <time dateTime={slutt.toString()}>{slutt}</time>
+            </p>
         )
     }
 }
 
 const CVInnhold = ({ tittel, sted, start, slutt, beskrivelse, emner }: Props) => {
     return (
-        <div className="cv-innhold gap-1">
+        <article className="cv-innhold gap-1">
             <header>
-                <h4 className="role">{tittel}</h4>
-                <h5 className="place">{sted}</h5>
+                <h4 className="sted">{sted}</h4>
+                <label className="tittel">{tittel}</label>
                 {sjekkTiden(start, slutt)}
             </header>
             <p>{beskrivelse}</p>
             {sjekkEmner(emner)}
-        </div >
+        </article >
     )
 }
 

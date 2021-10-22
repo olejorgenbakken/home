@@ -17,11 +17,8 @@ interface Props {
 
 const OmProsjektet = ({ kunde, rolle, start, slutt }: Props) => {
     return (
-        <Infopanel>
-            <header>
-                <h2>Om prosjektet</h2>
-            </header>
-            <section className="om-prosjektet">
+        <Infopanel tittel="Om prosjektet">
+            <section className="om-prosjektet-innhold">
                 <article>
                     <label>Kunde</label>
                     <p>{kunde}</p>

@@ -21,12 +21,12 @@ interface Props {
 
 const Test = ({ tittel, type, resultater }: Props) => {
     return (
-        <article className="test gap-2">
+        <div className="test gap-2">
             <header>
                 <h3>{tittel}</h3>
                 <label>{type}</label>
             </header>
-            <div className="results gap-4">
+            <section className="gap-4">
                 {
                     resultater.map((resultat) => {
                         return (
@@ -34,8 +34,8 @@ const Test = ({ tittel, type, resultater }: Props) => {
                         )
                     })
                 }
-            </div>
-        </article>
+            </section>
+        </div>
     );
 }
 

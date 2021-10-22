@@ -8,11 +8,11 @@
   height: 60vh;
   max-height: 450px;
   object-fit: cover;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
 }
 
 .sidetittel .tekst {
-  max-width: var(--max-width);
+  max-width: var(--vidde);
   margin: 0 auto;
   padding: 0 1em;
 }

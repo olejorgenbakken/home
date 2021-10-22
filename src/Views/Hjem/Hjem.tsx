@@ -3,7 +3,6 @@ import './Hjem.css'
 import ProsjektElement from '../../components/ProsjektElement/ProsjektElement';
 import Sidetittel from '../../components/Sidetittel/Sidetittel';
 import Vipps from '../../assets/Prosjekter/Vipps/Vipps';
-import Banner from '../../components/Banner/Banner';
 
 
 const Hjem = () => {

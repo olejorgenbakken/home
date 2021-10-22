@@ -1,11 +1,11 @@
 .link {
-  color: var(--link);
+  color: var(--lenke);
   position: relative;
   transition: 0.3s ease-in-out;
 }
 
 .link:hover {
-  color: var(--link-hover);
+  color: var(--lenke-hover);
 }
 
 .link svg {
@@ -16,7 +16,7 @@
 }
 
 .link svg path {
-  fill: var(--link);
+  fill: var(--lenke);
 }
 
 .external-link {

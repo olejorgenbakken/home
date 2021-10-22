@@ -8,13 +8,15 @@ export class Utdanning {
     private tid: {
       start: Date;
       slutt: Date;
-    }
+    },
+    public emner?: string[]
   ) {
     this.sted = sted;
     this.tittel = tittel;
     this.grad = grad;
     this.beskrivelse = beskrivelse;
     this.tid = tid;
+    this.emner = emner;
   }
 
   start() {

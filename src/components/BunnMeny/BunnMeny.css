@@ -4,7 +4,7 @@
 }
 
 .global-footer-innhold {
-  max-width: var(--max-width);
+  max-width: var(--vidde);
   margin: 0 auto;
   padding: 2em 1em;
 }

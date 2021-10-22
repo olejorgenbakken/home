@@ -1,33 +1,17 @@
-.info-panel {
+.infopanel {
   display: flex;
   flex-direction: column;
-  max-width: var(--max-width);
+  max-width: var(--vidde);
   margin: 0 auto;
   gap: 2em;
   padding: 2em 1em;
   position: relative;
-}
-
-.info-panel > * {
-  position: relative;
-  z-index: 1;
-}
-
-.info-panel::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  border-radius: var(--border-radius);
-  opacity: 0.1;
+  border-radius: var(--radius);
   background: var(--blå);
 }
 
 @media (min-width: 900px) {
-  .info-panel {
+  .infopanel {
     padding: 2em;
   }
 }

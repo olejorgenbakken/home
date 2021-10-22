@@ -1,6 +1,7 @@
 .sitat {
   padding: 2em 1em;
   position: relative;
+  background: var(--grønn);
 }
 
 .sitat::before {
@@ -10,18 +11,7 @@
   left: 0;
   height: 100%;
   width: 4px;
-  background: var(--grønn);
-}
-
-.sitat::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.1;
-  background: var(--grønn);
+  background: var(--grønn-mørk);
 }
 
 .sitat p {

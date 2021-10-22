@@ -1,7 +1,7 @@
 .prosjekt img {
   max-height: 400px;
   object-fit: cover;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
 }
 
 .prosjekt-info {

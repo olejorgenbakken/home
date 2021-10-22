@@ -1,14 +1,15 @@
 @import "./normalize.css";
 
 :root {
-  --background: #ffffff;
-  --text: #121213;
-  --link: #005ee2;
-  --link-hover: #0047ab;
-  --grønn: rgb(0, 151, 33);
-  --blå: rgb(0, 115, 255);
-  --max-width: 900px;
-  --border-radius: 0px;
+  --bakgrunn: rgb(255, 255, 255);
+  --tekst: rgb(18, 18, 19);
+  --lenke: rgb(0, 94, 226);
+  --lenke-mørk: rgb(0, 71, 171);
+  --grønn: #e5f4e8;
+  --grønn-mørk: #009721;
+  --blå: #e5f1ff;
+  --vidde: 900px;
+  --radius: 0px;
 }
 
 * {
@@ -22,8 +23,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--background);
-  color: var(--text);
+  background: var(--bakgrunn);
+  color: var(--tekst);
 }
 
 h1,
@@ -104,7 +105,7 @@ a {
 
 hr {
   width: 100%;
-  background: var(--text);
+  background: var(--tekst);
   opacity: 0.1;
   height: 1px;
   border: none;
@@ -131,13 +132,13 @@ main {
 
 article,
 figcaption {
-  max-width: var(--max-width);
+  max-width: var(--vidde);
 }
 
 img,
 figure {
   width: 100%;
-  max-width: calc(var(--max-width) + 10%);
+  max-width: calc(var(--vidde) + 10%);
 }
 
 figcaption {
@@ -180,7 +181,7 @@ figcaption {
 
 @media (min-width: 1050px) {
   :root {
-    --border-radius: 8px;
+    --radius: 8px;
   }
 
   h1 {

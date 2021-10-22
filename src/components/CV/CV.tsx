@@ -19,7 +19,7 @@ const CV = () => {
                         {
                             arbeidserfaring.map(jobb => {
                                 return (
-                                    <CVInnhold key={jobb.stilling} tittel={jobb.stilling} sted={jobb.sted} start={jobb.start().år} slutt={jobb.slutt().år} beskrivelse={jobb.beskrivelse} />
+                                    <CVInnhold key={jobb.stilling} tittel={jobb.stilling} sted={jobb.sted} start={jobb.start().år} slutt={jobb.slutt().år} beskrivelse={jobb.beskrivelse} emner={jobb.emner} />
                                 )
                             })
                         }
@@ -34,7 +34,7 @@ const CV = () => {
                         {
                             utdanning.map(skole => {
                                 return (
-                                    <CVInnhold key={skole.tittel} tittel={skole.tittel} sted={skole.sted} start={skole.start().år} slutt={skole.slutt().år} beskrivelse={skole.beskrivelse} />
+                                    <CVInnhold key={skole.tittel} tittel={skole.tittel} sted={skole.sted} start={skole.start().år} slutt={skole.slutt().år} beskrivelse={skole.beskrivelse} emner={skole.emner} />
                                 )
                             })
                         }

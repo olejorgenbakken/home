@@ -7,12 +7,14 @@ export class Arbeidserfaring {
     private tid: {
       start: Date;
       slutt: Date;
-    }
+    },
+    public emner?: string[]
   ) {
     this.sted = sted;
     this.stilling = stilling;
     this.beskrivelse = beskrivelse;
     this.tid = tid;
+    this.emner = emner;
   }
 
   start() {

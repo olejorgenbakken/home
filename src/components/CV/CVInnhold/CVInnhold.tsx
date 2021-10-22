@@ -14,11 +14,11 @@ interface Props {
 const sjekkEmner = (emner?: string[]) => {
     if (emner) {
         return (
-            <section className="emner">
+            <aside className="emner">
                 {emner.sort().map((emne) => {
                     return (<Emne>{emne}</Emne>)
                 })}
-            </section>
+            </aside>
         )
     }
 }

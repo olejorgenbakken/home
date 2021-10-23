@@ -6,11 +6,11 @@
   padding: 0.5em 1.2em;
   border-radius: 24px;
   background: var(--blå-lys);
-  font-size: 1em;
+  font-size: 0.93em;
 }
 
 .emne svg {
-  height: 1em;
+  height: 0.93em;
   width: auto;
 }
 

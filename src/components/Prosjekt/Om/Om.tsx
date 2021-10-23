@@ -1,5 +1,3 @@
-
-import Infopanel from '../../Infopanel/Infopanel';
 import './Om.css';
 
 interface Props {
@@ -17,7 +15,8 @@ interface Props {
 
 const OmProsjektet = ({ kunde, rolle, start, slutt }: Props) => {
     return (
-        <Infopanel tittel="Om prosjektet">
+        <aside className="om-prosjektet">
+            <label>Om prosjektet</label>
             <section className="om-prosjektet-innhold">
                 <article>
                     <label>Kunde</label>
@@ -39,7 +38,7 @@ const OmProsjektet = ({ kunde, rolle, start, slutt }: Props) => {
                     <p>{slutt.måned.replace(slutt.måned.charAt(0), slutt.måned.charAt(0).toUpperCase())} {slutt.år}</p>
                 </article>
             </section>
-        </Infopanel >
+        </aside >
     )
 }
 

@@ -1,3 +1,22 @@
+.om-prosjektet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--vidde);
+  margin: 0 auto;
+  gap: 2em;
+  padding: 2em var(--padding);
+  position: relative;
+  border-radius: var(--radius);
+  background: var(--blå-lys);
+}
+
+.om-prosjektet > label {
+  cursor: text;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
 .om-prosjektet-innhold {
   display: grid;
   grid-template-columns: 1fr;
@@ -8,5 +27,11 @@
   .om-prosjektet-innhold {
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .om-prosjektet {
+    background: var(--blå-mørk);
   }
 }

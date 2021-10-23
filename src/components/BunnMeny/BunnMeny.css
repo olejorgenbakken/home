@@ -1,49 +1,30 @@
 #global-footer {
   width: 100%;
   position: relative;
-  background: var(--svart);
-  color: var(--hvit);
 }
 
-#global-footer::after {
-  display: none;
+#global-footer::before {
   content: "";
   position: absolute;
+  background: var(--tekst);
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: var(--hvit);
-  opacity: 0.04;
+  opacity: 0.07;
 }
 
-#global-footer svg path {
-  fill: var(--hvit);
+#global-footer a {
+  color: inherit;
+  width: max-content;
 }
 
-.global-footer-innhold {
+#global-footer-innhold {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2em 4em;
+  flex-wrap: wrap;
   max-width: var(--vidde);
-  margin: 0 auto;
   padding: 4em var(--padding);
   position: relative;
-  z-index: 1;
-}
-
-.eksterne-sider {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 3em;
-}
-
-.eksterne-sider img {
-  height: 27px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 0;
-}
-@media (prefers-color-scheme: dark) {
-  #global-footer::after {
-    display: block;
-  }
 }

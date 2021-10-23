@@ -5,26 +5,28 @@
   margin: 0 auto;
   list-style: none;
   justify-content: space-between;
-  padding: 2em var(--padding);
-  gap: 2em;
+  padding: 3em var(--padding);
+  gap: 1em;
   flex-wrap: wrap;
   font-size: 1.2em;
   font-weight: 500;
 }
 
 #global-navigasjon a {
+  color: inherit;
+}
+
+#global-navigasjon .active {
   position: relative;
-  margin: 0;
-  padding: 0;
 }
 
 #global-navigasjon .active::after {
-  position: absolute;
   content: "";
-  left: 0;
-  bottom: -8px;
+  position: absolute;
   width: 100%;
   height: 2px;
-  background: var(--lenke);
-  border-radius: 4px;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+  background: var(--tekst);
 }

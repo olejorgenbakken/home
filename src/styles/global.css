@@ -2,11 +2,11 @@
 
 :root {
   --grønn: hsl(133, 100%, 40%);
-  --grønn-lys: hsl(133, 100%, 90%);
-  --grønn-mørk: hsl(133, 100%, 12%);
+  --grønn-lys: hsl(133, 100%, 95%);
+  --grønn-mørk: hsl(133, 100%, 14%);
   --blå: hsl(215, 100%, 40%);
-  --blå-lys: hsl(215, 100%, 90%);
-  --blå-mørk: hsl(215, 100%, 20%);
+  --blå-lys: hsl(215, 100%, 95%);
+  --blå-mørk: hsl(215, 100%, 14%);
   --lenke: hsl(215, 100%, 40%);
   --hvit: #ffffff;
   --svart: #000004;
@@ -103,9 +103,6 @@ label {
 
 a {
   text-decoration: none;
-  position: relative;
-  color: inherit;
-  transition: 0.2s ease-in-out;
 }
 
 hr {

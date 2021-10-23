@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
-import './Infopanel.css';
+import './Panel.css';
 
 interface Props {
     ikon?: string,
@@ -27,7 +27,7 @@ const hentHeading = (ikon?: string, tittel?: string) => {
     }
 }
 
-const Infopanel = ({ ikon, tittel, children }: Props) => {
+const Panel = ({ ikon, tittel, children }: Props) => {
     return (
         <aside className="infopanel gap-2">
             {hentHeading(ikon, tittel)}
@@ -38,4 +38,4 @@ const Infopanel = ({ ikon, tittel, children }: Props) => {
     )
 }
 
-export default Infopanel;
+export default Panel;

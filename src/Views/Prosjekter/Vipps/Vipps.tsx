@@ -8,7 +8,7 @@ import prosjekt from '../../../assets/Prosjekter/Vipps/Vipps';
 import Testing from "../../../components/Prosjekt/Testing/Tester";
 import Banner from "../../../components/Banner/Banner";
 import Bilde from "../../../components/Bilde/Bilde";
-import Infopanel from "../../../components/Infopanel/Infopanel";
+import Infopanel from "../../../components/Panel/Panel";
 
 const Vipps = () => {
   return (

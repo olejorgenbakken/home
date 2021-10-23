@@ -4,7 +4,7 @@ import App from "./App.tsx";
 import { BrowserRouter as Router } from "react-router-dom";
 import ToppMeny from "./components/ToppMeny/ToppMeny";
 import BunnMeny from "./components/BunnMeny/BunnMeny";
-import ScrollToTop from "./scrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 ReactDOM.render(
   <React.StrictMode>

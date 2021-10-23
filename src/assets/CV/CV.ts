@@ -10,7 +10,18 @@ const HKU = new Utdanning(
     start: new Date(2018, 7),
     slutt: new Date(2021, 5),
   },
-  ["Databaser", "C#", "Javascript", "PHP", "Wordpress", "UX/UI"]
+  [
+    "APIer",
+    "Databaser",
+    "C#",
+    "Javascript",
+    "PHP",
+    "Wordpress",
+    "UX/UI",
+    "Spørreundersøkelser",
+    "Brukertesting",
+    "Innholdsproduksjon",
+  ]
 );
 
 const UiO = new Utdanning(

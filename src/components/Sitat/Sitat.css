@@ -1,6 +1,6 @@
 .sitatblokk {
-  padding: 2em var(--padding);
   position: relative;
+  padding: 2em var(--padding);
   background: var(--grønn-lys);
 }
 
@@ -26,11 +26,6 @@
 .sitatblokk figcaption cite {
   display: flex;
   flex-direction: column;
-}
-
-.sitatblokk cite .navn,
-.sitatblokk cite .kredibilitet {
-  opacity: 0.8;
 }
 
 .sitatblokk cite .navn {

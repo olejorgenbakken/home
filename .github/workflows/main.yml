@@ -25,4 +25,4 @@ jobs:
         server: ${{ secrets.ftp_domene }}
         username: ${{ secrets.ftp_brukernavn }}
         password: ${{ secrets.ftp_passord }}
-        exclude: '**/node_modules/'
+        exclude: "[**/.git*/**, **/node_modules/**, **/build/, .babelrc, .editorconfig, .eslintrc, .prettierrc, .stylelintrc]"

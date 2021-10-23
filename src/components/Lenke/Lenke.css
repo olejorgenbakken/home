@@ -2,7 +2,6 @@
   position: relative;
   width: max-content;
   color: var(--blå);
-  transition: 0.2s ease-in-out;
 }
 
 .link svg {

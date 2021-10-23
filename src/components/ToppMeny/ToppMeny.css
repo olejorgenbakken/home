@@ -14,13 +14,10 @@
 
 #global-navigasjon a {
   color: inherit;
-}
-
-#global-navigasjon .active {
   position: relative;
 }
 
-#global-navigasjon .active::after {
+#global-navigasjon a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -29,4 +26,14 @@
   bottom: -8px;
   border-radius: 2px;
   background: var(--tekst);
+  opacity: 0;
+  transition: 0.25s ease-in-out;
+}
+
+#global-navigasjon a:hover::after {
+  opacity: 0.2;
+}
+
+#global-navigasjon a.active::after {
+  opacity: 1;
 }

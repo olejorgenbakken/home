@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { nettsider } from "../../assets/Nettsider/Nettsider";
 import Lenke from "../Lenke/Lenke";
 

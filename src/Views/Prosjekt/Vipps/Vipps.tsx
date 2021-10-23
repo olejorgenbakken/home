@@ -5,10 +5,10 @@ import '../Prosjekt.css';
 import Sidetittel from "../../../components/Sidetittel/Sidetittel";
 
 import prosjekt from '../../../assets/Prosjekter/Vipps/Vipps';
-import OmProsjektet from "../../../components/Prosjekt/Om/Om";
 import Testing from "../../../components/Prosjekt/Testing/Tester";
 import Banner from "../../../components/Banner/Banner";
 import Bilde from "../../../components/Bilde/Bilde";
+import Infopanel from "../../../components/Infopanel/Infopanel";
 
 const Vipps = () => {
   return (
@@ -20,7 +20,21 @@ const Vipps = () => {
           beskrivelse={prosjekt.bakgrunn}
         />
 
-        <OmProsjektet kunde={prosjekt.bedrift} rolle={prosjekt.rolle} start={prosjekt.start()} slutt={prosjekt.slutt()} />
+        <Infopanel tittel="Om prosjektet">
+          <article>
+            <label>Bedrift</label>
+            <p>{prosjekt.bedrift}</p>
+          </article>
+
+          <article>
+            <label>Min rolle</label>
+            <p>{prosjekt.rolle}</p>
+          </article>
+          <article>
+            <label>Tidsperiode</label>
+            <p>{prosjekt.start().måned.replace(prosjekt.start().måned.charAt(0), prosjekt.start().måned.charAt(0).toUpperCase())} {prosjekt.start().år} til {prosjekt.slutt().måned} {prosjekt.slutt().år}</p>
+          </article>
+        </Infopanel>
 
         <Bilde src={prosjekt.bilder!.prototype!} beskrivelse="Den ferdige prototypen for sluttbrukere." />
 

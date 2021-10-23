@@ -114,15 +114,13 @@ hr {
   outline: none;
 }
 
-main,
 section,
-article,
 blockquote,
 figure,
 img,
 figcaption {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
 }
 
 main {
@@ -130,11 +128,13 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
 }
 
 img,
 figure {
   width: 100%;
+  margin: 0 auto;
 }
 
 svg path {

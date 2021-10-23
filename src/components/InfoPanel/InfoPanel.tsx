@@ -5,7 +5,7 @@ import './Infopanel.css';
 interface Props {
     ikon?: string,
     tittel?: string,
-    children: ReactNode
+    children: ReactNode[]
 }
 
 const hentIkon = (ikon?: string) => {
@@ -19,7 +19,7 @@ const hentIkon = (ikon?: string) => {
 const hentHeading = (ikon?: string, tittel?: string) => {
     if (tittel) {
         return (
-            <header>
+            <header className="infopanel-header">
                 {hentIkon(ikon)}
                 <label>{tittel}</label>
             </header>
@@ -29,9 +29,11 @@ const hentHeading = (ikon?: string, tittel?: string) => {
 
 const Infopanel = ({ ikon, tittel, children }: Props) => {
     return (
-        <aside className="infopanel">
+        <aside className="infopanel gap-2">
             {hentHeading(ikon, tittel)}
-            {children}
+            <section className="infopanel-innhold">
+                {children}
+            </section>
         </aside>
     )
 }

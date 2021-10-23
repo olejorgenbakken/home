@@ -1,20 +1,23 @@
 .infopanel {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: var(--vidde);
   margin: 0 auto;
-  gap: 2em;
   padding: 2em var(--padding);
-  position: relative;
   border-radius: var(--radius);
   background: var(--blå-lys);
 }
 
-.infopanel header label {
+.infopanel .infopanel-header label {
   cursor: text;
   font-size: 1.4em;
   font-weight: 700;
+}
+
+.infopanel .infopanel-innhold {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em 4em;
 }
 
 @media (prefers-color-scheme: dark) {

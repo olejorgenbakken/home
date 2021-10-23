@@ -4,6 +4,7 @@ jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
@@ -25,4 +26,4 @@ jobs:
         server: ${{ secrets.ftp_domene }}
         username: ${{ secrets.ftp_brukernavn }}
         password: ${{ secrets.ftp_passord }}
-        exclude: "[**/.git*/**, **/node_modules/**, **/build/, .babelrc, .editorconfig, .eslintrc, .prettierrc, .stylelintrc]"
+        exclude: "[**/.git*/**, **/node_modules/, .babelrc, .editorconfig, .eslintrc, .prettierrc, .stylelintrc]"

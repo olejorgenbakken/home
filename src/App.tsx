@@ -5,7 +5,7 @@ import Button from "./components/Knapp/Knapp";
 import Feilside from "./Views/Feilside/Feilside";
 import Hjem from "./Views/Hjem/Hjem";
 import Om from "./Views/OmMeg/OmMeg";
-import Vipps from './Views/Prosjekt/Vipps/Vipps';
+import Vipps from './Views/Prosjekter/Vipps/Vipps';
 import Prosjekter from "./Views/Prosjekter/Prosjekter";
 import { Component } from "react";
 

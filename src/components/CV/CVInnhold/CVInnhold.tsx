@@ -5,9 +5,17 @@ import './CVInnhold.css';
 interface Props {
     tittel: string,
     sted: string,
-    start: number,
-    slutt: number,
-    beskrivelse: string,
+    start: [
+        år: number,
+        måned?: string,
+        dag?: number
+    ],
+    slutt?: [
+        år: number,
+        måned?: string,
+        dag?: number
+    ],
+    beskrivelse?: string,
     emner?: string[]
 }
 
@@ -16,7 +24,7 @@ const sjekkEmner = (emner?: string[]) => {
         return (
             <footer className="emner">
                 {emner.sort().map((emne) => {
-                    return (<Emne tekst={emne} />)
+                    return (<Emne key={emne} tekst={emne} />)
                 })}
             </footer>
         )
@@ -24,20 +32,31 @@ const sjekkEmner = (emner?: string[]) => {
 }
 
 
-const sjekkTiden = (start: number, slutt: number) => {
-    if (start !== slutt) {
+const sjekkTiden = (start: [
+    år: number,
+    måned?: string,
+    dag?: number
+],
+    slutt?: [
+        år: number,
+        måned?: string,
+        dag?: number
+    ]) => {
+    if (start && slutt)
+        if (start[0] === slutt[0]) {
+            return (<label className="tid">{start[1]} {start[0]}</label>)
+        } else {
+            return (<label className="tid">{start[1]} {start[0]} – {slutt[1]} {slutt[0]}</label>)
+        }
+    else {
+        return (<label className="tid">{start[1]} {start[0]} – Nå</label>)
+    }
+}
+
+const sjekkBeskrivelse = (beskrivelse?: string) => {
+    if (beskrivelse) {
         return (
-            <p className="tid">
-                <time dateTime={start.toString()}>{start}</time>
-                &nbsp;–&nbsp;
-                <time dateTime={slutt.toString()}>{slutt}</time>
-            </p>
-        )
-    } else {
-        return (
-            <p className="tid">
-                <time dateTime={slutt.toString()}>{slutt}</time>
-            </p>
+            <p>{beskrivelse}</p>
         )
     }
 }
@@ -47,10 +66,10 @@ const CVInnhold = ({ tittel, sted, start, slutt, beskrivelse, emner }: Props) =>
         <article className="cv-innhold gap-1">
             <header>
                 <h4 className="sted">{sted}</h4>
-                <label className="tittel">{tittel}</label>
+                <p className="tittel">{tittel}</p>
                 {sjekkTiden(start, slutt)}
             </header>
-            <p>{beskrivelse}</p>
+            {sjekkBeskrivelse(beskrivelse)}
             {sjekkEmner(emner)}
         </article >
     )

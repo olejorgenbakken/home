@@ -10,12 +10,14 @@
 
 .cv-innhold .tittel {
   font-size: 1.3em;
-  font-weight: 500;
+  line-height: 150%;
+  font-weight: 400;
 }
 
 .cv-innhold .tid {
   line-height: 200%;
-  opacity: 0.6;
+  text-transform: capitalize;
+  font-weight: 500;
 }
 
 .cv-innhold .emner {

@@ -43,11 +43,7 @@ const sjekkTiden = (start: [
         dag?: number
     ]) => {
     if (start && slutt)
-        if (start[0] === slutt[0]) {
-            return (<label className="tid">{start[1]} {start[0]}</label>)
-        } else {
-            return (<label className="tid">{start[1]} {start[0]} – {slutt[1]} {slutt[0]}</label>)
-        }
+        return (<label className="tid">{start[1]} {start[0]} – {slutt[1]} {slutt[0]}</label>)
     else {
         return (<label className="tid">{start[1]} {start[0]} – Nå</label>)
     }

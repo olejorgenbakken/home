@@ -48,9 +48,15 @@ const HiVolda = new Erfaring(
 
 export const utdanning = [HKU, UiO, HiVolda];
 
-const Nav = new Erfaring("Nav", "Designer", {
-  start: [2021, "september"],
-});
+const Nav = new Erfaring(
+  "Nav",
+  "Designer",
+  {
+    start: [2021, "november"],
+  },
+  "Jeg har nettopp starta som designer her, så hvem vet hva fremtiden vil bringe? Ikke jeg.",
+  ["UX", "Brukerinnsikt", "Designsystem", "Figma"]
+);
 
 const Vipps = new Erfaring(
   "Vipps",

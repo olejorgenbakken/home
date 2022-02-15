@@ -1,8 +1,0 @@
-#om-meg {
-  max-width: var(--vidde);
-  padding-bottom: 4em;
-}
-
-#om-meg > .innhold {
-  padding: 0 var(--padding);
-}

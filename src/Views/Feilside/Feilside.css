@@ -1,8 +1,0 @@
-#feilside {
-  max-width: var(--vidde);
-  padding-bottom: 4em;
-}
-
-#feilside .innhold {
-  padding: 0 var(--padding);
-}

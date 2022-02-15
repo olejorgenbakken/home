@@ -1,9 +1,0 @@
-.prosjekt img {
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-
-.prosjekt-info {
-  padding: 0 var(--padding);
-}

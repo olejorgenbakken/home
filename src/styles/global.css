@@ -1,18 +1,45 @@
 @import "./normalize.css";
 
 :root {
-  --grønn: hsl(133, 100%, 40%);
-  --grønn-lys: hsl(133, 100%, 95%);
-  --grønn-mørk: hsl(133, 100%, 14%);
-  --blå: hsl(215, 100%, 40%);
-  --blå-lys: hsl(215, 100%, 95%);
-  --blå-mørk: hsl(215, 100%, 14%);
-  --lenke: hsl(215, 100%, 40%);
-  --hvit: #ffffff;
-  --svart: #000004;
+  --oransj: hsl(9, 100%, 50%);
+  --oransj-lys: hsl(9, 100%, 70%);
+  --oransj-mørk: hsl(9, 100%, 20%);
+  --gul: hsl(59, 100%, 50%);
+  --gul-lys: hsl(59, 100%, 70%);
+  --gul-mørk: hsl(59, 100%, 20%);
+  --grønn: hsl(133, 100%, 50%);
+  --grønn-lys: hsl(133, 100%, 70%);
+  --grønn-mørk: hsl(133, 100%, 20%);
+  --blå: hsl(215, 100%, 50%);
+  --blå-lys: hsl(215, 100%, 70%);
+  --blå-mørk: hsl(215, 100%, 20%);
+  --lilla: hsl(256, 100%, 50%);
+  --lilla-lys: hsl(256, 100%, 70%);
+  --lilla-mørk: hsl(256, 100%, 20%);
+  --rosa: hsl(295, 100%, 50%);
+  --rosa-lys: hsl(295, 100%, 70%);
+  --rosa-mørk: hsl(295, 100%, 20%);
+  --rød: hsl(355, 100%, 50%);
+  --rød-lys: hsl(355, 100%, 70%);
+  --rød-mørk: hsl(355, 100%, 20%);
+  --hvit: hsl(0, 0%, 100%);
+  --hvit-50: hsl(0, 0%, 50%);
+  --hvit-85: hsl(0, 0%, 85%);
+  --hvit-90: hsl(0, 0%, 90%);
+  --hvit-95: hsl(0, 0%, 95%);
+  --hvit-98: hsl(0, 0%, 98%);
+  --svart: hsl(0, 0%, 0%);
+  --svart-50: hsl(0, 0%, 50%);
+  --svart-85: hsl(0, 0%, 15%);
+  --svart-90: hsl(0, 0%, 10%);
+  --svart-95: hsl(0, 0%, 5%);
+  --svart-98: hsl(0, 0%, 2%);
+  --vidde: 900px;
   --bakgrunn: var(--hvit);
   --tekst: var(--svart);
-  --vidde: 900px;
+  --tekst-svak: var(--svart-90);
+  --lenke: var(--blå);
+  --lenke-hover: var(--blå-mørk);
   --padding: 1em;
   --radius: 0px;
 }
@@ -54,22 +81,22 @@ h5 {
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2.5em;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 1.7em;
-  font-weight: 700;
-}
-
-h3 {
   font-size: 1.6em;
   font-weight: 700;
 }
 
-h4 {
+h3 {
   font-size: 1.4em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.3em;
   font-weight: 500;
 }
 
@@ -103,6 +130,14 @@ label {
 
 a {
   text-decoration: none;
+  padding-bottom: 2px;
+  color: var(--lenke);
+  border-bottom: 2px solid var(--lenke);
+}
+
+a:hover {
+  color: var(--lenke-hover);
+  border-bottom: 2px solid var(--lenke-hover);
 }
 
 hr {
@@ -124,11 +159,20 @@ figcaption {
 }
 
 main {
-  min-height: 60vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+}
+
+main .wrapper {
+  max-width: var(--vidde);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em;
 }
 
 img,
@@ -141,67 +185,12 @@ svg path {
   fill: var(--tekst);
 }
 
-.gap-1,
-.gap-2,
-.gap-4,
-.gap-8,
-.gap-12,
-.gap-16 {
-  display: flex;
-  flex-direction: column;
-}
-
-.gap-1 {
-  gap: 1em;
-}
-
-.gap-2 {
-  gap: 2em;
-}
-
-.gap-4 {
-  gap: 4em;
-}
-
-.gap-8 {
-  gap: 8em;
-}
-
-.gap-12 {
-  gap: 12em;
-}
-
-.gap-16 {
-  gap: 16em;
-}
-
-@media (min-width: 700px) {
-  :root {
-    --padding: 2em;
-  }
-}
-
-@media (min-width: 1050px) {
-  :root {
-    --radius: 8px;
-  }
-
-  h1 {
-    font-size: 2.9em;
-  }
-
-  h2 {
-    font-size: 1.9em;
-  }
-
-  h3 {
-    font-size: 1.5em;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --bakgrunn: var(--svart);
     --tekst: var(--hvit);
+    --tekst-svak: var(--hvit-90);
+    --lenke: var(--blå-lys);
+    --lenke-hover: var(--blå);
   }
 }

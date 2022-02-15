@@ -1,4 +1,4 @@
-import "./hjem.css";
+import "./Hjem.css";
 import Header from "../../components/Header/header";
 import Kort from "../../components/Kort/Kort";
 

@@ -37,7 +37,7 @@
   --vidde: 900px;
   --bakgrunn: var(--hvit);
   --tekst: var(--svart);
-  --tekst-svak: var(--svart-90);
+  --tekst-svak: var(--svart-85);
   --lenke: var(--blå);
   --lenke-hover: var(--blå-mørk);
   --padding: 1em;
@@ -189,7 +189,7 @@ svg path {
   :root {
     --bakgrunn: var(--svart);
     --tekst: var(--hvit);
-    --tekst-svak: var(--hvit-90);
+    --tekst-svak: var(--hvit-85);
     --lenke: var(--blå-lys);
     --lenke-hover: var(--blå);
   }

@@ -7,12 +7,11 @@
   flex-direction: column;
   gap: 1em;
   border: 2px solid var(--hvit-90);
-  background: var(--hvit-95);
+  background: var(--bakgrunn);
 }
 
 @media (prefers-color-scheme: dark) {
   .kort {
     border: 2px solid var(--svart-85);
-    background: var(--svart-90);
   }
 }

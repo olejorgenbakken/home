@@ -1,17 +1,11 @@
 import "./header.css";
-import { ReactNode } from "react";
 
-interface Props {
-    tittel: String,
-    children?: ReactNode
-}
-
-const Header = ({ tittel, children }: Props) => {
+const Header = () => {
     return (
-        <header className="overskrift">
-            <h1>{tittel}</h1>
-            {children}
-        </header >
+        <header className="global-header">
+            <h1>Ole Jørgen Bakken</h1>
+            <p>Interaksjonsdesigner i <a href="https://www.detsombetyrnoe.no/">NAV IT</a>.</p>
+        </header>
     );
 }
 

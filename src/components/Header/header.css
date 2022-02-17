@@ -1,3 +1,5 @@
-.overskrift {
-  padding: 0 1em;
+.global-header {
+  max-width: var(--vidde);
+  margin: 0 auto;
+  padding: 1em;
 }

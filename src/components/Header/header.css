@@ -3,3 +3,7 @@
   margin: 0 auto;
   padding: 1em;
 }
+
+.global-header h1 {
+  line-height: 100%;
+}

@@ -47,6 +47,7 @@
   --oransj-80: hsl(25, 100%, 80%);
   --oransj-90: hsl(25, 100%, 90%);
   --grå-0: hsl(0, 0%, 0%);
+  --grå-5: hsl(0, 0%, 5%);
   --grå-10: hsl(0, 0%, 10%);
   --grå-20: hsl(0, 0%, 20%);
   --grå-30: hsl(0, 0%, 30%);
@@ -56,15 +57,17 @@
   --grå-70: hsl(0, 0%, 70%);
   --grå-80: hsl(0, 0%, 80%);
   --grå-90: hsl(0, 0%, 90%);
+  --grå-95: hsl(0, 0%, 95%);
+  --grå-97: hsl(0, 0%, 97%);
   --grå-100: hsl(0, 0%, 100%);
   --hvit: var(--grå-100);
   --svart: var(--grå-0);
   --bakgrunn: var(--hvit);
   --tekst: var(--svart);
-  --tekst-svak: var(--svart-85);
+  --tekst-svak: var(--grå-30);
   --lenke: var(--blå-50);
   --lenke-hover: var(--blå-10);
-  --vidde: 600px;
+  --vidde: 800px;
 }
 
 * {
@@ -156,19 +159,22 @@ figcaption {
 }
 
 label {
-  line-height: 145%;
+  line-height: 130%;
   font-weight: 600;
 }
 
 a {
   text-decoration: none;
+}
+
+p a {
   padding-bottom: 2px;
   color: var(--lenke);
   border-bottom: 2px solid var(--lenke);
   transition: ease-in-out 0.2s;
 }
 
-a:hover {
+p a:hover {
   color: var(--lenke-hover);
   border-bottom: 2px solid var(--lenke-hover);
 }
@@ -196,7 +202,7 @@ main {
   flex-direction: column;
   margin: 0 auto;
   max-width: var(--vidde);
-  gap: 2em;
+  gap: 4em;
   padding: 1em;
 }
 
@@ -214,7 +220,7 @@ svg path {
   :root {
     --bakgrunn: var(--svart);
     --tekst: var(--hvit);
-    --tekst-svak: var(--hvit-90);
+    --tekst-svak: var(--grå-90);
     --lenke: var(--blå-80);
     --lenke-hover: var(--blå-70);
   }

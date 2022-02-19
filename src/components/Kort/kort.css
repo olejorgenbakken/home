@@ -1,0 +1,75 @@
+.kort {
+  background: var(--bakgrunn);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  height: max-content;
+}
+
+.kort .innhold {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+}
+
+.kort footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.kort.lenke,
+.kort.lenke label {
+  cursor: pointer;
+}
+
+.kort.lenke {
+  cursor: pointer;
+  color: var(--tekst);
+}
+
+.kort.grå {
+  background: var(--grå-97);
+}
+
+.kort.svart {
+  background: var(--svart);
+  color: var(--hvit);
+}
+
+.kort.svart a {
+  color: var(--blå-80);
+  border-bottom-color: var(--blå-70);
+}
+
+.kort.hvit {
+  background: var(--hvit);
+  color: var(--svart);
+}
+
+.kort.hvit a {
+  color: var(--blå-10);
+  border-bottom-color: var(--blå-30);
+}
+
+.kort .bilde {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.kort .bilde img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  .kort.grå {
+    background: var(--grå-10);
+  }
+}

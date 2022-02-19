@@ -1,0 +1,21 @@
+.prosjekter {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.prosjektliste {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+
+@media (min-width: 700px) {
+  .prosjektliste {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prosjektliste > *:first-of-type {
+    grid-column: 1 / span 2;
+  }
+}

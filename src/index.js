@@ -6,13 +6,12 @@ import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 
 import "./styles/global.css";
-import Hjem from "./views/Hjem/hjem";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router basename={`/${process.env.PUBLIC_URL}`}>
       <Header />
-      <Hjem />
+      <App />
       <Footer />
     </Router>
   </React.StrictMode>,

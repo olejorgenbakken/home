@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 
 
 import { Component } from "react";
-import Hjem from "./views/Hjem/hjem";
+import Hjem from "./views/Hjem/Hjem";
 
 class App extends Component {
   componentDidUpdate() {
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Switch>
         <Route exact path="/">
-
+          <Hjem />
         </Route>
       </Switch>
     );

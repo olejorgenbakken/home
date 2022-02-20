@@ -1,8 +1,8 @@
 import { Route, Switch } from "react-router-dom";
 
-import "./styles/global.css";
-import Hjem from "./views/Hjem/hjem";
+
 import { Component } from "react";
+import Hjem from "./views/Hjem/hjem";
 
 class App extends Component {
   componentDidUpdate() {

@@ -1,7 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 
 import "./styles/global.css";
-import Hjem from "./views/Hjem/hjem";
 import { Component } from "react";
 
 class App extends Component {
@@ -12,7 +11,6 @@ class App extends Component {
     return (
       <Switch>
         <Route exact path="/">
-          <Hjem />
         </Route>
       </Switch>
     );

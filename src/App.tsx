@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Switch>
         <Route exact path="/">
-          <Hjem />
+
         </Route>
       </Switch>
     );

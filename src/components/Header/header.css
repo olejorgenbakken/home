@@ -1,9 +1,0 @@
-.global-header {
-  max-width: var(--vidde);
-  margin: 0 auto;
-  padding: 2em 1em;
-}
-
-.global-header h1 {
-  line-height: 120%;
-}
